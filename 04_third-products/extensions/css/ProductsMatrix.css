@@ -1,0 +1,107 @@
+#ProductsMatrix { _overflow: hidden; padding: 210px 0 0 0; min-width: 720px; }
+	#ProductsMatrix .scroller_header { height: 210px; margin-top: -100px; overflow: hidden; }
+	#ProductsMatrix .scroller_section { overflow: auto; } 
+
+table.ProductsMatrixHeader {
+	width: 100%;
+	padding-bottom:10px;
+	padding-top:10px;
+}
+
+table.ProductsMatrixHeader td {
+	width: 32%;
+	text-align: center;
+	font-weight: bold;
+	vertical-align:middle;
+	background-color:#EEEEEE;
+}
+
+#matrixContent .left_corner {
+	background:url("../images/leftgrey.png") no-repeat scroll right top transparent;
+	height:77px;
+	width:1%;
+}
+
+#matrixContent .right_corner {
+	background:url("../images/rightgrey.png") no-repeat scroll left top transparent;
+	height:77px;
+	width:1%;
+}
+
+table.ProductsMatrixHeader td.title { width: auto; }
+		table.ProductsMatrixHeader img { display: block; margin: 0 auto; }
+
+#ProductsMatrix .wrapper { padding: 20px 10px; }
+
+table.ProductsMatrix { border-collapse: collapse; width: 100%; }
+	table.ProductsMatrix td { width: 33%; padding: .5em 20px .5em 20px; border: 1px solid #e3e3e3; border-left: none; border-right: none; text-align: center; color: #000; }
+	table.ProductsMatrix td.title { font-size: 1.2em; width: auto; text-align: left; padding: .5em 10px .5em 10px; }
+	table.ProductsMatrix tr.fake td.pic, table.ProductsMatrix tr.fake td.title { padding: 0; height: 10px; background: none !important; line-height: 1%; font-size: 1%; }
+
+		p.plus { font-size: 1.6em; line-height: 1em; margin: 0; }
+			table.ProductsMatrix td.title a, p.plus a { text-decoration: none; }
+	table.ProductsMatrix td.pic { padding: 0; width: 38px; min-height: 27px; background: url('../images/products_matrix_pics.gif') no-repeat; }
+	#Manage { background-position: 0 0; }
+	#Finance { background-position: -35px 0; }
+	#Recruit { background-position: -70px 0; }
+	#Trade { background-position: -105px 0; }
+	#Budget { background-position: -140px 0; }
+	#Project { background-position: -175px 0; }
+	#Energy { background-position: -210px 0; }
+	#Mashinery { background-position: -245px 0; }
+	#Connect { background-position: -280px 0; }
+	#Food { background-position: -315px 0; }
+	#Ecology { background-position: -350px 0; }
+	#Building { background-position: -385px 0; }
+	#Quality { background-position: -420px 0; }
+	#All { background-position: -455px 0; }
+	#Medicine { background-position: -490px 0; }
+
+	table.ProductsMatrix tr:hover { background: #fffee4 !important; cursor: pointer; }
+	table.ProductsMatrix tr.opened td.title { font-weight: bold; }
+	table.ProductsMatrix tr.opened p.plus { display: none; }
+
+	table.ProductsMatrix tr.fake:hover { background: #fff !important; cursor: default; }
+
+#group_All td { background-color: #ededed; }
+
+ul.ProductsList { display: none; text-align: left; margin: 5px; padding: 0; }
+	ul.ProductsList li { margin: 0; padding: 0 0 .5em 10px; line-height: 1.1em; cursor: default !important; }
+
+#matrixContent {
+	-moz-box-sizing:border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing:border-box;
+	-ms-box-sizing: border-box;
+	height:100%;
+	padding-top:200px;
+}
+#matrixContent .scroll {
+	overflow-x: auto;
+	height: 100%;
+	border-bottom:1px solid #DDDDDD;
+}
+#matrixHeader {
+	margin-top:-197px;
+	width:100%;
+}
+#matrixHeader li.leftPic {
+	background:url("../images/bk_hor_bg.png") no-repeat scroll left center transparent;
+}
+#matrixHeader li.middlePic {
+	background:url("../images/bk_hor_bg.png") no-repeat scroll center center transparent;
+}
+#matrixHeader li.rightPic {
+	background:url("../images/bk_hor_bg.png") no-repeat scroll right center transparent;
+}
+
+#matrixHeader ul {
+	list-style: none;
+	height:100%;
+}
+#matrixHeader li { float: left; height: 94px; width: 25%; }
+#matrixHeader li a { display: block; width: 100%; padding: 0 10px; height: 94px; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; -ms-box-sizing: border-box; box-sizing: border-box; }
+#matrixHeader ul .KodeksServices { background: url('../images/bk_KodeksServices_bg.png') no-repeat right top;  }
+#matrixHeader ul .TechexpertServices { background: url('../images/bk_TechexpertServices_bg.png') no-repeat right top;  }
+#matrixHeader ul .InfoChannel { background: url('../images/bk_InfoChannel_bg.png') no-repeat right top;  }
+#matrixHeader ul .UseAndUpdate { background: url('../images/bk_UseAndUpdate_bg.png') no-repeat right top;  }

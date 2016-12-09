@@ -1,0 +1,1689 @@
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<title>ИС "Кодекс: Интранет"</title>
+		<link rel="stylesheet" type="text/css" href="css/kodeks.min.css" />
+		<script type="text/javascript" src="js/kodeks.min.js"></script>
+		<style>
+			html, body{
+				margin: 0px;
+				paddind: 0px;
+				height: 100%;
+				overflow: hidden;
+				-moz-box-sizing:border-box;
+				-webkit-box-sizing: border-box;
+				box-sizing:border-box;
+				-ms-box-sizing: border-box;
+				padding: 0px 0px 10px 0px;
+				background-color: #EDEDED;
+				font: Tahoma 11px #000;
+			}
+			.dbf .frameLeft, .dbf .frameRight{
+				padding-top: 21px;
+				background-image: url(data:;base64,R0lGODlhAQAVAIQVADs7Ozw8PD09PT4+PjdARj8/P0FBQUJCQkREREZGRkdHR0lJSUpKSk1NTU5OTlBQUFJSUlRUVFZWVlhYWJ2dnf///////////////////////////////////////////yH+EUNyZWF0ZWQgd2l0aCBHSU1QACH5BAEKAB8ALAAAAAABABUAAAUSIDFJEfQ4DbMoCXIYxSAEABUCADs=);
+				background-position: 0px 0px;
+				background-repeat: repeat-x;
+				-moz-box-sizing:border-box;
+				-webkit-box-sizing: border-box;
+				box-sizing:border-box;
+				behavior: url('css/boxsizing.htc');
+				-ms-box-sizing: border-box;
+			}
+			.closeWindow{
+				display: none;
+			}
+			.dbf .closeWindow{
+				display: block;
+				float: right;
+				margin-bottom: -21px;
+				position: relative;
+				color: white;
+				text-decoration: none;
+				font-size: 11px;
+				line-height: 20px;
+				padding-right: 10px;
+				background-image: url(data:;base64,R0lGODlhCAAIAOMIAEFBQUJCQkREREZGRkdHR0lJSUpKSk1NTf///////////////////////////////yH+EUNyZWF0ZWQgd2l0aCBHSU1QACH5BAEKAA8ALAAAAAAIAAgAAAQc8KBDpUTIGIwK5wVBfOIwfKbwYSoWBByAALQMRAA7);		
+				background-position: left center;
+				background-repeat: no-repeat;
+				font-family: Arial,sans-serif;
+				padding-left: 14px;
+			}
+			.frame{
+				cursor: normal;
+				border: 0px;
+				float: left;
+				margin: 0px;
+				paddind: 0px;
+				width: 100%;
+				height: 100%;
+			}
+			#division{
+				cursor:w-resize;
+				float:left;
+				height:100%;
+				margin:0 -5px;
+				position:absolute;
+				width:8px;
+				left: 50%;
+				background-position: 6px center;
+				background-repeat: repeat-y;
+			}
+			.resizeFrameL, .resizeFrameR{
+				display:none;
+				width: 50%;
+				height: 100%;
+				padding: 10px;
+				float: left;
+				-moz-box-sizing:border-box;
+				-webkit-box-sizing: border-box;
+				box-sizing:border-box;
+				-ms-box-sizing: border-box;
+				behavior: url('css/boxsizing.htc');
+			}
+			.resizeFrameL{
+				padding-right: 5px;
+			}
+			.resizeFrameR{
+				padding-left: 5px;
+			}
+			.resizeFrameL .corner, .resizeFrameR .corner{
+				height: 100%;
+				border:2px dotted CadetBlue;
+				border-radius: 6px;
+				-moz-border-radius: 6px;
+				-khtml-border-radius: 6px;
+				-webkit-border-radius: 6px;
+			}
+			div.footer, div.footerleft, div.footerright {
+				-moz-user-select: -moz-none;
+				-khtml-user-select: none;
+				-webkit-user-select: none; 
+				user-select: none;
+				color:#909090;
+				right: 0px;
+				padding: 0px 12px 2px 0px;
+				font-size: 11px;
+				bottom:1px;
+				font-family:Tahoma;
+			}
+			
+			div.footerleft a,  div.footerright a{
+				color:#909090;
+				text-decoration: none;
+			}
+			div.footerright a{
+				cursor:default;
+				float: right;
+			}
+			div.footerleft a:hover, div.footerright a:hover{
+				color:#909090;
+			}
+			
+			div.footerright a:hover {
+				text-decoration: none;
+			}
+			div.footerright #getRegInfoFull:hover {
+				text-decoration:none;
+			}
+						
+			div.footerleft a:hover {
+				text-decoration: underline;
+			}
+			
+			div.footerleft {
+				height:18px;
+				left:0;
+				padding:0 0 0 12px;
+				position:absolute;
+				overflow:hidden;
+			}
+			div.footerright {
+				right: 0px;
+				padding: 0px 12px 0px 0px;
+				margin-left:280px;
+			}
+			.w2 {
+				width: 280px;
+				height:16px;
+				line-height:14px;
+				float:left;
+			}
+			div.footerleft .w2 a{	
+				color: #2a2a2a;
+			}
+			.w2open {
+				background-image: url(data:;base64,R0lGODlhGQASAMZYAENDQwZeDgBkCgByDVpaWlxcXACBEGNjYy94Nih8MGhoaACRFCiIM25ubnR0dAChFgajG3l5eXt7e4CAgACxGoODgy+lP4aGhoeHh4qKiouLiwDAHYyMjJKSkpWVlXGjdQDOIC+/RADYIqKioqOjo3G5egbiKSjWQ6mpqaysrCjeRa+vry/nTLa2tpTEmbi4wLq6upTKm6PHp3HcgZTRnJTYncXFycfHx8jIyJTen3HuhZTloMPYxZTqodTU1MPexqPxr+Li4sPzy+bm5ufn58P4y+rq6uvr6+3t7e/v7/Dw8PHx8fPz8/T09PX19fb29vf39/j4+Pn5+fr6+vv7+/z8/P39/f7+/v///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////yH5BAEKAH8ALAAAAAAZABIAAAf+gH+Cg4SFhoU3HhyLHjd/iYscjYeDHTc+ODYvHX+WmJqclH8XMC0rKCMEoxkVEQ0HqqIaWLS0Gn+ztVi3ohhWVcBWGH++wFVWJFBVWFVQS4QVU1HTUxV/0dNRVUU6LCYsOkVOgxNQTedQE3/l51JAKiLx8SpA438STEn6TBL3+UxCToAA0WPgwBNCnjlQcqShEgd/Fh55MmODxR1YLFqcAeVPAyRDQiJp4BHklBAUUuaglZJCiCp/FBgJQtOIgpgzr0B4wLNGLZ4QsPwpcISI0SMFhhalYmGBUxq0nC6wAPMAgKtXD/yxCiBFCQNgY2ABC7ZER1GClvxgMGCAi7YkbRn8eIZWkBMZCQTo1ZtAhr26dnl8QBAAwQcefwGnVcbM2aBAADs=);
+				background-position: 0px -1px;
+				background-repeat: no-repeat;
+				padding-left:30px;
+				padding-bottom:3px;
+			}
+			.w2close {
+				display: none;
+				background-image: url(data:;base64,R0lGODlhGQASAMZYAMMAAMgAAM4AANMAAMAGBtsAAOAAAOYAAOsAAPAAANwGBvMGBkNDQ8woKNEoKMovL+4oKPIoKNsvL+YvL/UvL1paWlxcXGNjY2hoaG5ubnR0dHl5eXt7e4CAgIODg4aGhoeHh9txceRxcYqKiouLi4yMjPFxcfhxcZKSkpWVlaKioqOjo+iUlOqUlO2UlPCUlPKUlPWUlKmpqfeUlKysrK+vr+mjo/qjo7a2tri4wLq6usXFycfHx8jIyPDDw/LDw/rDw/zDw9TU1OLi4ubm5ufn5+rq6uvr6+3t7e/v7/Dw8PHx8fPz8/T09PX19fb29vf39/j4+Pn5+fr6+vv7+/z8/P39/f7+/v///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////yH5BAEKAH8ALAAAAAAZABIAAAf+gH+Cg4SFhoU8KSWLKTx/iYsljYeDKDxCPTs5KH+WmJqclH8fOjg1MioVoyMeGxkXqqIkWLS0JH+ztVi3oiBWVcBWIH++wFVWK1BVWFVQS4QeU1HTUx5/0dNRVUEnFAsUJ0FOgx1QTedQHX/l51I3EQnx8RE3438cTEn6TBz3+UxAICAYiGDGQAhAnmlQcqShEg1/Fh55YuKAxQNYYlw0AeVPBiREQiLJ4BHklAkGUtKCkdLAhCp/MBgZQtMIhpgzrygoUKDWC54FFGD5Y+FIkaNHLBA1SkXCgKe0XDwdIAHmBQZYsV74c5UBDRECwgrA0kKsiI6iBC354SCA2wAmLNw6+PEsrSAnNhoA2Lu3gQ17du/6CPGAwIMQPgAHVquMmbNBgQAAOw==);
+				background-position: 0px -1px;
+				background-repeat: no-repeat;
+				padding-left:30px;
+				padding-bottom:3px;
+			}
+			
+			.sep{
+				background-color: white;
+				border-left: 1px solid #BEBEBE;
+				margin: 0 12px;
+				width: 1px;
+				height: 15px;
+				float: right;
+			}
+						
+		</style>
+	</head>
+	<body>
+		<div id="division" style="left: 765px; display: none;" class="ui-draggable"> </div>
+		
+		<a href="javascript:;" class="closeWindow closeWindowRight">Закрыть окно</a>
+		<a href="javascript:;" class="closeWindow closeWindowLeft">Закрыть окно</a>
+		
+		<div class="footerleft" style="display: block;">
+			<div class="w2">
+				<a href="javascript:;" class="w2open">
+					Включить двухоконный режим
+				</a>
+				<a href="javascript:;" class="w2close" style="display: none;">
+					Отключить двухоконный режим
+				</a>
+			</div>
+				
+				
+			<div class="footerright">				
+					<a href="javascript:;" nd="602610004" id="getRegInfo">ИС "Кодекс: Интранет" v. 6.3.0.320 (x64)</a>
+					
+					<div class="sep"> </div>
+					<a href="javascript:;" nd="602610004" id="getRegInfo">
+					 Рег. номер: 3_Worki_corp (ключ: 210305), вариант: интранет (4000 рабочих мест) 
+					</a>	
+					<div class="sep"> </div>
+			</div>
+		</div>
+		<div class="leftFrame">
+	
+		    <input class="webkit_scroll_fixed" type="text">
+			<div id="loading">
+				<div class="progress" style="margin-left: -140px;">
+					<div class="waitMore" style="display: none;">Идет выполнение операции...</div>
+					<div class="longWaiting" style="display: none;">
+						<p>
+							Возможно, для завершения операции потребуется больше времени, чем предполагалось.
+						</p>
+						<p>
+							Можно дождаться завершения операции или <a href="javascript:;">вернуться назад</a>.
+						</p>
+					</div>
+				</div>
+				<div class="bg"> </div>
+			</div>
+
+			<div id="container" class="" style="display: block; padding-top: 57px;">
+				<div id="hideForm" style="display: block;">
+					<div>
+						<a href="gettestdocinfo?nd=777712445" id="helpLink2" title="Справка" target="_blank"><div id="help2"></div></a>
+					</div>
+				</div>
+				<div id="header" class="kMenu" style="">
+					<div id="kMenu" class="kMenuInactive">
+						<div class="kMenuButton">
+						</div>
+						<div class="kMenuList" style="display: none;"><div class="menuCorner"></div><ul></ul></div>
+					</div>
+					<div id="prev" title="Назад" class="active"></div>
+					<div id="prevTo" class="active">
+					</div>
+					<div id="prevHistoryList">
+						<ul>
+						</ul>
+						<div class="showAllHistory" title="История">показать всю историю</div>
+					</div>
+					<div id="next" title="Вперед" class=""></div>
+					<div id="nextTo" class="">
+					</div>
+					<div id="nextHistoryList">
+						<ul>
+						</ul>
+						<div class="showAllHistory" title="История">показать всю историю</div>
+					</div>
+					<div class="kNavContainer">
+						<div id="home"></div>
+						
+							<div class="kNavList" style="opacity: 1; display: none;">
+								<div class="menuCorner"></div>
+								<ul>
+									<li class="nopic navHeader">
+										<p class="title">
+											Вы можете  <a class="navHome" href="javascript:void(0)">перейти на Главную страницу</a><br>
+											или перейти на страницу информационного продукта,<br>
+											который у вас установлен:
+										</p>
+									</li>
+									<li class="haspic">
+										<a href="javascript:;" nd="777714411" class="kodeksColor">
+											
+												<p class="title pic" style="background:url(getpict.gif?nd=777714411&amp;attr=20&amp;area=4603&amp;mime=png) no-repeat scroll left center">Судебная практика</p>
+											
+											
+										</a>
+									</li>
+								</ul>
+							</div>
+						
+					</div>
+					<div id="history" title="История"></div>
+					<div id="userdata" title="Папки пользователя"></div>
+					
+					
+					<a href="gettestdocinfo?nd=777712445" id="helpLink" title="Справка" target="_blank"><div id="help"><div id="helpBack"></div></div></a>
+		             
+		            <a class="iconJuris" sf="fjpanalyzer" href="javascript:;">
+		            	<div sf="fjpanalyzer" title="Судебный аналитик"></div>
+		            </a>
+		             
+		             
+					
+		            <div id="aSearchBtn" title="Атрибутный поиск"></div>
+					<div id="iSearchBtn"></div>
+					<div id="search" class="search_head  searchJuris   ">
+						<div id="search_leftCorner"></div>
+						<div class="ins">
+							<input id="context" name="iSearch" default="введите фразу для поиска" value="введите фразу для поиска" maxlength="400">
+						</div>
+					</div>
+				</div>
+				<div id="icons" class="kMenu" style="display: none;"></div>
+				<div id="tabs" style="display: none;" class="">
+					<div class="selector" title="Показать еще ярлыки" style="margin-top: 33px; height: 0px; display: none;">
+						<div style="height: 0px;"><p style="height: 0px;"></p></div>
+					</div>
+					<div id="nextTabs">
+					</div>
+					<div id="carousel" style="margin-right: 0px; float: right;">
+						<ul style="margin-top: 3px;"><li id="tab_0" class="active" style="display: none;"><p><u>Г</u>лавная страница</p></li></ul>
+					</div>
+					<div id="prevTabs">
+					</div>
+					
+				</div>
+
+				<div id="left" style="display: none;">
+					<div class="cornerTop">
+						<span></span>
+					</div>
+					<div id="panelBorder"></div>
+					<div id="panel">
+						<div id="tree">
+						</div>
+					</div>
+					<div class="cornerBottom">
+						<span class="left"></span>
+						<span class="right"></span>
+						<div></div>
+					</div>
+				</div>
+
+
+				<div id="main" style="margin-left: 4px; padding-left: 0px;">
+					<div class="cornerTop">
+						<span></span>
+					</div>
+					<div id="workspace" style="padding-top: 0px; padding-bottom: 0px;">
+						<div id="tabBody_0" class="tabBody url activeDoc" style="display: block;">
+						
+						<div class="martixOfProd_html">
+								<div class="martixOfProd_header">
+									<a href="#" class="infoProd icon mainIcon first">	
+									</a>
+									<a href="#" class="infoProdWight icon second">	
+									</a>				
+									<a href="#" class="servWight icon first">	
+									</a>	
+									<a href="#" class="serv icon mainIcon second">	
+									</a>			
+								</div>
+								<div class="martixOfProd_body">			
+									<div class="martixOfProd_Prod_body">
+										<div class="martixOfProd_prod_firstLine">
+											<a href="#" class="martixOfProd_prod1 specialization">	
+												<span></span>
+											</a>
+											<a href="#" class="martixOfProd_prod2 specialization">	
+												<span></span>
+											</a>
+											<a href="#" class="martixOfProd_prod3 specialization">	
+												<span></span>
+											</a>
+											<a href="#" class="martixOfProd_prod4 specialization">
+												<span></span>					
+											</a>
+										</div>	
+										<div class="martixOfProd_Prod_menu prod1_menu collapse">				
+											<a href="#" class="martixOfProd_menu_Close" title="Закрыть">	
+											</a>				
+											<div class="martixOfProd_Prod_cont cont_1">
+												<a href="#" class="cont_first_Img icon"> 				
+												</a>
+												<a href="#" class="martixOfProd_Title main_prod twoLine"> 
+													Помощник Юриста: Стандарт<br />
+												</a>
+												<span class="martixOfProd_Prod_Main main_prod twoLineTitle"> 
+													Информационный продукт &laquo;Помощник Юриста: Стандарт&raquo; входит в&nbsp;серию 
+													профессиональных юридических систем &laquo;Кодекс&raquo;.
+												</span>				
+											</div>
+											<div class="martixOfProd_Prod_cont cont_2">
+												<a href="#"class="cont_first_Img icon"> 				
+												</a>
+												<a href="#" class="martixOfProd_Title main_prod twoLine"> 
+													Помощник Юриста: Профессионал<br />
+												</a>
+												<span class="martixOfProd_Prod_Main main_prod twoLineTitle"> 
+													Информационный продукт &laquo;Помощник Юриста: Профессионал&raquo; входит в&nbsp;серию
+													профессиональных юридических систем &laquo;Кодекс&raquo;.
+												</span>				
+											</div>
+											<div class="martixOfProd_Prod_cont cont_3">
+												<a href="#" class="cont_first_Img icon"> 				
+												</a>
+												<a href="#" class="martixOfProd_Title main_prod threeLine"> 
+													Помощник Юриста: Строительство. Саморегулирование
+												</a>
+												<span class="martixOfProd_Prod_Main main_prod threeLineTitle"> 
+													Информационный продукт "Помощник Юриста: Строительство. Саморегулирование" входит в серию 
+													специализированных юридических систем "Кодекс".
+												</span>				
+											</div>	
+											<div class="martixOfProd_Prod_cont cont_4">
+												<a href="#" class="cont_first_Img icon"> 				
+												</a>
+												<a href="#" class="martixOfProd_Title main_prod twoLine"> 
+													Разделы &laquo;Регионального законодательства&raquo;<br />
+												</a>
+												<span class="martixOfProd_Prod_Main main_prod twoLineTitle"> 
+													Информационные продукты регионального законодательства содержат нормативные акты, принятые региональными представителями федеральных органов государственной власти, органами законодательной и&nbsp;исполнительной власти субъекта Федерации, наиболее авторитетными общественными организациями региона. Они предназначены для предприятий, ведущих свою деятельность в&nbsp;конкретном регионе.
+												</span>				
+											</div>	
+											<div class="martixOfProd_Prod_cont cont_5">
+												<a href="#" class="cont_first_Img icon"> 				
+												</a>
+												<a href="#" class="martixOfProd_Title main_prod threeLine"> 
+													Системы судебной и&nbsp;иной правоприменительной практики<br />
+												</a>
+												<span class="martixOfProd_Prod_Main main_prod threeLineTitle"> 
+													Информационные продукты судебной практики содержат акты Высшего Арбитражного Суда&nbsp;РФ, акты Верховного и&nbsp;Конституционного Судов&nbsp;РФ, акты федеральных арбитражных судов округов, арбитражных апелляционных судов, акты арбитражных судов субъектов Российской Федерации, а&nbsp;также акты судов общей юрисдикции.
+												</span>				
+											</div>	
+											<div class="martixOfProd_Prod_cont cont_6">
+												<a href="#" class="cont_first_Img icon"> 				
+												</a>
+												<a href="#" class="martixOfProd_Title main_prod oneLine"> 
+													Международное право<br />
+												</a>
+												<span class="martixOfProd_Prod_Main main_prod oneLineTitle"> 
+													Информационный продукт (база данных) &laquo;Международное право&raquo; входит в&nbsp;состав профессиональной юридической системы &laquo;Кодекс&raquo;.
+												</span>				
+											</div>	
+										</div>
+										<div class="martixOfProd_Prod_menu prod2_menu collapse">				
+											<a href="#" class="martixOfProd_menu_Close" title="Закрыть">	
+											</a>				
+											<div class="martixOfProd_Prod_cont cont_1">
+												<a href="#" class="cont_first_Img icon"> 				
+												</a>
+												<a href="#" class="martixOfProd_Title main_prod oneLine"> 
+													Помощник Бухгалтера<br />
+												</a>
+												<span class="martixOfProd_Prod_Main main_prod oneLineTitle"> 
+													Основа серии консультационно- справочных систем &laquo;Кодекс&raquo; <br />для бухгалтеров.
+												</span>				
+											</div>
+											<div class="martixOfProd_Prod_cont cont_2">
+												<a href="#"class="cont_first_Img icon"> 				
+												</a>
+												<a href="#" class="martixOfProd_Title main_prod twoLine"> 
+													Помощник Бухгалтера <br /> по&nbsp;бюджетному учету
+												</a>
+												<span class="martixOfProd_Prod_Main main_prod twoLineTitle"> 
+													Входит в&nbsp;серию консультационно- справочных систем &laquo;Кодекс&raquo; для бухгалтеров.
+												</span>				
+											</div>
+											<div class="martixOfProd_Prod_cont cont_3">
+												<a href="#" class="cont_first_Img icon"> 				
+												</a>
+												<a href="#" class="martixOfProd_Title main_prod twoLine"> 
+													Помощник Финансового<br /> Директора
+												</a>
+												<span class="martixOfProd_Prod_Main main_prod twoLineTitle"> 
+													Входит в&nbsp;серию консультационно- справочных систем &laquo;Кодекс&raquo; для бухгалтеров.
+												</span>				
+											</div>	
+											<div class="martixOfProd_Prod_cont cont_4 small_text_2Line">
+												<a href="#" class="cont_first_Img icon"> 				
+												</a>
+												<a href="#" class="martixOfProd_Title main_prod oneLine"> 
+													Международное право<br />
+												</a>
+												<span class="martixOfProd_Prod_Main main_prod oneLineTitle"> 
+													Входит в&nbsp;состав профессиональной юридической системы &laquo;Кодекс&raquo;
+												</span>				
+											</div>	
+										</div>
+										<div class="martixOfProd_Prod_menu prod3_menu collapse">				
+											<a href="#" class="martixOfProd_menu_Close" title="Закрыть">	
+											</a>				
+											<div class="martixOfProd_Prod_cont cont_1">
+												<a href="#" class="cont_first_Img icon"> 				
+												</a>
+												<a href="#" class="martixOfProd_Title main_prod twoLine"> 
+													Помощник Кадровика: Эксперт<br />
+												</a>
+												<span class="martixOfProd_Prod_Main main_prod twoLineTitle"> 
+													Информационный продукт (база данных) &laquo;Помощник кадровика: Эксперт&raquo; представляет собой специализированную справочную систему, содержащую необходимую информацию для ведения кадрового делопроизводства на&nbsp;предприятии.
+												</span>				
+											</div>
+											<div class="martixOfProd_Prod_cont cont_2">
+												<a href="#"class="cont_first_Img icon"> 				
+												</a>
+												<a href="#" class="martixOfProd_Title main_prod twoLine"> 
+													Помощник Кадровика: Эксперт. Строительство
+												</a>
+												<span class="martixOfProd_Prod_Main main_prod twoLineTitle"> 
+													Информационный продукт (база данных) &laquo;Помощник кадровика: Эксперт&raquo; представляет собой специализированную справочную систему, содержащую необходимую информацию для ведения кадрового делопроизводства на&nbsp;предприятии.
+												</span>				
+											</div>
+											<div class="martixOfProd_Prod_cont cont_3">
+												<a href="#" class="cont_first_Img icon"> 				
+												</a>
+												<a href="#" class="martixOfProd_Title main_prod threeLine"> 
+													Помощник Кадровика: Эксперт. Уголовно-исполнительная система
+												</a>
+												<span class="martixOfProd_Prod_Main main_prod threeLineTitle"> 
+													Информационный продукт (база данных) &laquo;Помощник кадровика: Эксперт&raquo; представляет собой специализированную справочную систему, содержащую необходимую информацию для ведения кадрового делопроизводства на&nbsp;предприятии.
+												</span>				
+											</div>	
+											<div class="martixOfProd_Prod_cont cont_4 big_text_2Line">
+												<a href="#" class="cont_first_Img icon"> 				
+												</a>
+												<a href="#" class="martixOfProd_Title main_prod twoLine"> 
+													Помощник Кадровика: Эксперт. Образование
+												</a>
+												<span class="martixOfProd_Prod_Main main_prod twoLineTitle"> 
+													Информационный продукт (база данных) &laquo;Помощник кадровика: Эксперт&raquo; представляет собой специализированную справочную систему, содержащую необходимую информацию для ведения кадрового делопроизводства на&nbsp;предприятии.
+												</span>				
+											</div>
+											<div class="martixOfProd_Prod_cont cont_5 big_text_2Line">
+												<a href="#" class="cont_first_Img icon"> 				
+												</a>
+												<a href="#" class="martixOfProd_Title main_prod threeLine"> 
+													Помощник Кадровика: Эксперт. Государственная гражданская служба
+												</a>
+												<span class="martixOfProd_Prod_Main main_prod threeLineTitle"> 
+													Информационный продукт (база данных) &laquo;Помощник кадровика: Эксперт&raquo; представляет собой специализированную справочную систему, содержащую необходимую информацию для ведения кадрового делопроизводства на&nbsp;предприятии.
+												</span>				
+											</div>	
+											<div class="martixOfProd_Prod_cont cont_6 big_text_2Line">
+												<a href="#" class="cont_first_Img icon"> 				
+												</a>
+												<a href="#" class="martixOfProd_Title main_prod twoLine"> 
+													Помощник Кадровика: Эксперт. Медицина
+												</a>
+												<span class="martixOfProd_Prod_Main main_prod twoLineTitle"> 
+													Информационный продукт (база данных) &laquo;Помощник кадровика: Эксперт&raquo; представляет собой специализированную справочную систему, содержащую необходимую информацию для ведения кадрового делопроизводства на&nbsp;предприятии.
+												</span>				
+											</div>	
+											<div class="martixOfProd_Prod_cont cont_7 big_text_3Line">
+												<a href="#" class="cont_first_Img icon"> 				
+												</a>
+												<a href="#" class="martixOfProd_Title main_prod twoLine"> 
+													Помощник Кадровика: Эксперт. Транспорт
+												</a>
+												<span class="martixOfProd_Prod_Main main_prod twoLineTitle"> 
+													Информационный продукт (база данных) &laquo;Помощник кадровика: Эксперт&raquo; представляет собой специализированную справочную систему, содержащую необходимую информацию для ведения кадрового делопроизводства на&nbsp;предприятии.
+												</span>				
+											</div>				
+											<div class="martixOfProd_Prod_cont cont_8 big_text_3Line">
+												<a href="#" class="cont_first_Img icon"> 				
+												</a>
+												<a href="#" class="martixOfProd_Title main_prod twoLine"> 
+													Помощник Кадровика: Эксперт. Военная служба
+												</a>
+												<span class="martixOfProd_Prod_Main main_prod twoLineTitle"> 
+													Информационный продукт (база данных) &laquo;Помощник кадровика: Эксперт&raquo; представляет собой специализированную справочную систему, содержащую необходимую информацию для ведения кадрового делопроизводства на&nbsp;предприятии.
+												</span>				
+											</div>	
+											<div class="martixOfProd_Prod_cont cont_9 big_text_3Line">
+												<a href="#" class="cont_first_Img icon"> 				
+												</a>
+												<a href="#" class="martixOfProd_Title main_prod twoLine"> 
+													Помощник Кадровика: Эксперт. Спорт
+												</a>
+												<span class="martixOfProd_Prod_Main main_prod twoLineTitle"> 
+													Информационный продукт (база данных) &laquo;Помощник кадровика: Эксперт&raquo; представляет собой специализированную справочную систему, содержащую необходимую информацию для ведения кадрового делопроизводства на&nbsp;предприятии.
+												</span>				
+											</div>	
+										</div>
+										<div class="martixOfProd_Prod_menu prod4_menu collapse">				
+											<a href="#" class="martixOfProd_menu_Close" title="Закрыть">	
+											</a>				
+											<div class="martixOfProd_Prod_cont cont_1">
+												<a href="#" class="cont_first_Img icon"> 				
+												</a>
+												<a href="#" class="martixOfProd_Title main_prod twoLine"> 
+													Медицина и здравоохранение
+												</a>
+												<span class="martixOfProd_Prod_Main main_prod twoLineTitle"> 
+													Информационный продукт &laquo;Медицина и&nbsp;здравоохранение&raquo; разработан в&nbsp;помощь специалистам государственных и&nbsp;частных клиник, медицинских центров, больниц, поликлиник, диспансеров и&nbsp;других учреждений медицины и&nbsp;здравоохранения.
+												</span>				
+											</div>
+											<div class="martixOfProd_Prod_cont cont_2">
+												<a href="#"class="cont_first_Img icon"> 				
+												</a>
+												<a href="#" class="martixOfProd_Title main_prod twoLine"> 
+													Помощник Кадровика: Эксперт. Медицина
+												</a>
+												<span class="martixOfProd_Prod_Main main_prod twoLineTitle"> 
+													Информационный продукт (база данных) &laquo;Помощник кадровика: Эксперт&raquo; представляет собой специализированную справочную систему, содержащую необходимую информацию для ведения кадрового делопроизводства на&nbsp;предприятии.
+												</span>				
+											</div>
+											<div class="martixOfProd_Prod_cont cont_3">
+												<a href="#" class="cont_first_Img icon"> 				
+												</a>
+												<a href="#" class="martixOfProd_Title main_prod twoLine"> 
+													Помощник Юриста: Профессионал
+												</a>
+												<span class="martixOfProd_Prod_Main main_prod twoLineTitle"> 
+													Информационный продукт &laquo;Помощник Юриста: Профессионал&raquo; входит в&nbsp;серию профессиональных юридических систем &laquo;Кодекс&raquo;.
+												</span>				
+											</div>
+											<div class="martixOfProd_Prod_cont cont_4 big_text_2Line">
+												<a href="#" class="cont_first_Img icon"> 				
+												</a>
+												<a href="#" class="martixOfProd_Title main_prod twoLine"> 
+													Помощник Бухгалтера по бюджетному учету
+												</a>
+												<span class="martixOfProd_Prod_Main main_prod twoLineTitle"> 
+													Информационная система &laquo;Помощник Бухгалтера по&nbsp;бюджетному учету&raquo; входит в&nbsp;серию консультационно-справочных систем &laquo;Кодекс&raquo; для бухгалтеров.
+												</span>				
+											</div>
+											<div class="martixOfProd_Prod_cont cont_5 big_text_2Line">
+												<a href="#" class="cont_first_Img icon"> 				
+												</a>
+												<a href="#" class="martixOfProd_Title main_prod twoLine"> 
+													Разделы &laquo;Регионального законодательства&raquo;
+												</a>
+												<span class="martixOfProd_Prod_Main main_prod twoLineTitle"> 
+													Информационные продукты регионального законодательства содержат нормативные акты, принятые региональными представителями федеральных органов государственной власти, органами законодательной и&nbsp;исполнительной власти субъекта Федерации, наиболее авторитетными общественными организациями региона. Они предназначены для предприятий, ведущих свою деятельность в&nbsp;конкретном регионе.
+												</span>				
+											</div>	
+											<div class="martixOfProd_Prod_cont cont_6 big_text_2Line">
+												<a href="#" class="cont_first_Img icon"> 				
+												</a>
+												<a href="#" class="martixOfProd_Title main_prod threeLine"> 
+													Системы судебной и иной правоприменительной практики
+												</a>
+												<span class="martixOfProd_Prod_Main main_prod threeLineTitle"> 
+													Информационные продукты судебной практики содержат акты Высшего Арбитражного Суда&nbsp;РФ, акты Верховного и&nbsp;Конституционного Судов&nbsp;РФ, акты федеральных арбитражных судов округов, арбитражных апелляционных судов, акты арбитражных судов субъектов Российской Федерации, а&nbsp;также акты судов общей юрисдикции.
+													</span>				
+											</div>	
+											<div class="martixOfProd_Prod_cont cont_7 verybig_text_3Line">
+												<a href="#" class="cont_first_Img icon"> 				
+												</a>
+												<a href="#" class="martixOfProd_Title main_prod oneLine"> 
+													Помощник Бухгалтера
+												</a>
+												<span class="martixOfProd_Prod_Main main_prod oneLineTitle"> 
+													Информационная система &laquo;Помощник Бухгалтера&raquo; является основой серии консультационно-справочных систем &laquo;Кодекс&raquo; для бухгалтеров.
+												</span>				
+											</div>				
+											<div class="martixOfProd_Prod_cont cont_8 verybig_text_3Line">
+												<a href="#" class="cont_first_Img icon"> 				
+												</a>
+												<a href="#" class="martixOfProd_Title main_prod twoLine"> 
+													Помощник Юриста: Стандарт
+												</a>
+												<span class="martixOfProd_Prod_Main main_prod twoLineTitle"> 
+													Информационный продукт &laquo;Помощник Юриста: Стандарт&raquo; входит в&nbsp;серию профессиональных юридических систем &laquo;Кодекс&raquo;.
+												</span>				
+											</div>
+										</div>
+										<div class="martixOfProd_prod_SecondLine">
+											<a href="#" class="martixOfProd_prod2_1 specialization">
+												<span></span>
+											</a>
+											<a href="#" class="martixOfProd_prod2_2 specialization">	
+												<span></span>
+											</a>
+											<a href="#" class="martixOfProd_prod2_3 specialization">
+												<span></span>					
+											</a>
+											<a href="#" class="martixOfProd_prod2_4 specialization">	
+												<span></span>
+											</a>
+										</div>	
+										
+										<div class="martixOfProd_Prod_menu prod21_menu menu_2 collapse">				
+											<a href="#" class="martixOfProd_menu_Close" title="Закрыть">	
+											</a>				
+											<div class="martixOfProd_Prod_cont cont_1">
+												<a href="#" class="cont_first_Img icon"> 				
+												</a>
+												<a href="#" class="martixOfProd_Title main_prod twoLine"> 
+													Помощник Бухгалтера по бюджетному учету
+												</a>
+												<span class="martixOfProd_Prod_Main main_prod twoLineTitle"> 
+													Информационная система &laquo;Помощник Бухгалтера по&nbsp;бюджетному учету&raquo; входит в&nbsp;серию консультационно-справочных систем &laquo;Кодекс&raquo; для бухгалтеров.
+												</span>				
+											</div>
+											<div class="martixOfProd_Prod_cont cont_2">
+												<a href="#"class="cont_first_Img icon"> 				
+												</a>
+												<a href="#" class="martixOfProd_Title main_prod threeLine"> 
+													Помощник Кадровика: Эксперт. Органы внутренних дел
+												</a>
+												<span class="martixOfProd_Prod_Main main_prod threeLineTitle"> 
+													Информационный продукт (база данных) &laquo;Помощник кадровика: Эксперт&raquo; представляет собой специализированную справочную систему, содержащую необходимую информацию для ведения кадрового делопроизводства на&nbsp;предприятии.
+												</span>				
+											</div> 
+											<div class="martixOfProd_Prod_cont cont_3">
+												<a href="#" class="cont_first_Img icon"> 				
+												</a>
+												<a href="#" class="martixOfProd_Title main_prod twoLine"> 
+													Помощник Кадровика: Эксперт. Медицина
+												</a>
+												<span class="martixOfProd_Prod_Main main_prod twoLineTitle"> 
+													Информационный продукт (база данных) &laquo;Помощник кадровика: Эксперт&raquo; представляет собой специализированную справочную систему, содержащую необходимую информацию для ведения кадрового делопроизводства на&nbsp;предприятии.
+												</span>				
+											</div>
+											<div class="martixOfProd_Prod_cont cont_4 big_text_2Line">
+												<a href="#" class="cont_first_Img icon"> 				
+												</a>
+												<a href="#" class="martixOfProd_Title main_prod twoLine"> 
+													Помощник Кадровика: Эксперт. Образование
+												</a>
+												<span class="martixOfProd_Prod_Main main_prod twoLineTitle"> 
+													Информационный продукт (база данных) &laquo;Помощник кадровика: Эксперт&raquo; представляет собой специализированную справочную систему, содержащую необходимую информацию для ведения кадрового делопроизводства на&nbsp;предприятии.
+												</span>				
+											</div>
+											<div class="martixOfProd_Prod_cont cont_5 big_text_2Line">
+												<a href="#" class="cont_first_Img icon"> 				
+												</a>
+												<a href="#" class="martixOfProd_Title main_prod threeLine"> 
+													Помощник Кадровика: Эксперт. Государственная гражданская служба
+												</a>
+												<span class="martixOfProd_Prod_Main main_prod threeLineTitle"> 
+													Информационный продукт (база данных) &laquo;Помощник кадровика: Эксперт&raquo; представляет собой специализированную справочную систему, содержащую необходимую информацию для ведения кадрового делопроизводства на&nbsp;предприятии.
+												</span>				
+											</div>	
+											<div class="martixOfProd_Prod_cont cont_6 big_text_2Line">
+												<a href="#" class="cont_first_Img icon"> 				
+												</a>
+												<a href="#" class="martixOfProd_Title main_prod twoLine"> 
+													Помощник Кадровика: Эксперт. Военная служба
+												</a>
+												<span class="martixOfProd_Prod_Main main_prod twoLineTitle"> 
+													Информационный продукт (база данных) &laquo;Помощник кадровика: Эксперт&raquo; представляет собой специализированную справочную систему, содержащую необходимую информацию для ведения кадрового делопроизводства на&nbsp;предприятии.
+												</span>				
+											</div>	
+											<div class="martixOfProd_Prod_cont cont_7 big_text_3Line">
+												<a href="#" class="cont_first_Img icon"> 				
+												</a>
+												<a href="#" class="martixOfProd_Title main_prod threeLine"> 
+													Помощник Кадровика: Эксперт. Уголовно-исполнительная система
+												</a>
+												<span class="martixOfProd_Prod_Main main_prod threeLineTitle"> 
+													Информационный продукт (база данных) &laquo;Помощник кадровика: Эксперт&raquo; представляет собой специализированную справочную систему, содержащую необходимую информацию для ведения кадрового делопроизводства на&nbsp;предприятии.
+												</span>				
+											</div>				
+											<div class="martixOfProd_Prod_cont cont_8 big_text_3Line">
+												<a href="#" class="cont_first_Img icon"> 				
+												</a>
+												<a href="#" class="martixOfProd_Title main_prod twoLine"> 
+													Помощник кадровика: Эксперт. Транспорт
+												</a>
+												<span class="martixOfProd_Prod_Main main_prod twoLineTitle"> 
+													Информационный продукт (база данных) &laquo;Помощник кадровика: Эксперт&raquo; представляет собой специализированную справочную систему, содержащую необходимую информацию для ведения кадрового делопроизводства на&nbsp;предприятии.
+												</span>				
+											</div>
+											<div class="martixOfProd_Prod_cont cont_9 big_text_3Line">
+												<a href="#" class="cont_first_Img icon"> 				
+												</a>
+												<a href="#" class="martixOfProd_Title main_prod threeLine"> 
+													Государственные и муниципальные закупки. Справочник заказчика
+												</a>
+												<span class="martixOfProd_Prod_Main main_prod threeLineTitle"> 
+													Продукт &laquo;Государственные и&nbsp;муниципальные закупки. Справочник заказчика&raquo; разработан совместно со&nbsp;специалистами, работающими в&nbsp;сфере госзаказа, на&nbsp;основе их&nbsp;требований, и&nbsp;содержит всю необходимую информацию для их&nbsp;работы.
+												</span>				
+											</div>
+											<div class="martixOfProd_Prod_cont cont_10 big_text_4Line">
+												<a href="#" class="cont_first_Img icon"> 				
+												</a>
+												<a href="#" class="martixOfProd_Title main_prod oneLine"> 
+													Международное право
+												</a>
+												<span class="martixOfProd_Prod_Main main_prod oneLineTitle"> 
+													Информационный продукт (база данных) &laquo;Международное право&raquo; входит в&nbsp;состав профессиональной юридической системы &laquo;Кодекс&raquo;.
+												</span>				
+											</div>
+											<div class="martixOfProd_Prod_cont cont_11 big_text_4Line">
+												<a href="#" class="cont_first_Img icon"> 				
+												</a>
+												<a href="#" class="martixOfProd_Title main_prod twoLine"> 
+													Медицина и здравоохранение
+												</a>
+												<span class="martixOfProd_Prod_Main main_prod twoLineTitle"> 
+													Информационный продукт &laquo;Медицина и&nbsp;здравоохранение&raquo; разработан в&nbsp;помощь специалистам государственных и&nbsp;частных клиник, медицинских центров, больниц, поликлиник, диспансеров и&nbsp;других учреждений медицины и&nbsp;здравоохранения.
+												</span>				
+											</div>
+											<div class="martixOfProd_Prod_cont cont_12 big_text_4Line">
+												<a href="#" class="cont_first_Img icon"> 				
+												</a>
+												<a href="#" class="martixOfProd_Title main_prod twoLine"> 
+													Разделы &laquo;Регионального законодательства&raquo;
+												</a>
+												<span class="martixOfProd_Prod_Main main_prod twoLineTitle"> 
+													Информационные продукты регионального законодательства содержат нормативные акты, принятые региональными представителями федеральных органов государственной власти, органами законодательной и&nbsp;исполнительной власти субъекта Федерации, наиболее авторитетными общественными организациями региона. Они предназначены для предприятий, ведущих свою деятельность в&nbsp;конкретном регионе.
+												</span>				
+											</div>	
+											<div class="martixOfProd_Prod_cont cont_13 big_text_5Line">
+												<a href="#" class="cont_first_Img icon"> 				
+												</a>
+												<a href="#" class="martixOfProd_Title main_prod threeLine"> 
+													Системы судебной и иной правоприменительной практики
+												</a>
+												<span class="martixOfProd_Prod_Main main_prod threeLineTitle"> 
+													Информационные продукты судебной практики содержат акты Высшего Арбитражного Суда&nbsp;РФ, акты Верховного и&nbsp;Конституционного Судов&nbsp;РФ, акты федеральных арбитражных судов округов, арбитражных апелляционных судов, акты арбитражных судов субъектов Российской Федерации, а&nbsp;также акты судов общей юрисдикции.
+												</span>				
+											</div>				
+											<div class="martixOfProd_Prod_cont cont_14 big_text_5Line">
+												<a href="#" class="cont_first_Img icon"> 				
+												</a>
+												<a href="#" class="martixOfProd_Title main_prod twoLine"> 
+													Помощник Юриста: Стандарт
+												</a>
+												<span class="martixOfProd_Prod_Main main_prod twoLineTitle"> 
+													Информационный продукт &laquo;Помощник Юриста: Стандарт&raquo; входит в&nbsp;серию профессиональных юридических систем &laquo;Кодекс&raquo;.
+												</span>				
+											</div>
+											<div class="martixOfProd_Prod_cont cont_15 big_text_5Line">
+												<a href="#" class="cont_first_Img icon"> 				
+												</a>
+												<a href="#" class="martixOfProd_Title main_prod twoLine"> 
+													Помощник Юриста: Профессионал
+												</a>
+												<span class="martixOfProd_Prod_Main main_prod twoLineTitle"> 
+													Информационный продукт &laquo;Помощник Юриста: Профессионал&raquo; входит в&nbsp;серию профессиональных юридических систем &laquo;Кодекс&raquo;.
+												</span>				
+											</div>
+											<div class="martixOfProd_Prod_cont cont_16 big_text_6Line">
+												<a href="#" class="cont_first_Img icon"> 				
+												</a>
+												<a href="#" class="martixOfProd_Title main_prod threeLine"> 
+													Техэксперт: Эксплуатация зданий для бюджетных организаций
+												</a>
+												<span class="martixOfProd_Prod_Main main_prod threeLineTitle"> 
+													Информационный продукт (база данных) &laquo;Техэксперт: Эксплуатация зданий для бюджетных организаций&raquo;&nbsp;&mdash; это специализированный справочный продукт, который не&nbsp;имеет аналогов в&nbsp;России, содержащий всю необходимую информацию для специалистов служб эксплуатации любого объекта недвижимости: технических директоров, инженеров по&nbsp;эксплуатации, руководителей жилищно-коммунальных предприятий. В&nbsp;продукте&nbsp;Вы найдете не&nbsp;только подборки нормативных и&nbsp;нормативно-технических документов и&nbsp;форм, но&nbsp;и&nbsp;уникальную справочную информацию.
+												</span>				
+											</div>	
+										</div>
+										
+										<div class="martixOfProd_Prod_menu prod22_menu menu_2 collapse">				
+											<a href="#" class="martixOfProd_menu_Close" title="Закрыть">	
+											</a>				
+											<div class="martixOfProd_Prod_cont cont_1">
+												<a href="#" class="cont_first_Img icon"> 				
+												</a>
+												<a href="#" class="martixOfProd_Title main_prod twoLine"> 
+													Помощник Кадровика: Эксперт. Строительство
+												</a>
+												<span class="martixOfProd_Prod_Main main_prod twoLineTitle"> 
+													Информационный продукт (база данных) &laquo;Помощник кадровика: Эксперт&raquo; представляет собой специализированную справочную систему, содержащую необходимую информацию для ведения кадрового делопроизводства на&nbsp;предприятии.
+												</span>				
+											</div>
+											<div class="martixOfProd_Prod_cont cont_2">
+												<a href="#"class="cont_first_Img icon"> 				
+												</a>
+												<a href="#" class="martixOfProd_Title main_prod twoLine"> 
+													Техэксперт: Помощник проектировщика
+												</a>
+												<span class="martixOfProd_Prod_Main main_prod twoLineTitle"> 
+													Информационный продукт (база данных) &laquo;Техэксперт: Помощник проектировщика&raquo;&nbsp;&mdash; справочная система, которая содержит технические нормы, правила и&nbsp;стандарты, определяющие технические и&nbsp;организационно-экономические аспекты проектирования строительства.
+												</span>				
+											</div>
+											<div class="martixOfProd_Prod_cont cont_3">
+												<a href="#" class="cont_first_Img icon"> 				
+												</a>
+												<a href="#" class="martixOfProd_Title main_prod twoLine"> 
+													Техэксперт: Промышленное оборудование
+												</a>
+												<span class="martixOfProd_Prod_Main main_prod twoLineTitle"> 
+													Информационный продукт &laquo;Техэксперт: Промышленное оборудование&raquo; представляет собой справочную систему, содержащую технические данные на&nbsp;промышленное оборудование и&nbsp;комплектующие изделия, информацию о&nbsp;разработчиках, производителях и&nbsp;поставщиках.
+												</span>				
+											</div>
+											<div class="martixOfProd_Prod_cont cont_4 big_text_2Line">
+												<a href="#" class="cont_first_Img icon"> 				
+												</a>
+												<a href="#" class="martixOfProd_Title main_prod oneLine"> 
+													Стройэксперт
+												</a>
+												<span class="martixOfProd_Prod_Main main_prod oneLineTitle"> 
+													Информационный продукт (база данных) &laquo;Стройэксперт. Вариант Лидер&raquo;&nbsp;&mdash; справочная система, содержащая нормативно-правовые акты, регламентирующие порядок организации и&nbsp;осуществления строительной деятельности.
+												</span>				
+											</div>
+											<div class="martixOfProd_Prod_cont cont_5 big_text_2Line">
+												<a href="#" class="cont_first_Img icon"> 				
+												</a>
+												<a href="#" class="martixOfProd_Title main_prod oneLine"> 
+													Стройтехнолог
+												</a>
+												<span class="martixOfProd_Prod_Main main_prod oneLineTitle"> 
+													Информационный продукт (база данных) &laquo;Стройтехнолог&raquo; представляет собой специализированную справочную систему, содержащую технологическую и&nbsp;справочную информацию по&nbsp;основным вопросам организации строительства и&nbsp;строительного производства.
+												</span>				
+											</div>	
+											<div class="martixOfProd_Prod_cont cont_6 big_text_2Line">
+												<a href="#" class="cont_first_Img icon"> 				
+												</a>
+												<a href="#" class="martixOfProd_Title main_prod twoLine"> 
+													ТПД. Здания, сооружения, конструкции и узлы
+												</a>
+												<span class="martixOfProd_Prod_Main main_prod twoLineTitle"> 
+													Информационный продукт (база данных) &laquo;ТПД. Здания, сооружения, конструкции и&nbsp;узлы&raquo; представляет собой самое крупное собрание проектной документации типовых строительных конструкций, изделий и&nbsp;узлов, зданий и&nbsp;сооружений.
+												</span>				
+											</div>	
+											<div class="martixOfProd_Prod_cont cont_7 big_text_3Line">
+												<a href="#" class="cont_first_Img icon"> 				
+												</a>
+												<a href="#" class="martixOfProd_Title main_prod threeLine"> 
+													ТПД. Инженерные сети, оборудование и сооружения
+												</a>
+												<span class="martixOfProd_Prod_Main main_prod threeLineTitle"> 
+													Информационный продукт (база данных) &laquo;ТПД. Инженерные сети, оборудование и&nbsp;сооружения&raquo; входит в&nbsp;состав электронных систем нормативно-технической информации &laquo;Техэксперт&raquo; и&nbsp;представляет собой собрание проектной документации инженерного оборудования зданий и&nbsp;сооружений.
+												</span>				
+											</div>				
+											<div class="martixOfProd_Prod_cont cont_8 big_text_3Line">
+												<a href="#" class="cont_first_Img icon"> 				
+												</a>
+												<a href="#" class="martixOfProd_Title main_prod oneLine"> 
+													ТПД. Электроэнергетика
+												</a>
+												<span class="martixOfProd_Prod_Main main_prod oneLineTitle"> 
+													Информационный продукт (база данных) &laquo;ТПД. Электроэнергетика&raquo; входит в&nbsp;состав электронных систем нормативно-технической информации &laquo;Техэксперт&raquo; и&nbsp;представляет собой собрание проектной документации электрооборудования, конструкций и&nbsp;узлов электросетей, зданий и&nbsp;сооружений объектов электроэнергетики.
+												</span>				
+											</div>
+											<div class="martixOfProd_Prod_cont cont_9 big_text_3Line">
+												<a href="#" class="cont_first_Img icon"> 				
+												</a>
+												<a href="#" class="martixOfProd_Title main_prod twoLine"> 
+													Строй-Ресурс: Проектные организации
+												</a>
+												<span class="martixOfProd_Prod_Main main_prod twoLineTitle"> 
+													Информационно-справочная электронная система &laquo;Строй-Ресурс: Проектные организации&raquo;&nbsp;&mdash; это уникальная электронная энциклопедия, не&nbsp;имеющая аналогов в&nbsp;России. В&nbsp;ней&nbsp;Вы найдете исчерпывающую информацию о&nbsp;строительных материалах, используемых на&nbsp;всех этапах проектирования, а&nbsp;также технические характеристики, сертификаты, альбомы технических решений, сравнительные таблицы материалов, что в&nbsp;итоге позволит Вам сэкономить не&nbsp;только время, но&nbsp;и&nbsp;деньги предприятия.
+												</span>				
+											</div>
+											<div class="martixOfProd_Prod_cont cont_10 verybig_text_4Line">
+												<a href="#" class="cont_first_Img icon"> 				
+												</a>
+												<a href="#" class="martixOfProd_Title main_prod twoLine"> 
+													Строй-Ресурс: Подрядные организации
+												</a>
+												<span class="martixOfProd_Prod_Main main_prod twoLineTitle"> 
+													Информационно-справочная электронная система &laquo;Строй-Ресурс: Подрядные организации&raquo;&nbsp;&mdash; это уникальная электронная энциклопедия, не&nbsp;имеющая аналогов в&nbsp;России. В&nbsp;ней&nbsp;Вы найдете исчерпывающую информацию о&nbsp;строительных материалах и&nbsp;инструментах, используемых на&nbsp;всех этапах строительства, а&nbsp;также технические характеристики, сертификаты, паспорта, контакты поставщиков, что в&nbsp;итоге позволит Вам экономить не&nbsp;только время, но&nbsp;и&nbsp;деньги предприятия.
+												</span>				
+											</div>
+											<div class="martixOfProd_Prod_cont cont_11 verybig_text_4Line">
+												<a href="#" class="cont_first_Img icon"> 				
+												</a>
+												<a href="#" class="martixOfProd_Title main_prod twoLine"> 
+													Техэксперт: Дорожное строительство
+												</a>
+												<span class="martixOfProd_Prod_Main main_prod twoLineTitle"> 
+													Информационный продукт (база данных) "Техэксперт: Дорожное строительство" - это специализированная система, объединяющая нормативные документы, описание технологий дорожного строительства, каталоги дорожной техники и материалов, справочные пособия и материалы для проектирования.
+												</span>				
+											</div>
+											<div class="martixOfProd_Prod_cont cont_12 verybig_text_4Line">
+												<a href="#" class="cont_first_Img icon"> 				
+												</a>
+												<a href="#" class="martixOfProd_Title main_prod threeLine"> 
+													Техэксперт: Ценообразование и сметное дело в строительстве
+												</a>
+												<span class="martixOfProd_Prod_Main main_prod threeLineTitle"> 
+													Информационный продукт (база данных) &laquo;Техэксперт: Ценообразование и&nbsp;сметное дело в&nbsp;строительстве&raquo; содержит оптимальный объем информации, необходимой в&nbsp;работе инженера-сметчика: нормативные акты, методические документы по&nbsp;ценообразованию и&nbsp;сметному нормированию, материалы судебной и&nbsp;правоприменительной практики, консультации, разъяснения, статьи по&nbsp;практике применения государственных элементных норм, федеральных, территориальных единичных расценок (ГЭСН, ФЕР, ТЕР) при составлении смет и&nbsp;расчетов за&nbsp;выполненные работы, образцы документов и&nbsp;формы отчетности.
+												</span>				
+											</div>	
+											<div class="martixOfProd_Prod_cont cont_13 verybig_text_5Line">
+												<a href="#" class="cont_first_Img icon"> 				
+												</a>
+												<a href="#" class="martixOfProd_Title main_prod threeLine"> 
+													Помощник Юриста: Строительство. Саморегулирование
+												</a>
+												<span class="martixOfProd_Prod_Main main_prod threeLineTitle"> 
+													Информационный продукт &laquo;Помощник Юриста: Строительство. Саморегулирование&raquo; входит в&nbsp;серию специализированных юридических систем &laquo;Кодекс&raquo;.
+												</span>				
+											</div>				
+											<div class="martixOfProd_Prod_cont cont_14 verybig_text_5Line">
+												<a href="#" class="cont_first_Img icon"> 				
+												</a>
+												<a href="#" class="martixOfProd_Title main_prod oneLine"> 
+													Техэксперт: Охрана труда
+												</a>
+												<span class="martixOfProd_Prod_Main main_prod oneLineTitle"> 
+													Информационный продукт &laquo;Техэксперт: Охрана труда&raquo; представляет собой профессиональную справочную систему, содержащую необходимую информацию для организации охраны труда, обеспечения безопасных условий труда на&nbsp;производстве, сохранения жизни и&nbsp;здоровья работников в&nbsp;процессе трудовой деятельности.
+												</span>				
+											</div>
+											<div class="martixOfProd_Prod_cont cont_15 verybig_text_5Line">
+												<a href="#" class="cont_first_Img icon"> 				
+												</a>
+												<a href="#" class="martixOfProd_Title main_prod twoLine"> 
+													Техэксперт: Теплоэнергетика
+												</a>
+												<span class="martixOfProd_Prod_Main main_prod twoLineTitle"> 
+													Информационный продукт &laquo;Техэксперт: Теплоэнергетика&raquo; представляет собой специализированный комплекс объединяющий справочную, нормативно-правовую, техническую документацию в&nbsp;области теплоэнергетики.
+												</span>				
+											</div>
+											<div class="martixOfProd_Prod_cont cont_16 verybig_text_6Line">
+												<a href="#" class="cont_first_Img icon"> 				
+												</a>
+												<a href="#" class="martixOfProd_Title main_prod twoLine"> 
+													Техэксперт: Электроэнергетика
+												</a>
+												<span class="martixOfProd_Prod_Main main_prod twoLineTitle"> 
+													Информационный продукт &laquo;Техэксперт: Электроэнергетика&raquo; представляет собой специализированный комплекс справочной, нормативно-правовой и&nbsp;технической документации в&nbsp;области электроэнергетики.
+												</span>				
+											</div>
+											<div class="martixOfProd_Prod_cont cont_17 verybig_text_6Line">
+												<a href="#" class="cont_first_Img icon"> 				
+												</a>
+												<a href="#" class="martixOfProd_Title main_prod twoLine"> 
+													Техэксперт: Промышленная безопасность
+												</a>
+												<span class="martixOfProd_Prod_Main main_prod twoLineTitle"> 
+													Информационный продукт (база данных) &laquo;Техэксперт: Промышленная безопасность&raquo; представляет собой профессиональную справочную систему, содержащую необходимую информацию для обеспечения безопасной эксплуатации опасных производственных объектов.
+												</span>				
+											</div>											
+										</div>
+										
+										<div class="martixOfProd_Prod_menu prod23_menu menu_2 collapse">				
+											<a href="#" class="martixOfProd_menu_Close" title="Закрыть">	
+											</a>				
+											<div class="martixOfProd_Prod_cont cont_1">
+												<a href="#" class="cont_first_Img icon"> 				
+												</a>
+												<a href="#" class="martixOfProd_Title main_prod twoLine"> 
+													Техэксперт: Нефтегазовый комплекс
+												</a>
+												<span class="martixOfProd_Prod_Main main_prod twoLineTitle"> 
+													&laquo;Техэксперт: Нефтегазовый комплекс&raquo;&nbsp;&mdash; это не&nbsp;имеющая аналогов в&nbsp;России профессиональная справочная система, которая содержит крупнейшую подборку нормативно-правовых, нормативно-технических документов, справочную и&nbsp;консультационную информацию в&nbsp;электронном виде, а&nbsp;также комплекс сервисов и&nbsp;услуг для различных специалистов предприятий нефтяной, нефтехимической и&nbsp;газовой промышленности России.
+												</span>				
+											</div>
+											<div class="martixOfProd_Prod_cont cont_2">
+												<a href="#"class="cont_first_Img icon"> 				
+												</a>
+												<a href="#" class="martixOfProd_Title main_prod threeLine"> 
+													Техэксперт: Нефтегазовый комплекс. Документы ведущих разработчиков
+												</a>
+												<span class="martixOfProd_Prod_Main main_prod threeLineTitle"> 
+													&laquo;Техэксперт: Нефтегазовый комплекс. Документы ведущих разработчиков&raquo;&nbsp;&mdash; это специализированная подборка актуальной авторской документации от&nbsp;крупнейших российских разработчиков, предназначенная для использования на&nbsp;предприятиях нефтегазового комплекса. Все стандарты являются официальными и&nbsp;предоставляются на&nbsp;основании прямых договоров и&nbsp;с&nbsp;соблюдением авторских прав разработчиков документов.
+												</span>				
+											</div>
+											<div class="martixOfProd_Prod_cont cont_3">
+												<a href="#" class="cont_first_Img icon"> 				
+												</a>
+												<a href="#" class="martixOfProd_Title main_prod twoLine"> 
+													Техэксперт: Промышленное оборудование
+												</a>
+												<span class="martixOfProd_Prod_Main main_prod twoLineTitle"> 
+													Информационный продукт &laquo;Техэксперт: Промышленное оборудование&raquo; представляет собой справочную систему, содержащую технические данные на&nbsp;промышленное оборудование и&nbsp;комплектующие изделия, информацию о&nbsp;разработчиках, производителях и&nbsp;поставщиках.
+												</span>				
+											</div>
+											<div class="martixOfProd_Prod_cont cont_4 verybig_text_2Line">
+												<a href="#" class="cont_first_Img icon"> 				
+												</a>
+												<a href="#" class="martixOfProd_Title main_prod twoLine"> 
+													Техэксперт: Электроэнергетика
+												</a>
+												<span class="martixOfProd_Prod_Main main_prod twoLineTitle"> 
+													Информационный продукт &laquo;Техэксперт: Электроэнергетика&raquo; представляет собой специализированный комплекс справочной, нормативно-правовой и&nbsp;технической документации в&nbsp;области электроэнергетики.
+												</span>				
+											</div>
+											<div class="martixOfProd_Prod_cont cont_5 verybig_text_2Line">
+												<a href="#" class="cont_first_Img icon"> 				
+												</a>
+												<a href="#" class="martixOfProd_Title main_prod oneLine"> 
+													ТПД. Электроэнергетика
+												</a>
+												<span class="martixOfProd_Prod_Main main_prod oneLineTitle"> 
+													Информационный продукт (база данных) &laquo;ТПД. Электроэнергетика&raquo; входит в&nbsp;состав электронных систем нормативно-технической информации &laquo;Техэксперт&raquo; и&nbsp;представляет собой собрание проектной документации электрооборудования, конструкций и&nbsp;узлов электросетей, зданий и&nbsp;сооружений объектов электроэнергетики.
+												</span>				
+											</div>	
+											<div class="martixOfProd_Prod_cont cont_6 verybig_text_2Line">
+												<a href="#" class="cont_first_Img icon"> 				
+												</a>
+												<a href="#" class="martixOfProd_Title main_prod oneLine"> 
+													Техэксперт: Охрана труда
+												</a>
+												<span class="martixOfProd_Prod_Main main_prod oneLineTitle"> 
+													Информационный продукт &laquo;Техэксперт: Охрана труда&raquo; представляет собой профессиональную справочную систему, содержащую необходимую информацию для организации охраны труда, обеспечения безопасных условий труда на&nbsp;производстве, сохранения жизни и&nbsp;здоровья работников в&nbsp;процессе трудовой деятельности.
+												</span>				
+											</div>	
+											<div class="martixOfProd_Prod_cont cont_7 verybig_text_3Line">
+												<a href="#" class="cont_first_Img icon"> 				
+												</a>
+												<a href="#" class="martixOfProd_Title main_prod twoLine"> 
+													Техэксперт: Промышленная безопасность
+												</a>
+												<span class="martixOfProd_Prod_Main main_prod twoLineTitle"> 
+													Информационный продукт (база данных) &laquo;Техэксперт: Промышленная безопасность&raquo; представляет собой профессиональную справочную систему, содержащую необходимую информацию для обеспечения безопасной эксплуатации опасных производственных объектов.
+												</span>				
+											</div>				
+											<div class="martixOfProd_Prod_cont cont_8 verybig_text_3Line">
+												<a href="#" class="cont_first_Img icon"> 				
+												</a>
+												<a href="#" class="martixOfProd_Title main_prod twoLine"> 
+													Техэксперт: Пожарная безопасность
+												</a>
+												<span class="martixOfProd_Prod_Main main_prod twoLineTitle"> 
+													Информационный продукт (база данных) &laquo;Техэксперт: Пожарная безопасность&raquo; представляет собой профессиональную справочную систему, содержащую необходимую информацию по&nbsp;обеспечению пожарной безопасности, защиты жизни, здоровья, имущества граждан и&nbsp;юридических лиц, государственного и&nbsp;муниципального имущества от&nbsp;пожаров, а&nbsp;также по&nbsp;обеспечению пожарной безопасности зданий, сооружений и&nbsp;строений, промышленных объектов.
+												</span>				
+											</div>
+											<div class="martixOfProd_Prod_cont cont_9 verybig_text_3Line">
+												<a href="#" class="cont_first_Img icon"> 				
+												</a>
+												<a href="#" class="martixOfProd_Title main_prod twoLine"> 
+													Техэксперт: Теплоэнергетика
+												</a>
+												<span class="martixOfProd_Prod_Main main_prod twoLineTitle"> 
+													Информационный продукт &laquo;Техэксперт: Теплоэнергетика&raquo; представляет собой специализированный комплекс объединяющий справочную, нормативно-правовую, техническую документацию в&nbsp;области теплоэнергетики.
+												</span>				
+											</div>
+											<div class="martixOfProd_Prod_cont cont_10 text_4Line_23">
+												<a href="#" class="cont_first_Img icon"> 				
+												</a>
+												<a href="#" class="martixOfProd_Title main_prod twoLine"> 
+													Техэксперт: Эксплуатация зданий
+												</a>
+												<span class="martixOfProd_Prod_Main main_prod twoLineTitle"> 
+													&laquo;Техэксперт: Эксплуатация зданий &raquo; - это специализированный справочный продукт, который не&nbsp;имеет аналогов в&nbsp;России, содержащий всю необходимую информацию для специалистов служб эксплуатации: технических директоров, инженеров по&nbsp;эксплуатации, руководителей жилищно-коммунальных предприятий. 
+												</span>				
+											</div>
+											<div class="martixOfProd_Prod_cont cont_11 text_4Line_23 ">
+												<a href="#" class="cont_first_Img icon"> 				
+												</a>
+												<a href="#" class="martixOfProd_Title main_prod oneLine"> 
+													Техэксперт: Экология. Проф
+												</a>
+												<span class="martixOfProd_Prod_Main main_prod oneLineTitle"> 
+													Информационный продукт &laquo;Техэксперт: Экология. Проф&raquo; является специализированной справочной системой торговой марки &laquo;Техэксперт&raquo;.
+												</span>				
+											</div>											
+										</div>
+										
+										<div class="martixOfProd_Prod_menu prod24_menu menu_2 collapse">				
+											<a href="#" class="martixOfProd_menu_Close" title="Закрыть">	
+											</a>				
+											<div class="martixOfProd_Prod_cont cont_1">
+												<a href="#" class="cont_first_Img icon"> 				
+												</a>
+												<a href="#" class="martixOfProd_Title main_prod threeLine"> 
+													Автоматизированное рабочее место специалиста по охране труда
+												</a>
+												<span class="martixOfProd_Prod_Main main_prod threeLineTitle"> 
+													&laquo;Автоматизированное рабочее место специалиста по&nbsp;охране труда&raquo; (АРМ ОТ)&nbsp;&mdash; программный комплекс, предназначенный для автоматизации трудоемких операций по&nbsp;планированию и&nbsp;организации охраны труда на&nbsp;предприятии.
+												</span>				
+											</div>
+											<div class="martixOfProd_Prod_cont cont_2">
+												<a href="#"class="cont_first_Img icon"> 				
+												</a>
+												<a href="#" class="martixOfProd_Title main_prod twoLine"> 
+													Техэксперт: Машиностроение
+												</a>
+												<span class="martixOfProd_Prod_Main main_prod twoLineTitle"> 
+													Информационный продукт &laquo;Техэксперт: Машиностроение&raquo;&nbsp;&mdash; это уникальное комплексное собрание национальных и&nbsp;отраслевых стандартов, а&nbsp;также справочно-консультационной информации по&nbsp;основным направлениям деятельности предприятий машиностроительного комплекса России.
+												</span>				
+											</div>
+											<div class="martixOfProd_Prod_cont cont_3">
+												<a href="#" class="cont_first_Img icon"> 				
+												</a>
+												<a href="#" class="martixOfProd_Title main_prod oneLine"> 
+													Техэксперт: Охрана труда
+												</a>
+												<span class="martixOfProd_Prod_Main main_prod oneLineTitle"> 
+													Информационный продукт &laquo;Техэксперт: Охрана труда&raquo; представляет собой профессиональную справочную систему, содержащую необходимую информацию для организации охраны труда, обеспечения безопасных условий труда на&nbsp;производстве, сохранения жизни и&nbsp;здоровья работников в&nbsp;процессе трудовой деятельности.
+												</span>				
+											</div>
+											<div class="martixOfProd_Prod_cont cont_4 big_text_2Line">
+												<a href="#" class="cont_first_Img icon"> 				
+												</a>
+												<a href="#" class="martixOfProd_Title main_prod twoLine "> 
+													Техэксперт: Пожарная безопасность
+												</a>
+												<span class="martixOfProd_Prod_Main main_prod twoLineTitle"> 
+													Информационный продукт (база данных) &laquo;Техэксперт: Пожарная безопасность&raquo; представляет собой профессиональную справочную систему, содержащую необходимую информацию по&nbsp;обеспечению пожарной безопасности, защиты жизни, здоровья, имущества граждан и&nbsp;юридических лиц, государственного и&nbsp;муниципального имущества от&nbsp;пожаров, а&nbsp;также по&nbsp;обеспечению пожарной безопасности зданий, сооружений и&nbsp;строений, промышленных объектов.
+												</span>				
+											</div>
+											<div class="martixOfProd_Prod_cont cont_5 big_text_2Line">
+												<a href="#" class="cont_first_Img icon"> 				
+												</a>
+												<a href="#" class="martixOfProd_Title main_prod twoLine"> 
+													Техэксперт: Промышленная безопасность
+												</a>
+												<span class="martixOfProd_Prod_Main main_prod twoLineTitle"> 
+													Информационный продукт (база данных) &laquo;Техэксперт: Промышленная безопасность&raquo; представляет собой профессиональную справочную систему, содержащую необходимую информацию для обеспечения безопасной эксплуатации опасных производственных объектов.
+												</span>				
+											</div>	
+											<div class="martixOfProd_Prod_cont cont_6 big_text_2Line">
+												<a href="#" class="cont_first_Img icon"> 				
+												</a>
+												<a href="#" class="martixOfProd_Title main_prod twoLine"> 
+													Техэксперт: Промышленное оборудование
+												</a>
+												<span class="martixOfProd_Prod_Main main_prod twoLineTitle"> 
+													Информационный продукт &laquo;Техэксперт: Промышленное оборудование&raquo; представляет собой справочную систему, содержащую технические данные на&nbsp;промышленное оборудование и&nbsp;комплектующие изделия, информацию о&nbsp;разработчиках, производителях и&nbsp;поставщиках.
+												</span>				
+											</div>	
+											<div class="martixOfProd_Prod_cont cont_7 text_3Line_24">
+												<a href="#" class="cont_first_Img icon"> 				
+												</a>
+												<a href="#" class="martixOfProd_Title main_prod twoLine"> 
+													Техэксперт: Эксплуатация зданий
+												</a>
+												<span class="martixOfProd_Prod_Main main_prod twoLineTitle"> 
+													&laquo;Техэксперт: Эксплуатация зданий &raquo; - это специализированный справочный продукт, который не&nbsp;имеет аналогов в&nbsp;России, содержащий всю необходимую информацию для специалистов служб эксплуатации: технических директоров, инженеров по&nbsp;эксплуатации, руководителей жилищно-коммунальных предприятий. В&nbsp;продукте &laquo;Техэксперт: Эксплуатация зданий&raquo; Вы&nbsp;найдете не&nbsp;только подборки нормативных и&nbsp;нормативно-технических документов и&nbsp;форм, но&nbsp;и&nbsp;уникальную справочную информацию.
+												</span>				
+											</div>				
+											<div class="martixOfProd_Prod_cont cont_8 text_3Line_24">
+												<a href="#" class="cont_first_Img icon"> 				
+												</a>
+												<a href="#" class="martixOfProd_Title main_prod oneLine"> 
+													Техэксперт: Экология. Проф
+												</a>
+												<span class="martixOfProd_Prod_Main main_prod oneLineTitle"> 
+													Информационный продукт &laquo;Техэксперт: Экология. Проф&raquo; является специализированной справочной системой торговой марки &laquo;Техэксперт&raquo;.
+												</span>				
+											</div>
+										</div>
+						
+										<div class="martixOfProd_prod_ThirdLine">
+											<a href="#" class="martixOfProd_prod3_1 specialization">	
+												<span></span>
+											</a>
+											<a href="#" class="martixOfProd_prod3_2 specialization">	
+												<span></span>
+											</a>
+											<a href="#" class="martixOfProd_prod3_3 specialization">	
+												<span></span>
+											</a>
+											<a href="#" class="martixOfProd_prod3_4 specialization">	
+												<span></span>
+											</a>
+										</div>	
+										
+										<div class="martixOfProd_Prod_menu prod31_menu menu_3 collapse">				
+											<a href="#" class="martixOfProd_menu_Close" title="Закрыть">	
+											</a>				
+											<div class="martixOfProd_Prod_cont cont_1">
+												<a href="#" class="cont_first_Img icon"> 				
+												</a>
+												<a href="#" class="martixOfProd_Title main_prod threeLine"> 
+													Автоматизированное рабочее место специалиста по охране труда
+												</a>
+												<span class="martixOfProd_Prod_Main main_prod threeLineTitle"> 
+													&laquo;Автоматизированное рабочее место специалиста по&nbsp;охране труда&raquo; (АРМ ОТ)&nbsp;&mdash; программный комплекс, предназначенный для автоматизации трудоемких операций по&nbsp;планированию и&nbsp;организации охраны труда на&nbsp;предприятии.
+												</span>				
+											</div>
+											<div class="martixOfProd_Prod_cont cont_2">
+												<a href="#"class="cont_first_Img icon"> 				
+												</a>
+												<a href="#" class="martixOfProd_Title main_prod oneLine"> 
+													Техэксперт: Связь
+												</a>
+												<span class="martixOfProd_Prod_Main main_prod oneLineTitle"> 
+													Информационный продукт &laquo;Техэксперт: Связь&raquo; входит в&nbsp;состав электронных систем нормативно-технической информации &laquo;Техэксперт&raquo;.
+												</span>				
+											</div>
+											<div class="martixOfProd_Prod_cont cont_3">
+												<a href="#" class="cont_first_Img icon"> 				
+												</a>
+												<a href="#" class="martixOfProd_Title main_prod oneLine"> 
+													Техэксперт: Охрана труда
+												</a>
+												<span class="martixOfProd_Prod_Main main_prod oneLineTitle"> 
+													Информационный продукт &laquo;Техэксперт: Охрана труда&raquo; представляет собой профессиональную справочную систему, содержащую необходимую информацию для организации охраны труда, обеспечения безопасных условий труда на&nbsp;производстве, сохранения жизни и&nbsp;здоровья работников в&nbsp;процессе трудовой деятельности.	
+												</span>				
+											</div>
+											<div class="martixOfProd_Prod_cont cont_4 big_text_2Line">
+												<a href="#" class="cont_first_Img icon"> 				
+												</a>
+												<a href="#" class="martixOfProd_Title main_prod twoLine "> 
+													Техэксперт: Пожарная безопасность
+												</a>
+												<span class="martixOfProd_Prod_Main main_prod twoLineTitle"> 
+													Информационный продукт (база данных) &laquo;Техэксперт: Пожарная безопасность&raquo; представляет собой профессиональную справочную систему, содержащую необходимую информацию по&nbsp;обеспечению пожарной безопасности, защиты жизни, здоровья, имущества граждан и&nbsp;юридических лиц, государственного и&nbsp;муниципального имущества от&nbsp;пожаров, а&nbsp;также по&nbsp;обеспечению пожарной безопасности зданий, сооружений и&nbsp;строений, промышленных объектов.
+												</span>				
+											</div>											
+										</div>
+						
+										<div class="martixOfProd_Prod_menu prod32_menu menu_3 collapse">				
+											<a href="#" class="martixOfProd_menu_Close" title="Закрыть">	
+											</a>				
+											<div class="martixOfProd_Prod_cont cont_1">
+												<a href="#" class="cont_first_Img icon"> 				
+												</a>
+												<a href="#" class="martixOfProd_Title main_prod threeLine"> 
+													Автоматизированное рабочее место специалиста по охране труда
+												</a>
+												<span class="martixOfProd_Prod_Main main_prod threeLineTitle"> 
+													&laquo;Автоматизированное рабочее место специалиста по&nbsp;охране труда&raquo; (АРМ ОТ)&nbsp;&mdash; программный комплекс, предназначенный для автоматизации трудоемких операций по&nbsp;планированию и&nbsp;организации охраны труда на&nbsp;предприятии.
+												</span>				
+											</div>
+											<div class="martixOfProd_Prod_cont cont_2">
+												<a href="#"class="cont_first_Img icon"> 				
+												</a>
+												<a href="#" class="martixOfProd_Title main_prod oneLine"> 
+													Техэксперт: Охрана труда
+												</a>
+												<span class="martixOfProd_Prod_Main main_prod oneLineTitle"> 
+													Информационный продукт &laquo;Техэксперт: Охрана труда&raquo; представляет собой профессиональную справочную систему, содержащую необходимую информацию для организации охраны труда, обеспечения безопасных условий труда на&nbsp;производстве, сохранения жизни и&nbsp;здоровья работников в&nbsp;процессе трудовой деятельности.
+												</span>				
+											</div>
+											<div class="martixOfProd_Prod_cont cont_3">
+												<a href="#" class="cont_first_Img icon"> 				
+												</a>
+												<a href="#" class="martixOfProd_Title main_prod twoLine"> 
+													Техэксперт: Промышленная безопасность
+												</a>
+												<span class="martixOfProd_Prod_Main main_prod twoLineTitle"> 
+													Информационный продукт (база данных) &laquo;Техэксперт: Промышленная безопасность&raquo; представляет собой профессиональную справочную систему, содержащую необходимую информацию для обеспечения безопасной эксплуатации опасных производственных объектов.
+												</span>				
+											</div>	
+											<div class="martixOfProd_Prod_cont cont_4 big_text_2Line">
+												<a href="#" class="cont_first_Img icon"> 				
+												</a>
+												<a href="#" class="martixOfProd_Title main_prod twoLine"> 
+													Техэксперт: Пожарная безопасность
+												</a>
+												<span class="martixOfProd_Prod_Main main_prod twoLineTitle"> 
+													Информационный продукт (база данных) &laquo;Техэксперт: Пожарная безопасность&raquo; представляет собой профессиональную справочную систему, содержащую необходимую информацию по&nbsp;обеспечению пожарной безопасности, защиты жизни, здоровья, имущества граждан и&nbsp;юридических лиц, государственного и&nbsp;муниципального имущества от&nbsp;пожаров, а&nbsp;также по&nbsp;обеспечению пожарной безопасности зданий, сооружений и&nbsp;строений, промышленных объектов.
+												</span>				
+											</div>
+											<div class="martixOfProd_Prod_cont cont_5 big_text_2Line">
+												<a href="#" class="cont_first_Img icon"> 				
+												</a>
+												<a href="#" class="martixOfProd_Title main_prod oneLine"> 
+													Техэксперт: Экология. Проф
+												</a>
+												<span class="martixOfProd_Prod_Main main_prod oneLineTitle"> 
+													Информационный продукт &laquo;Техэксперт: Экология. Проф&raquo; является специализированной справочной системой торговой марки &laquo;Техэксперт&raquo;.
+													Система предназначена для специалистов, занимающихся природоохранной деятельностью, руководителей хозяйствующих субъектов, ответственных за&nbsp;соблюдение экологических норм и&nbsp;правил на&nbsp;промышленных предприятиях, проектировщиков, обязанных учитывать экологические требования при проектировании и&nbsp;строительстве, а&nbsp;также может быть использована в&nbsp;высших и&nbsp;средних учебных заведениях для подготовки специалистов в&nbsp;области экологии.
+													В&nbsp;системе&nbsp;Вы найдете не&nbsp;только подборки нормативно-правовых, нормативно-технических документов и&nbsp;форм, но&nbsp;также и&nbsp;уникальный блок справочной информации, представленный в&nbsp;виде методических рекомендаций по&nbsp;экологической деятельности предприятия.
+												</span>				
+											</div>	
+										</div>
+										
+										<div class="martixOfProd_Prod_menu prod33_menu menu_3 collapse">				
+											<a href="#" class="martixOfProd_menu_Close" title="Закрыть">	
+											</a>				
+											<div class="martixOfProd_Prod_cont cont_1">
+												<a href="#" class="cont_first_Img icon"> 				
+												</a>
+												<a href="#" class="martixOfProd_Title main_prod twoLine"> 
+													Техэксперт: Промышленное оборудование
+												</a>
+												<span class="martixOfProd_Prod_Main main_prod twoLineTitle"> 
+													Информационный продукт &laquo;Техэксперт: Промышленное оборудование&raquo; представляет собой справочную систему, содержащую технические данные на&nbsp;промышленное оборудование и&nbsp;комплектующие изделия, информацию о&nbsp;разработчиках, производителях и&nbsp;поставщиках.
+												</span>				
+											</div>
+											<div class="martixOfProd_Prod_cont cont_2">
+												<a href="#"class="cont_first_Img icon"> 				
+												</a>
+												<a href="#" class="martixOfProd_Title main_prod twoLine"> 
+													Техэксперт: Эксплуатация зданий
+												</a>
+												<span class="martixOfProd_Prod_Main main_prod twoLineTitle"> 
+													&laquo;Техэксперт: Эксплуатация зданий &raquo; - это специализированный справочный продукт, который не&nbsp;имеет аналогов в&nbsp;России, содержащий всю необходимую информацию для специалистов служб эксплуатации: технических директоров, инженеров по&nbsp;эксплуатации, руководителей жилищно-коммунальных предприятий. В&nbsp;продукте &laquo;Техэксперт: Эксплуатация зданий&raquo; Вы&nbsp;найдете не&nbsp;только подборки нормативных и&nbsp;нормативно-технических документов и&nbsp;форм, но&nbsp;и&nbsp;уникальную справочную информацию.
+												</span>				
+											</div>											
+										</div>
+										
+										<div class="martixOfProd_Prod_menu prod34_menu menu_3 collapse">				
+											<a href="#" class="martixOfProd_menu_Close" title="Закрыть">	
+											</a>				
+											<div class="martixOfProd_Prod_cont cont_1">
+												<a href="#" class="cont_first_Img icon"> 				
+												</a>
+												<a href="#" class="martixOfProd_Title main_prod twoLine"> 
+													Управление качеством продукции и услуг
+												</a>
+												<span class="martixOfProd_Prod_Main main_prod twoLineTitle"> 
+													Информационный продукт (база данных) &laquo;Управление качеством продукции и&nbsp;услуг&raquo; входит в&nbsp;состав электронных систем нормативно-технической информации &laquo;Техэксперт&raquo;.
+												</span>				
+											</div>
+										</div>
+										
+										<div class="martixOfProd_prod_FourthLine">
+											<a href="#" class="martixOfProd_prod4_1 specialization">	
+												<span></span>
+											</a>
+											<a href="#" class="martixOfProd_prod4_2 specialization">	
+												<span></span>
+											</a>					
+										</div>	
+										
+										<div class="martixOfProd_Prod_menu prod41_menu menu_4 collapse">				
+											<a href="#" class="martixOfProd_menu_Close" title="Закрыть">	
+											</a>				
+											<div class="martixOfProd_Prod_cont cont_1">
+												<a href="#" class="cont_first_Img icon"> 				
+												</a>
+												<a href="#" class="martixOfProd_Title main_prod threeLine"> 
+													Техэксперт: Нормы, правила, стандарты и законодательство России
+												</a>
+												<span class="martixOfProd_Prod_Main main_prod threeLineTitle"> 
+													Информационный продукт &laquo;Техэксперт: Нормы, правила, стандарты и&nbsp;законодательство России&raquo;&nbsp;&mdash; это крупнейшая библиотека нормативных документов в&nbsp;электронном виде для крупных и&nbsp;средних компаний различных отраслей и&nbsp;сфер деятельности.
+												</span>				
+											</div>
+											<div class="martixOfProd_Prod_cont cont_2">
+												<a href="#"class="cont_first_Img icon"> 				
+												</a>
+												<a href="#" class="martixOfProd_Title main_prod oneLine"> 
+													Классификаторы России
+												</a>
+												<span class="martixOfProd_Prod_Main main_prod oneLineTitle"> 
+													Объектами классификации и&nbsp;кодирования в&nbsp;Общероссийских классификаторах являются технико-экономические и&nbsp;социальные объекты, используемые в&nbsp;таких областях хозяйственной деятельности, как статистика, финансы, банковское дело, бухгалтерский учет, стандартизация, сертификация, производство продукции и&nbsp;предоставление услуг, таможенное дело и&nbsp;торговля. Более подробная информация об&nbsp;объектах классификации и&nbsp;структуре кодов Общероссийских классификаторов приведена в&nbsp;таблице &laquo;Объекты классификации и&nbsp;структура кодов Общероссийских классификаторов&raquo;, размещенная в&nbsp;блоке &laquo;Справочная информация о&nbsp;классификаторах&raquo;.
+												</span>				
+											</div>
+											
+										</div>
+										
+										<div class="martixOfProd_Prod_menu prod42_menu menu_4 collapse">				
+											<a href="#" class="martixOfProd_menu_Close" title="Закрыть">	
+											</a>				
+											<div class="martixOfProd_Prod_cont cont_1">
+												<a href="#" class="cont_first_Img icon"> 				
+												</a>
+												<a href="#" class="martixOfProd_Title main_prod oneLine"> 
+													Кодекс: Банк документов
+												</a>
+												<span class="martixOfProd_Prod_Main main_prod oneLineTitle"> 
+													Система &laquo;Кодекс: Банк документов&raquo; предназначена для создания корпоративного архива управленческих документов, нормативно-технической документации, различной профессиональной информации и&nbsp;других документов организации.
+												</span>				
+											</div>
+											<div class="martixOfProd_Prod_cont cont_2 ">
+												<a href="#"class="cont_first_Img icon"> 				
+												</a>
+												<a href="#" class="martixOfProd_Title main_prod twoLine"> 
+													Техэксперт: Банк документов
+												</a>
+												<span class="martixOfProd_Prod_Main main_prod twoLineTitle"> 
+													Система &laquo;Техэксперт: Банк документов&raquo; предназначена для создания корпоративного архива управленческих документов, нормативно-технической документации, различной профессиональной информации и&nbsp;других документов организации.
+												</span>				
+											</div>												
+										</div>
+										
+									</div>		
+									<div class="martixOfProd_serv_body">
+										<div class="martixOfProd_serv_firstLine">
+											<a href="#" class="martixOfProd_serv1 specialization">	
+											<span></span>
+											</a>				
+											<a href="#" class="martixOfProd_serv2 specialization">	
+											<span></span>
+											</a>					
+											<a href="#" class="martixOfProd_serv3 specialization">	
+											<span></span>
+											</a>					
+											<a href="#" class="martixOfProd_serv4 specialization">
+											<span></span>
+											</a>
+											
+										</div>
+										<div class="martixOfProd_serv_menu serv1_menu collapse">				
+											<a href="#" class="martixOfProd_menu_Close" title="Закрыть">	
+											</a>				
+											<div class="martixOfProd_serv_cont serv_cont_1">
+												<a href="#" class="serv1_Img icon"> 				
+												</a>
+												<a href="#" class="martixOfProd_Title main_prod twoLine"> 
+													Портал &laquo;Кодекс&raquo;: профессиональные новости, <br /> онлайн-доступ к&nbsp;документам
+												</a>
+												<span class="martixOfProd_Prod_Main serv_prod twoLineTitle"> 
+													Информационно-правовой портал &laquo;Кодекс&raquo; (www.kodeks.ru) представляет собой ежедневно пополняемый банк данных нормативно-правовой, нормативно-технической и&nbsp;специализированной информации для всех сфер деятельности.
+													
+												</span>
+														
+											</div>
+											<div class="martixOfProd_serv_cont serv_cont_2">
+												<a href="#"class="serv2_Img icon"> 				
+												</a>
+												<a href="#" class="martixOfProd_Title main_prod twoLine"> 
+													Линия профессиональной поддержки <br />
+													&laquo;Задай вопрос эксперту&raquo; (ЛПП) <br />
+												</a>
+												<span class="martixOfProd_Prod_Main serv_prod twoLineTitle"> 
+													Это возможность получить индивидуальную консультацию по&nbsp;вопросам, возникающим в&nbsp;
+													Вашей профессиональной деятельности.<br /><br />
+													Для того чтобы задать вопрос эксперту необходимо нажать 
+													на&nbsp;баннер &laquo;Задай вопрос эксперту&raquo;, который размещен на&nbsp;Главной странице 
+													системы, а&nbsp;также
+													в&nbsp;продукте. Вашему вниманию откроется форма запроса, которую нужно заполнить, вписать текст вопроса 
+													и&nbsp;нажать &laquo;Отправить&raquo;. Подробнее 
+													о&nbsp;возможностях Линии профессиональной поддержки&nbsp;Вы можете прочитать
+													в&nbsp;разделе &laquo;Правила услуги&raquo;.
+												</span>				
+											</div>
+											<div class="martixOfProd_serv_cont serv_cont_3 text_2Line_serv">
+												<a href="#" class="serv3_Img icon"> 				
+												</a>
+												<a href="#" class="martixOfProd_Title main_prod oneLine"> 
+													Зарубежные и&nbsp;международные стандарты<br />
+												</a>
+												<span class="martixOfProd_Prod_Main serv_prod oneLineTitle"> 
+													Мы&nbsp;предоставляем стандарты более чем 450 разработчиков со&nbsp;всего 
+													мира ISO, BSI, DIN, ASTM, API и&nbsp;т.д.) для предприятий, 
+													экспортирующих продукцию, приводящих производственные
+													и&nbsp;бизнес-процессы в&nbsp;соответствие с&nbsp;требованиями других стран 
+													и&nbsp;международных организаций.
+													<br /><br />
+													В&nbsp;Интернет-магазине shop.cntd.ru Вы&nbsp;можете получить подробную информацию
+													об&nbsp;интересующем Вас документе, заказать его текст 
+													на&nbsp;языке оригинала или на&nbsp;русском языке.
+												</span>				
+											</div>
+										</div>
+										<div class="martixOfProd_serv_menu serv2_menu collapse">				
+											<a href="#" class="martixOfProd_menu_Close" title="Закрыть">	
+											</a>				
+											<div class="martixOfProd_serv_cont serv_cont_1">
+												<a href="#" class="serv1_Img icon"> 				
+												</a>
+												<a href="#" class="martixOfProd_Title main_prod oneLine"> 
+													Единая справочная служба<br />
+												</a>
+												<span class="martixOfProd_Prod_Main oneLineTitle serv_prod"> 
+													Для оперативного решения вопросов по&nbsp;работе с&nbsp;нашими системами организована Единая справочная служба &laquo;Кодекс&raquo;.
+													<br /><br />
+													Позвонив в&nbsp;Единую справочную службу, Вы&nbsp;сможете подать заявку на&nbsp;поиск редкого или архивного документа, 
+													получить консультацию по&nbsp;любым вопросам работы с&nbsp;нашими продуктами, узнать о&nbsp;новинках продуктов и&nbsp;услуг 
+													Консорциума &laquo;Кодекс&raquo;, и&nbsp;заказать их&nbsp;демонстрацию. <br /><br />
+													Единая справочная служба &laquo;Кодекс&raquo;: <br />  тел: 8-800-555-90-25 <span class="eMail">e-mail: hot@kodeks.ru.</span>
+												</span>				
+											</div>
+											<div class="martixOfProd_serv_cont serv_cont_2">
+												<a href="#"class="serv2_Img icon"> 				
+												</a>
+												<a href="#" class="martixOfProd_Title main_prod twoLine"> 
+													Линия профессиональной поддержки <br />
+													&laquo;Задай вопрос эксперту&raquo; (ЛПП) <br />
+												</a>
+												<span class="martixOfProd_Prod_Main serv_prod twoLineTitle"> 
+													Это возможность получить индивидуальную консультацию по&nbsp;вопросам, возникающим в&nbsp;
+													Вашей профессиональной деятельности.<br /><br />
+													Для того чтобы задать вопрос эксперту необходимо нажать 
+													на&nbsp;баннер &laquo;Задай вопрос эксперту&raquo;, который размещен на&nbsp;Главной странице 
+													системы, а&nbsp;также
+													в&nbsp;продукте. Вашему вниманию откроется форма запроса, которую нужно заполнить, вписать текст вопроса 
+													и&nbsp;нажать &laquo;Отправить&raquo;. Подробнее 
+													о&nbsp;возможностях Линии профессиональной поддержки&nbsp;Вы можете прочитать
+													в&nbsp;разделе &laquo;Правила услуги&raquo;.
+												</span>				
+											</div>
+											<div class="martixOfProd_serv_cont serv_cont_3 text_2Line_serv_12">
+												<a href="#" class="serv3_Img icon"> 				
+												</a>
+												<a href="#" class="martixOfProd_Title main_prod oneLine"> 
+													Зарубежные и&nbsp;международные стандарты<br />
+												</a>
+												<span class="martixOfProd_Prod_Main serv_prod oneLineTitle"> 
+													Мы&nbsp;предоставляем стандарты более чем 450 разработчиков со&nbsp;всего 
+													мира ISO, BSI, DIN, ASTM, API и&nbsp;т.д.) для предприятий, 
+													экспортирующих продукцию, приводящих производственные
+													и&nbsp;бизнес-процессы в&nbsp;соответствие с&nbsp;требованиями других стран 
+													и&nbsp;международных организаций.
+													<br /><br />
+													В&nbsp;Интернет-магазине shop.cntd.ru Вы&nbsp;можете получить подробную информацию
+													об&nbsp;интересующем Вас документе, заказать его текст 
+													на&nbsp;языке оригинала или на&nbsp;русском языке.
+												</span>				
+											</div>
+											<div class="martixOfProd_serv_cont serv_cont_4 text_2Line_serv_12">
+												<a href="#" class="serv4_Img icon"> 				
+												</a>
+												<a href="#" class="martixOfProd_Title main_prod oneLine"> 
+													Официальный портал &laquo;Техэксперт&raquo;<br />
+												</a>
+												<span class="martixOfProd_Prod_Main serv_prod oneLineTitle"> 
+													Работать с&nbsp;актуальными нормативно-техническими документами  on-line, всегда быть в&nbsp;курсе 
+													изменений в&nbsp;сфере технического регулирования и&nbsp;стандартизации в&nbsp;России, делиться 
+													мнениями о&nbsp;ходе реформы техрегулирования позволяет 
+													портал &laquo;Техэксперт&raquo;&nbsp;&mdash; WWW.CNTD.RU. <br /><br />
+													Пользователям портала доступны ленты новостей технического регулирования, промышленной 
+													политики и&nbsp;строительства, материалы конференций и&nbsp;семинаров и&nbsp;планы ближайших 
+													мероприятий по&nbsp;актуальным проблемам. <br /><br />
+													Пользователям портала бесплатно доступен фонд ВСЕХ национальных стандартов (ГОСТов). 
+													На&nbsp;портале открыт свободный доступ к&nbsp;документам и&nbsp;информации Европейской 
+													экономический комиссии ООН и&nbsp;электронной системе &laquo;Реформа технического 
+													регулирования&raquo;, включающей все технические регламенты, проекты техрегламентов и&nbsp;национальных 
+													стандартов.
+												</span>				
+											</div>
+										</div>
+										<div class="martixOfProd_serv_menu serv3_menu collapse">				
+											<a href="#" class="martixOfProd_menu_Close" title="Закрыть">	
+											</a>				
+											<div class="martixOfProd_serv_cont serv_cont_1">
+												<a href="#" class="serv1_Img icon"> 				
+												</a>
+												<a href="#" class="martixOfProd_Title main_prod twoLine"> 
+													Электронная система &laquo;Реформа технического регулирования&raquo;<br />
+												</a>
+												<span class="martixOfProd_Prod_Main serv_prod twoLineTitle"> 
+													Электронная система &laquo;Реформа технического регулирования&raquo;&nbsp;&mdash; уникальная система, для специалистов, в&nbsp;которой аккумулируется и&nbsp;постоянно обновляется информация по&nbsp;реформе технического регулирования на&nbsp;уровне ЕврАзЭС, Таможенного союза и&nbsp;Российской Федерации&nbsp;&mdash; проекты и&nbsp;все утвержденные техрегламенты, &laquo;доказательная база&raquo; (перечни ГОСТов), указатель стандартов России.
+												</span>				
+											</div>
+											<div class="martixOfProd_serv_cont serv_cont_2">
+												<a href="#"class="serv2_Img icon"> 				
+												</a>
+												<a href="#" class="martixOfProd_Title main_prod oneLine"> 
+													Информационный бюллетень Техэксперт <br />
+												</a>
+												<span class="martixOfProd_Prod_Main serv_prod oneLineTitle"> 
+													Информационный бюллетень Техэксперт (до&nbsp;января 2013 года&nbsp;&mdash; Информационный бюллетень ЦНТД)&nbsp;&mdash; это имиджевое информационно-аналитическое издание сети &laquo;Техэксперт&raquo;, направленное на&nbsp;освещение хода проведения реформы технического регулирования для специалиста, работающего с&nbsp;нормами, правилами, стандартами.
+												</span>				
+											</div>
+											<div class="martixOfProd_serv_cont serv_cont_3 text_2Line_serv_13">
+												<a href="#" class="serv3_Img icon"> 				
+												</a>
+												<a href="#" class="martixOfProd_Title main_prod oneLine"> 
+													Веб-ресурсы: www.cntd.ru, www.club-reach.ru<br />
+												</a>
+												<span class="martixOfProd_Prod_Main serv_prod oneLineTitle"> 
+													Веб-ресурсы: www.cntd.ru, www.club-reach.ru
+												</span>				
+											</div>
+											<div class="martixOfProd_serv_cont serv_cont_4 text_2Line_serv_13">
+												<a href="#" class="serv4_Img icon"> 				
+												</a>
+												<a href="#" class="martixOfProd_Title main_prod oneLine"> 
+													Зарубежные и международные стандарты<br />
+												</a>
+												<span class="martixOfProd_Prod_Main serv_prod oneLineTitle"> 
+													Мы&nbsp;представляем широкий выбор международных и&nbsp;зарубежных стандартов, использование которых позволяет повысить качество продукции и&nbsp;услуг, привести производственные и&nbsp;бизнес-процессы в&nbsp;соответствие с&nbsp;требованиями других стран и&nbsp;международных организаций, являясь официальным партнером компании IHS inc., признанного лидера в&nbsp;области распространения мирового рынка предоставления технических данных и&nbsp;информационных интегрированных решений по&nbsp;стандартам, регулирующей информации, баз данных по&nbsp;запасным частям и&nbsp;компонентам, руководств по&nbsp;проектированию и&nbsp;другой технической информации.
+												</span>				
+											</div>
+										</div>
+										<div class="martixOfProd_serv_menu serv4_menu collapse">				
+											<a href="#" class="martixOfProd_menu_Close" title="Закрыть">	
+											</a>				
+											<div class="martixOfProd_serv_cont serv_cont_1">
+												<a href="#" class="serv1_Img icon"> 				
+												</a>
+												<a href="#" class="martixOfProd_Title main_prod oneLine"> 
+													Права на&nbsp;использование систем<br />
+												</a>
+												<span class="martixOfProd_Prod_Main serv_prod oneLineTitle"> 
+													ИСС охраняются в&nbsp;соответствии с&nbsp;международными договорами и&nbsp;законодательством Российской Федерации об&nbsp;авторском праве и&nbsp;защите информации. Ничто в&nbsp;договоре на&nbsp;приобретение экземпляров ИСС не&nbsp;должно толковаться как передача Пользователю каких-либо имущественных прав на&nbsp;ИСС и&nbsp;содержащиеся в&nbsp;них материалы (информационные ресурсы), если это прямо не&nbsp;указано в&nbsp;тексте договора или иного письменного соглашения Пользователя и&nbsp;изготовителя (правообладателя) или уполномоченного им&nbsp;лица.
+												</span>				
+											</div>
+											<div class="martixOfProd_serv_cont serv_cont_2">
+												<a href="#"class="serv2_Img icon"> 				
+												</a>
+												<a href="#" class="martixOfProd_Title main_prod oneLine"> 
+													Обновление систем <br />
+												</a>
+												<span class="martixOfProd_Prod_Main serv_prod oneLineTitle"> 
+													Обновление&nbsp;&mdash; это операция, позволяющая поддерживать базу данных, установленную на&nbsp;Вашем компьютере, в&nbsp;актуальном состоянии. Обновление обеспечивает передачу в&nbsp;Вашу базу данных всех изменений, произведенных в&nbsp;эталонной базе данных со&nbsp;времени последнего обновления. 
+														<br />
+													Обновление базы данных &laquo;Кодекс&raquo; производится с&nbsp;помощью специальных файлов, именуемых &laquo;пакетами обновления&raquo;. Вы&nbsp;можете выбрать наиболее удобный способ получения пакетов обновления: обычной почтой или с&nbsp;курьером (например, на&nbsp;компакт-диске); по&nbsp;электронной почте; по&nbsp;сети Internet, с&nbsp;FTP или WWW-серверов &laquo;Кодекс&raquo;.
+												</span>				
+											</div>
+											<div class="martixOfProd_serv_cont serv_cont_3 text_2Line_serv">
+												<a href="#" class="serv3_Img icon"> 				
+												</a>
+												<a href="#" class="martixOfProd_Title main_prod twoLine"> 
+													Рекомендации по&nbsp;бухгалтерскому и&nbsp;налоговому учету ИПС &laquo;Кодекс&raquo; и&nbsp;&laquo;Техэксперт&raquo;<br />
+												</a>
+												<span class="martixOfProd_Prod_Main serv_prod twoLineTitle"> 
+													Предлагаем Вашему вниманию рекомендации по&nbsp;бухгалтерскому и&nbsp;налоговому учету расходов на&nbsp;приобретение и&nbsp;обслуживание систем &laquo;Кодекс&raquo; и&nbsp;&laquo;Техэксперт&raquo;, подготовленные экспертами Консорциума &laquo;Кодекс&raquo;. Рекомендации ориентированы на&nbsp;коммерческие организации, применяющие общую систему налогообложения.
+												</span>				
+											</div>					
+										</div>
+									</div>
+								</div>
+							</div> 
+
+						</div>
+					</div>
+					<div class="cornerBottom">
+						<span class="left"></span>
+						<span class="right"></span>
+						<div></div>
+					</div>
+				</div>
+			</div>
+			
+			<div id="waitDialog" style="display: none;">
+				<span class="closeBookmarkDialog returnWaitDialog" title="Закрыть окно"></span>
+				<h1>Не удаётся завершить операцию</h1>
+				<p>
+					Скорее всего, это вызвано неполадками сети или временными проблемами на сервере.
+				</p>
+				<p>
+					Можно попробовать <a href="#" class="hideWaitDialog">продолжить ожидание</a> или <a href="#" class="returnWaitDialog">вернуться назад</a>.
+				</p>
+				<div id="waitDialogClose">
+					<span class="button yellow"> 
+						<span type="button" class="returnWaitDialog">Закрыть</span>
+					</span>
+				</div>
+			</div>
+
+			<div id="ui-datepicker-div" class="ui-datepicker ui-widget ui-widget-content ui-helper-clearfix ui-corner-all ui-helper-hidden-accessible"></div>
+			<div id="dialog" class="" style="display: none; height: 541px; min-height: 101px; width: auto;"></div>
+		</div>
+	</body>
+</html>

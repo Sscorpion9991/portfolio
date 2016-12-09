@@ -1,0 +1,98 @@
+#workspace .document external{
+	color: #0000AA;
+	border-bottom:1px dashed #0000AA;
+	cursor: pointer;
+}
+#workspace .document external:hover{
+	border-bottom:1px dashed #FF0000;
+	color: #FF0000
+}
+.docInfo {
+	background: #D42C2C;
+	font-size: 12px;
+	text-align: center;
+	color: #ffffff;
+	line-height:25px;
+}
+#workspace .tabBody.text ,
+#workspace .tabBody.searchTabBody{
+	-moz-box-sizing:border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing:border-box;
+	-ms-box-sizing: border-box;
+	behavior: url('boxsizing.htc');
+	-moz-user-select: text;
+	-khtml-user-select: text;
+	-webkit-user-select: text;
+	user-select: text;
+}
+#workspace .tabBody.clearText span.comment{
+	display: none;
+}
+#icons span, #icons span a{
+	-moz-user-select: none;
+	-khtml-user-select: none;
+	-webkit-user-select: none;
+	user-select: none;
+}
+.waitDjvuImage{
+	border: 1px solid #EAEAEA;
+	border-radius: 2px;
+	padding: 4px 8px 4px 16px;
+	background-color: white;
+	background-image: url(../images/spinner_l.gif);
+	background-position: 8px 5px;
+	color: grey;
+	background-repeat: no-repeat;
+	cursor: default !important;
+	padding-left: 32px !important;
+    /*white-space: nowrap;
+	float:left;*/
+	display:none;
+    position: absolute;
+	z-index: 100;
+	right: 44%;
+    top: 64px;
+	-moz-box-shadow:2px 2px 5px #555555;
+	box-shadow:2px 2px 5px #555555;
+  	-webkit-box-shadow:2px 2px 5px #555555;
+}
+.panelDjvu .fullDjvuBt{
+	background-image: url(../images/fullDjvuBt.png);
+	width: 214px;
+	height: 32px;
+	background-repeat: no-repeat;
+	float: left;
+	margin-top: -4px;
+}
+.panelDjvu .fullDjvuBt:hover{
+	background-position: 0px -32px;
+}
+.panelDjvu .fullDjvuBt:active{
+	background-position: 0px -64px;
+}
+
+.panelDjvu.miniPanel .fullDjvuBt, .narrow .panelDjvu .fullDjvuBt, .panelDjvu.mediumPanel .fullDjvuBt{
+    background-image: url(../images/fullDjvuBt_mini.png);
+    width: 40px;
+}
+/*div.scrollBlock div#emblem {
+	height: 68px;
+	width: 68px;
+	background-image: url(../images/gerbs_all.png);
+	background-repeat: no-repeat;
+	background-position: 0px 0px;	
+	margin-left: auto;
+    margin-right: auto;
+	margin-top: 20px;
+	
+}
+div.scrollBlock div#emblem.MskEmbl {
+	background-position: 0px -400px;
+}
+div.scrollBlock div#emblem.SpbEmbl {
+	background-position: 0px -200px;
+}
+div.scrollBlock div#emblem.FedEmbl {
+	background-position: 0px 0px;
+}*/

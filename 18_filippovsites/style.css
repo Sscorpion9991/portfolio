@@ -1,0 +1,584 @@
+/* style.css */
+
+html,
+body,
+.cover {
+    height: 100%;
+    font-size: 18px;
+}
+html,
+body,
+{
+    min-width: 300px;
+}
+
+#page-preloader {
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background: #000;
+    z-index: 100500;
+}
+
+#page-preloader .spinner {
+    width: 120px;
+    height: 120px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    background: url('img/loader.gif') center center no-repeat;
+    margin: -60px;
+}
+
+.cover {
+    background: url('img/bg.jpg') center right no-repeat;
+    background-size: cover;
+    display: table;
+    width: 100%;
+    padding: 0 20%;
+    box-shadow: inset 0 0 100px #000;
+}
+
+nav.navbar-inverse {
+    background: rgba(34, 34, 34, 0.7);
+    border: none;
+    padding: 15px 0;
+}
+
+.navbar-brand:link,
+.navbar-brand:visited,
+.navbar-brand:hover,
+.navbar-brand:active {
+    font-size: 28px;
+    font-family: Pristina, serif;
+    color: white;
+}
+
+.nav li:visited,
+.nav li:hover,
+.nav li:active {
+    border-bottom: solid 1px white;
+}
+
+.cover-text-middle {
+    text-align: center;
+    color: white;
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.cover-text-bottom {
+    text-align: center;
+    color: white;
+    display: table-footer-group;
+}
+
+.cover h1 {
+    font-family: Formata, Helvetica, sans-serif;
+    font-weight: 400;
+    font-size: 45px;
+    text-transform: uppercase;
+}
+
+.cover p {
+    font-size: 22px;
+    padding-top: 1em;
+    line-height: 1.3em;
+    margin-bottom: 2em;
+    font-weight: light;
+}
+
+.btn {
+    text-transform: uppercase;
+}
+
+.language {
+    position: relative;
+    margin-top: -55px;
+    margin-left: 5px;
+}
+
+.main-container {
+    width: 100%;
+    padding: 0 20%;
+}
+
+.btn-default {
+    background: none;
+    color: white;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -o-border-radius: 20px;
+    border-radius: 20px;
+}
+
+.btn-default:link {
+    background: none;
+    color: white;
+}
+
+.btn-default:visited {
+    background: none;
+    color: white;
+}
+
+.btn-default:hover {
+    background: white;
+    color: #111;
+}
+
+.btn-default:active {
+    background: white;
+    color: black;
+    position: relative;
+    top: 1px;
+}
+
+.cover .glyphicon {
+    position: relative;
+    top: 0;
+}
+
+
+/* About
+Section */
+
+section {
+    padding: 80px 0;
+}
+
+.about-photo {
+    padding: 0;
+    margin: 0;
+}
+
+#about .row h1 {
+    font-family: Times, sans-serif;
+    font-weight: bold;
+    font-size: 50px;
+    text-transform: uppercase;
+    padding: 0 30px;
+    padding-bottom: 30px;
+    margin-top: 100px;
+    color: #222329;
+}
+
+#about .row p {
+    padding-left: 30px;
+    color: #A8A8A8;
+    font-style: italic;
+    font-family: Times, sans-serif;
+    font-size: 20px;
+    text-align: justify;
+}
+
+#button_about {
+    padding-left: 30px;
+    padding-top: 50px;
+}
+
+.btn-inverse {
+    color: black;
+    border: solid 1px #111;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -o-border-radius: 20px;
+    border-radius: 20px;
+}
+
+.btn-inverse:link {
+    background: none;
+    color: #111;
+}
+
+.btn-inverse:visited {
+    background: none;
+    color: #111;
+}
+
+.btn-inverse:hover {
+    background: #333;
+    color: white;
+}
+
+.btn-inverse:active {
+    background: white;
+    color: #333;
+    position: relative;
+    top: 1px;
+}
+
+
+/*Next section 
+quote */
+
+.testimonial {
+    background: #222;
+}
+
+blockquote {
+    border: none;
+    margin: 0;
+    font-family: Georgia, Times, serif;
+    font-style: italic;
+    font-size: 32px;
+    color: white;
+}
+
+blockquote cite {
+    display: block;
+    text-align: right;
+    text-transform: uppercase;
+    font-family: Helvetica, Arial, sans-serif;
+    font-style: normal;
+    font-size: 18px;
+    font-weight: bold;
+    color: #888;
+    margin-top: 40px;
+}
+
+
+/*Phases section*/
+
+.cover-phases {
+    background: url('img/phases.jpg') center center no-repeat;
+    background-size: cover;
+    height: 500px;
+    width: 100%;
+    position: relative;
+    margin-top: -80px;
+    margin-bottom: 80px;
+}
+
+#phases {
+    width: 100%;
+    position: relative;
+    margin-bottom: -30px;
+}
+
+#phases .row h1 {
+    font-family: Times, serif;
+    font-weight: bold;
+    font-size: 50px;
+    text-transform: uppercase;
+    padding-bottom: 50px;
+    color: #222329;
+}
+
+.phase-icons {
+    font-size: 40px;
+}
+
+.caption h3 {
+    font-family: Georgia, Times, serif;
+    font-size: 20px;
+    padding-bottom: 10px;
+    color: #222329;
+    position: relative;
+    margin-top: 5px;
+}
+
+.caption p {
+    color: #777;
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 16px;
+}
+
+.thumbnail {
+    background: rgba(255, 255, 255, 0.0);
+    height: 250px;
+    border: none;
+}
+
+
+/*Portfoilio*/
+
+#portfolio h1 {
+    font-family: Times, serif;
+    font-weight: bold;
+    font-size: 50px;
+    text-transform: uppercase;
+    padding-bottom: 50px;
+    color: #222329;
+}
+
+.carousel-caption {
+    background: rgba(150, 150, 150, 0.7);
+    padding: 0 0 30px;
+    display: none;
+}
+
+.carousel-caption p {
+    font-size: 16px;
+}
+
+.item a {
+    color: white;
+    text-decoration: none;
+}
+
+.callme {
+    padding-bottom: 50px;
+    text-align: center;
+}
+
+.carousel {
+    margin-bottom: 60px;
+}
+
+#feedback {
+    background: url('img/fan.jpg') top left no-repeat;
+    background-size: cover;
+    color: white;
+    text-align: center;
+    margin-top: -60px;
+}
+
+#feedback h2 {
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin: 0 0 60px;
+}
+
+#feedback h4 {
+    margin: 15px 0 10px;
+}
+
+#feedback a.a-more {
+    color: #ccc;
+    text-decoration: none;
+    cursor: pointer;
+    font-weight: 400;
+    font-style: italic;
+}
+
+/*Contact*/
+
+#contact {
+    background: url('img/bg_contact.jpg') bottom center no-repeat;
+    background-size: cover;
+}
+
+#contact h1 {
+    font-family: Times, serif;
+    font-weight: bold;
+    font-size: 50px;
+    text-transform: uppercase;
+    padding-bottom: 30px;
+    color: #222329;
+}
+
+#contact h2 {
+    font-family: sans-serif;
+    font-weight: bold;
+    font-size: 30px;
+    line-height: 1.3em;
+    padding-bottom: 40px;
+    color: #222329;
+}
+
+#social {
+    padding-bottom: 80px;
+}
+
+#social a {
+    padding: 5px;
+}
+
+#social a:active {
+    position: relative;
+    top: 1px;
+}
+
+#contact .lead {
+    font-style: italic;
+    margin-bottom: 60px;
+}
+
+#contact .arrow-up {
+    margin-bottom: -100px;
+}
+
+#contact form {
+    text-align: left;
+    width: 70%;
+    margin: 0 auto;
+}
+
+#contact form input,
+#contact form textarea {
+    font-size: 14px;
+    text-transform: uppercase;
+    resize: none;
+}
+
+.form-group {
+    margin-top: 20px;
+}
+
+
+/*Footer*/
+
+footer {
+    background: #333;
+    padding: 60px 0 30px;
+    color: white;
+}
+
+footer a:link,
+footer a:visited,
+footer a:hover,
+footer a:active {
+    color: white;
+    text-decoration: none;
+}
+
+footer .p-together {
+    margin-bottom: 0;
+}
+
+footer .small {
+    margin-top: 30px;
+}
+
+.footer-btn {
+    margin-bottom: 55px;
+}
+
+.copyright {
+    display: block;
+}
+
+
+/* Media Queries */
+
+@media only screen and (max-width: 320px) {
+    .cover {
+        padding: 10%;
+    }
+    #about .btn-inverse {
+        font-size: 9.3px !important;
+        padding: 8px !important;
+    }
+    cite,
+    blockquote {
+        font-size: 14px!important;
+    }
+    
+    #contact p.lead {
+        font-size: 14px !important;
+    }
+}
+
+@media only screen and (max-width: 568px) {
+    .main-container,
+    .cover {
+        padding: 10%;
+    }
+    .cover h1 {
+        font-size: 35px;
+    }
+    .cover p {
+        font-size: 18px;
+    }
+    .nav li:visited,
+    .nav li:hover,
+    .nav li:active {
+        border-bottom: none;
+    }
+    .language {
+        margin-left: 0;
+    }
+    .pull-right {
+        position: relative;
+        left: 15px;
+    }
+    /*    About*/
+    #about .row h1 {
+        font-size: 35px;
+        padding: 0;
+        margin: 50px 0 20px;
+    }
+    #about .row p {
+        font-size: 18px;
+        padding: 0;
+    }
+    #button_about {
+        padding: 0;
+        display: block;
+        margin-top: 20px;
+        margin-right: 10px;
+    }
+    #about .btn-inverse {
+        font-size: 11px;
+        padding: 10px;
+    }
+    .thumbnail {
+        height: 200px;
+    }
+    /*    Phases*/
+    #phases .row h1 {
+        font-size: 35px;
+        padding: 0;
+        margin: 0 0 50px;
+    }
+    #phases .row p {
+        font-size: 18px;
+        padding: 0;
+    }
+    cite,
+    blockquote {
+        font-size: 18px;
+    }
+    /*    Portfolio*/
+    #portfolio h1 {
+        font-size: 35px;
+        padding: 0;
+        margin: 0 0 50px;
+    }
+    #feedback p {
+        font-size: 14px;
+        padding: 0;
+    }
+    /*    Contact*/
+    #contact h1 {
+        font-size: 35px;
+        padding: 0;
+        margin: 0 0 50px;
+    }
+    #contact h2 {
+        font-size: 20px;
+    }
+    #contact form {
+        width: 90%;
+    }
+    #contact form input,
+    #contact form textarea {
+        font-size: 12px;
+    }
+    #contact #social a img{     
+        width: 30px;
+        height: 30px;
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    footer .p-together {
+        margin-top: 0;
+        font-size: 14px;
+        text-align: center;
+    }
+    blockquote {
+        font-size: 20px;
+    }
+    #contact p.lead {
+        font-size: 18px;
+    }
+}
+
+
+}

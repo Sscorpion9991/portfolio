@@ -1,0 +1,1055 @@
+﻿/***********************************************************************/
+/*                      Common layout version 3.5                      */
+/*                            DO NOT modify                            */
+/***********************************************************************/
+
+/*-----------------------------------------------------------
+
+Содержание:
+
+1. Общее
+   1.1. .scroller
+   1.2. .cleared
+   1.3. Выравнивание по центру родительского блока для спиннера
+   1.4. .dropdown
+2. Структура страницы
+   2.1. Навигационная панель (#header)
+        2.1.1. Навигационное меню (.Menu)
+        2.1.2. Область поиска
+        2.1.3. Выпадающие окна навигационной панели
+		       2.1.3.1. Навигация по истории (.History_Back, .History_Forward)
+			   2.1.3.2. Результаты быстрого интеллектуального поиска (.ISearch_QuickResults)
+			   2.1.3.3. Подсказка по интеллектуальному поиску (.ISearch_Tip)
+   2.2. Информационная область (#article)
+        2.2.1. Боковая панель (#aside)
+        2.2.2. Область контента (#section)
+   2.3. Подвал (#footer)
+   2.4. Модальные окна (#modal)
+
+------------------------------------------------------------*/
+
+/*-----------------------------------------------------------
+1. Общее
+------------------------------------------------------------*/
+
+body
+{
+   position: absolute;
+   width: 100%;
+   height: 100%;
+   min-width: 600px;
+   overflow: auto;
+   background: #ededed;
+   _overflow-y: hidden;
+}
+
+
+
+	/*
+	   1.1. .scroller
+	   Общий макет для блочной реализации конструкции "шапка-скроллируемая область-футер",
+	   шапка и футер фиксированной высоты (40px по умолчанию).
+	*/
+
+.scroller,
+.scroller_header,
+.scroller_footer
+{
+   -moz-box-sizing: border-box;
+   -webkit-box-sizing: border-box;
+   -ms-box-sizing: border-box;
+   box-sizing: border-box;
+}
+
+.scroller { width: 100%; height: 100%; padding: 40px 0 40px 0; position: relative; right: 0; left: 0; }
+	.scroller_section { width: 100%; height: 100%; }
+	.scroller_header, .scroller_footer { position: absolute; _width: 100%; right: 0; left: 0; height: 40px; }
+	.scroller_header { margin-top: -40px; }
+
+
+
+	/*
+	   1.2. .cleared
+	   Правильный clear для блоков, содержащих float'нутые элементы
+	*/
+
+.cleared:after
+{
+   content: ".";
+   display: block;
+   height: 0;
+   clear: both;
+   visibility: hidden;
+}
+
+* html .cleared
+{
+   display: inline-block;
+   height: 1%;
+}
+
+
+
+	/*
+	   1.3. Выравнивание по центру родительского блока для спиннера
+	*/
+
+#section_Content .content_wrapper,
+#section_Document .content_wrapper,
+#content_SearchForm .content_wrapper,
+#xxxcontent_SearchForm2 .content_wrapper,
+#content_SearchList .content_wrapper,
+#section_UserData .content_wrapper
+{ _height: 100% !important; }
+
+.spinner_wrapper { display: none; text-align: center; width: 100%; height: 99%; }
+	.spinner_wrapper .valign_middle { display: table-cell; vertical-align: middle; width: 100%; height: 100%; _display: inline; _height: auto; }
+	.spinner_wrapper .ie { display: none; _display: inline; width: 1px; margin-left: -1px; vertical-align: middle; height: 100%; }
+		.spinner_wrapper .normal { display: block; }
+		.spinner_wrapper .long, .spinner_wrapper .failed { display: none; }
+		.spinner_wrapper .strict_search { display: none; }
+			.spinner_wrapper img { vertical-align: middle; }
+			.spinner_wrapper .info { font-size: .75em; line-height: 1.2em; }
+			.spinner_wrapper h2, .spinner_wrapper h4 { margin-bottom: 1em; }
+			.spinner_wrapper a { text-decoration: underline; }
+
+/* секция загружается */
+.loading .spinner_wrapper { display: table; _display: block; }
+.loading .Buttons3 { display: none; }
+/* контент загружается */
+.content_wrapper.loading { height: 100%; padding: 0 !important; }
+/* контент загружается долго */
+.content_wrapper.loading.long .normal { display: none; }
+.content_wrapper.loading.long .long { display: block; }
+/* контент так и не загрузился */
+.content_wrapper.loading.failed .normal { display: none; }
+.content_wrapper.loading.failed .failed { display: block; }
+
+/* ничего не найдено */
+.softSearch, .strictSearch, .noDBs { color: #555; }
+.softSearch, .strictSearch { background: url('../images/pic_large_search.png') no-repeat center top; padding-top: 160px; }
+.softSearch { display: block; }
+.strictSearch, .noDBs { display: none; }
+/* ничего не найдено при строгом поиске */
+.content_wrapper.foundNothing_Strict .softSearch,
+.content_wrapper.foundNothing_Strict .noDBs { display: none; }
+.content_wrapper.foundNothing_Strict .strictSearch { display: block; }
+/* ничего не найдено потому что нет подключенных баз */
+.content_wrapper.foundNothing_noDBSs .softSearch,
+.content_wrapper.foundNothing_Strict .strictSearch { display: none; }
+.content_wrapper.foundNothing_noDBs .noDBs { display: block; }
+
+
+/* Информационное сообщение, которое показывается в случае отсутствия документа */
+.document404 {
+   color: #555;
+   padding: 0 50px;
+}
+	.document404 h4 {
+	   background: url('../images/pic_large_404.png') no-repeat center top;
+	   padding-top: 160px;
+	}
+
+	.document404 p { margin-bottom: .7em; }
+
+
+
+
+/*-----------------------------------------------------------
+2. Структура страницы
+------------------------------------------------------------*/
+
+#NoJS { padding: 20px; font-size: 0.875em; display: none; }
+.copyright { margin-top: 4em; }
+
+#Preloader_Server { padding: 20px; font-size: 0.875em; display: none; }
+	#Preloader_Server .status { margin-top: 3em; }
+		#Preloader_Server .progressbar { background: #f0f0f0;  }
+
+	.progressbar { margin-top: 8px; background: #fff; height: 3px; width: 470px; font-size: 1%; line-height: .1; border: 1px solid #e0e0e0; }
+		.progressbar #loaded { background: #2467b7; height: 3px; width: 0; }
+
+#root { padding: 40px 0 20px 0; display: none; } /* .scroller */
+	#header { height: 40px; background: #0c2254 url('../images/top_bar.png') repeat-x 0 0; } /* .scroller_header */
+	#article { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; -ms-box-sizing: border-box; box-sizing: border-box; padding: 0 5px; background: #ededed; } /* .scroller_section */
+		#aside { width: 30%; float: left; display: none; padding-right: 6px; padding-top: 13px; padding-bottom: 8px; } /* .scroller */
+		#section { width: 100%; float: right; padding-top: 34px; padding-bottom: 8px; background: #fff; } /* .scroller */
+			.pics-and-tabs_wrapper { height: 100% !important; position: relative !important; width: auto !important; left: 0 !important; top: auto !important; font-size: 100% !important; background: none !important; margin: 0 !important; _z-index: 500; }
+				.pics-and-tabs_wrapper .Pics_v3 { display: none; }
+					#section .pics-and-tabs_wrapper .content_wrapper .Tabs_v3 { display: none; }
+	#footer { background: #ededed; height: 20px; font-size: 0.6875em; } /* .scroller_footer */
+
+	#article.Panel_enabled #aside { display: block; }
+	#article.Panel_enabled #section { width: 70%; _width: 69.9%; }
+
+		#resizer { font-size: 1%; position: absolute; right: 0; width: 5px; top: 0; height: 100%; xxxcursor: w-resize; background: #ededed; }
+
+
+/* отсутствует 7474 */
+#root.no7474 { padding-top: 0 !important; }
+	#root.no7474 #header { display: none !important; }
+		#root.no7474 #section { padding-top: 14px !important; }
+			#root.no7474 #section .pics-and-tabs_wrapper { display: none; }
+
+
+/*
+   2.1. Навигационная панель (#header)
+*/
+
+	/*
+	   2.1.1. Навигационное меню (.Menu)
+	*/
+
+ul#Menu
+{
+   position: absolute;
+   top: 0;
+   left: 0;
+   height: 40px;
+   xxxfloat: left;
+   list-style: none;
+}
+
+	ul#Menu li
+	{
+	   float: left;
+	   cursor: pointer;
+	}
+
+		ul#Menu a
+		{
+		   background: url('../images/top_buttons.png') no-repeat;
+		   display: block;
+		   height: 40px;
+		   text-indent: -9999px;
+		}
+
+/*
+ul.Menu li.Back a, ul.Menu li.Back_inactive a { width: 37px; background-position: 0 0; }
+ul.Menu li.Back a:hover { background-position: 0 -40px; }
+ul.Menu li.Back_inactive a { background-position: 0 -80px !important; }
+
+ul.Menu li.Forward a, ul.Menu li.Forward_inactive a { width: 29px; background-position: -37px 0; }
+ul.Menu li.Forward a:hover { background-position: -37px -40px; }
+ul.Menu li.Forward_inactive a { background-position: -37px -80px !important; }
+
+ul.Menu li.BackTo, ul.Menu li.ForwardTo { position: relative; z-index: 20; }
+ul.Menu li.BackTo a, ul.Menu li.ForwardTo a { width: 9px; background-position: -66px 0; }
+ul.Menu li.BackTo a:hover, ul.Menu li.ForwardTo a:hover { background-position: -66px -40px; }
+
+ul.Menu li.Home a { width: 34px; background-position: -75px 0; }
+ul.Menu li.Home a:hover { background-position: -75px -40px; }
+
+ul.Menu li.History a { width: 32px; background-position: -110px 0; }
+ul.Menu li.History a:hover { background-position: -110px -40px; }
+
+ul.Menu li.Folders a { width: 33px; background-position: -141px 0; }
+ul.Menu li.Folders a:hover { background-position: -141px -40px; }
+*/
+
+ul#Menu li#Back a { width: 37px; background-position: 0 -80px; }
+ul#Menu li#Back.active a { background-position: 0 0; }
+ul#Menu li#Back.active a:hover { background-position: 0 -40px; }
+
+ul#Menu li#Forward a { width: 29px; background-position: -37px -80px; }
+ul#Menu li#Forward.active a { background-position: -37px 0; }
+ul#Menu li#Forward.active a:hover { background-position: -37px -40px; }
+
+
+ul#Menu li#BackTo, ul#Menu li#ForwardTo { position: relative; z-index: 20; }
+ul#Menu li#BackTo a, ul#Menu li#ForwardTo a { width: 9px; background-position: -66px 0; }
+ul#Menu li#BackTo.active a:hover, ul#Menu li#ForwardTo.active a:hover { background-position: -66px -40px; }
+
+ul#Menu li#Home a { width: 34px; background-position: -75px 0; }
+ul#Menu li#Home a:hover { background-position: -75px -40px; }
+
+ul#Menu li#History a { width: 32px; background-position: -110px 0; }
+ul#Menu li#History a:hover { background-position: -110px -40px; }
+
+ul#Menu li#Folders a { width: 33px; background-position: -141px 0; }
+ul#Menu li#Folders a:hover { background-position: -141px -40px; }
+
+
+
+	/*
+	   2.1.2. Область поиска
+	*/
+
+#header .search_par,
+	#header .search_pic,
+	#header .search_par .wrapper
+{
+   background: url('../images/top_bar.png') no-repeat;
+}
+
+#header .search_par
+{
+   position: relative;
+   height: 40px;
+   margin: 0 0 0 183px;	/* отступ слева - на ширину навигационного меню */
+   background-repeat: repeat-x;
+   background-position: 0 -40px;
+}
+
+	#header .search_pic
+	{
+	   position: absolute;
+	   top: 0;
+	   left: 0;
+	   width: 161px;
+	   height: 40px;
+	   background-position: 0 -80px;
+	}
+
+	#header .search_par .wrapper
+	{
+	   margin: 0 410px 0 161px;
+	   height: 40px;
+	   background-repeat: repeat-x;
+	   background-position: 0 -160px;
+	   min-width: 5px;
+	}
+
+	* html #header .search_par .wrapper
+	{
+	   display: inline;
+	}
+
+		#header input
+		{
+		   width: 100%;
+		   margin-top: 9px;
+		   border: none;
+		   background: transparent;
+		   float: left;
+		   font-size: 100%;
+		   line-height: 21px;
+		   height: 21px;
+		}
+
+		#header .buttons 
+		{
+		   position: relative;
+		   top: 0;
+		   width: 205px;
+		   height: 40px;
+		   margin-right: -205px;
+		   float: right;
+		}
+
+			#header .ISearch,
+			#header .ASearch,
+			#header .SSearch,
+			#header .Help
+			{
+			   position: absolute;
+			   height: 40px;
+			   cursor: pointer;
+			}
+
+				#header .buttons a
+				{
+				   display: block;
+				   height: 40px;
+				   background: url('../images/top_buttons.png') no-repeat;
+				   text-indent: -9999px;
+				}
+
+				#header .buttons a:active
+				{
+				   background-color: none;
+				}
+
+#header .ISearch,
+#header .ISearch a
+{
+   left: 0;
+   width: 147px;
+}
+#header .ISearch a { background-position: -206px 0; }
+#header .ISearch a:hover { background-position: -206px -40px; }
+
+#header .ASearch,
+#header .ASearch a
+{
+   left: 147px;
+   width: 109px;
+}
+#header .ASearch a { background-position: -354px 0; }
+#header .ASearch a:hover { background-position: -354px -40px; }
+
+#header .SSearch,
+#header .SSearch a
+{
+   left: 256px;
+   width: 118px;
+}
+#header .SSearch a { background-position: -464px 0; }
+#header .SSearch a:hover { background-position: -464px -40px; }
+
+#header .Help,
+#header .Help a
+{
+   left: 374px;
+   width: 31px;
+}
+#header .Help a { background-position: -174px 0; }
+#header .Help a:hover { background-position: -174px -40px; }
+
+
+/*
+Для удаления из интерфейса кнопок "История" и "Папки пользователя"
+блоку с #header нужно добавить класс NoHistoryAndFolders
+*/
+#header.NoHistoryAndFolders .search_par { margin-left: 120px; }
+#header.NoHistoryAndFolders ul#Menu li#History,
+#header.NoHistoryAndFolders ul#Menu li#Folders { display: none; }
+
+
+/*
+для удаления из интерфейса строки интеллектуального поиска
+блоку с классом search_par нужно добавить класс NoISearch
+*/
+
+#header .search_par.NoISearch
+{
+   position: absolute;
+   right: 0;
+   width: 385px;
+   margin: 0;
+}
+
+	#header .search_par.NoISearch .search_pic
+	{
+	   background-position: 0 -120px;
+	}
+
+	#header .search_par.NoISearch .wrapper
+	{
+	   background: none;
+	}
+
+	* html #header .search_par.NoISearch .wrapper
+	{
+	   margin: 0;
+	}
+
+#header .search_par.NoISearch input,
+#header .search_par.NoISearch .ISearch
+{
+   display: none;
+}
+
+#header .search_par.NoISearch .buttons 
+{
+   margin-right: -19px;
+}
+
+* html #header .search_par.NoISearch .buttons
+{
+   margin-right: 100px;
+}
+
+
+
+
+
+
+/*
+   2.2. Информационная область (#article)
+*/
+
+/*
+gr - global rounded
+.gr_t - верхняя часть
+.gr_m - область контента
+.gr_b - нижняя часть
+*/
+
+#aside .gr_t div, #aside .gr_t span,
+#aside .gr_b, #aside .gr_b div, #aside .gr_b span,
+#section .gr_t div, #section .gr_t span,
+#section .gr_b, #section .gr_b div, #section .gr_b span
+{
+   background: #fff url('../images/blocks3_g.png') no-repeat;
+}
+
+
+
+	/*
+	   2.2.1. Боковая панель (#aside)
+	*/
+
+#aside
+{
+   background: #ededed;
+}
+
+	#aside .gr_t
+	{
+	   margin-top: -8px;
+	   height: 8px;
+	   font-size: 1%;
+	   position: relative;
+	}
+
+		#aside .gr_t div
+		{
+		   position: absolute;
+		   bottom: 0;
+		   left: 0;
+		   height: 8px;
+		   width: 100%;
+		   background-position: right 0;
+		}
+
+			#aside .gr_t span
+			{
+			   display: block;
+			   width: 8px;
+			   height: 8px;
+			   background-position: 0 -18px;
+			}
+
+	#aside .gr_m
+	{
+	   -moz-box-sizing: border-box;
+	   -webkit-box-sizing: border-box;
+	   -ms-box-sizing: border-box;
+	   box-sizing: border-box;
+	   padding: 0 5px;
+	   background: #fff;
+	   overflow: hidden;
+	   border-right: 1px solid #888;
+	}
+
+	#aside > .gr_b,
+	#section > .gr_b
+	{									/* В Chrome v2.0.157.1 не показывалась нижняя граница, */
+	   background: #fff !important;		/* пришлось делать так. Когда в Chrome все будет ок, */
+	   border-bottom: 1px solid #888;	/* это правило можно будет безболезненно удалить */
+	}
+
+	#aside .gr_b
+	{
+	   height: 8px;
+	   font-size: 1%;
+	   background-repeat: repeat-x;
+	   background-position: bottom;
+	   padding-right: 5px;
+	   _padding-right: 0;
+	}
+
+		#aside .gr_b div
+		{
+		   position: relative;
+		   bottom: 0;
+		   left: 0;
+		   height: 8px;
+		   background-color: transparent;
+		   background-position: right -10px;
+		}
+
+			#aside .gr_b span
+			{
+			   display: block;
+			   width: 8px;
+			   height: 8px;
+			   background-position: 0 -28px;
+			}
+
+
+
+	/*
+	   2.2.2. Область контента (#section)
+	*/
+
+#section
+{
+   background: #ededed;
+}
+
+	#section .gr_t
+	{
+	   -moz-box-sizing: border-box;
+	   -webkit-box-sizing: border-box;
+	   -ms-box-sizing: border-box;
+	   box-sizing: border-box;
+	   height: 34px;
+	   margin-top: -34px;
+	   padding-bottom: 8px;
+	   background: #ededed;
+	}
+
+		#section .gr_t .bottom
+		{
+		   position: absolute;
+		   top: 100%;
+		   left: 0;
+		   height: 8px;
+		   width: 100%;
+		   margin-top: -8px;
+		   _margin-top: -7px;
+		   font-size: 1%;
+		   background-position: right 0;
+		}
+
+			#section .gr_t span
+			{
+			   display: block;
+			   width: 8px;
+			   height: 8px;
+			   background-position: 0 -18px;
+			}
+
+	#section .gr_m
+	{
+	   -moz-box-sizing: border-box;
+	   -webkit-box-sizing: border-box;
+	   -ms-box-sizing: border-box;
+	   box-sizing: border-box;
+	   padding: 0 5px;
+	   background: #fff;
+	   overflow: hidden;
+	   border-right: 1px solid #888888;
+	}
+
+	#section .gr_b
+	{
+	   height: 8px;
+	   font-size: 1%;
+	   background-repeat: repeat-x;
+	   background-position: bottom;
+	}
+
+		#section .gr_b div
+		{
+		   position: relative;
+		   bottom: 0;
+		   left: 0;
+		   height: 8px;
+		   background-color: transparent;
+		   background-position: right -10px;
+		}
+
+			#section .gr_b span
+			{
+			   display: block;
+			   width: 8px;
+			   height: 8px;
+			   background-position: 0 -28px;
+			}
+
+
+
+
+
+/*
+   2.3. Подвал (#footer)
+*/
+
+#footer { font-size: 0.6875em; }
+
+#footer span
+{
+   height: 20px;
+   line-height: 19px;
+   font-family: Tahoma;
+}
+
+	#footer .Status
+	{
+	   float: left;
+	   margin-left: 5px;
+	   padding-left: 15px;
+	   background-image: url('../images/spinner.gif') !important;
+	   background-repeat: no-repeat;
+	   background-position: left center;
+	}
+
+	#footer .Version
+	{
+	   float: right;
+	   margin-right: 10px;
+	   color: #909090;
+	}
+
+
+
+
+
+/*
+   2.4. Шаблоны выпадающих меню (.dropdown)
+*/
+
+.dropdown
+{
+   display: none;
+	position: absolute;
+	top: 0;
+	left: 0;
+	bottom: auto;
+	z-index: 1000;
+	background: #fff;
+	border: 1px solid #aaa;
+   -webkit-box-shadow: 2px 2px 5px #555;
+   -moz-box-shadow: 2px 2px 5px #555;
+   box-shadow: 2px 2px 5px #555;
+	width: auto;
+	-moz-background-clip:border;
+	-moz-background-inline-policy:continuous;
+	-moz-background-origin:padding;
+}
+
+	#template_navigate_history,
+	#template_isearch_quickresults,
+	#template_isearch_tip,
+	#template_asearch_tip,
+	#template_ssearch_tip,
+	#template_quickresults,
+	#template_annotation,
+	#annotation,
+	#template_params_date,
+	#template_params_string,
+	#template_calendar,
+	#template_calendar_period,
+	#template_sort
+	{
+	   display: none;
+	}
+	
+
+.History_Back,
+.History_Forward
+{
+   top: 21px !important;
+   left: 33px !important;
+   overflow: auto;
+   max-width: 17em;
+   max-height: 25em;
+}
+
+.History_Forward { left: 71px !important; }
+
+		.History_Back .QuickResults a,
+		.History_Forward .QuickResults a
+		{
+		   padding: 2px 5px 5px 5px;
+		}
+
+			.History_Forward .QuickResults a small { padding-bottom: 9px; }
+
+
+#template_navigate_history .QuickResults { _width: 16em; }
+
+.ISearch_QuickResults
+{
+   top: 34px !important;
+   left: 0 !important;
+   width: 100% !important;
+   overflow: hidden;
+   -moz-box-sizing: border-box;
+   -webkit-box-sizing: border-box;
+   -ms-box-sizing: border-box;
+   box-sizing: border-box; 
+   background: none;
+   border: none;
+   -webkit-box-shadow: none;
+   -moz-box-shadow: none;
+   box-shadow: none; 
+   -moz-opacity: 1;
+   opacity: 1; 
+   padding: 0 405px 0 339px;
+	/*
+	   height: 13em;
+	   _height: 12em;
+	*/
+	height: auto;
+}
+
+	.ISearch_QuickResults .wrapper
+	{
+height: auto;
+max-height: 15em;
+	   overflow: auto;
+	   background: #fff;
+	   border: 1px solid #aaa;
+ 	   -webkit-box-shadow: 2px 2px 5px #555;
+	   -moz-box-shadow: 2px 2px 5px #555;
+	   box-shadow: 2px 2px 5px #555;
+	   -moz-opacity: .95;
+	   opacity: 1;
+	}
+
+		.noise
+		{
+		   padding: 5px;
+		   font-size: .8em;
+		   text-align: center;
+		   font-style: italic;
+		   margin: 0;
+		}
+
+.ISearch_Tip,
+.ASearch_Tip,
+.SSearch_Tip {
+   -moz-box-sizing: border-box;
+   -webkit-box-sizing: border-box;
+   -ms-box-sizing: border-box;
+   box-sizing: border-box;
+   padding: 15px;
+   top: 30px !important;
+   right: 335px !important;
+   left: auto !important;
+}
+.ASearch_Tip { right: 200px !important; }
+.SSearch_Tip { right: 100px !important; }
+	#template_isearch_tip,
+	#template_asearch_tip,
+	#template_ssearch_tip {
+	   font-size: .75em;
+	   line-height: 1.3em;
+	   width: 33em !important;
+	   height: 16.5em !important;
+	   overflow: auto;
+	}
+	#template_asearch_tip,
+	#template_ssearch_tip {
+	   width: 30em !important;
+	   height: 15em !important;
+	}
+	#template_ssearch_tip {
+	   height: 13.5em !important;
+	}
+		#template_isearch_tip h3,
+		#template_asearch_tip h3,
+		#template_ssearch_tip h3 {
+		   margin-bottom: 1em;
+		}
+		#template_isearch_tip img,
+		#template_asearch_tip img,
+		#template_ssearch_tip img {
+		   vertical-align: text-bottom;
+		}
+
+
+
+
+#template_annotation,
+#annotation
+{
+   -moz-box-sizing: border-box;
+   -webkit-box-sizing: border-box;
+   -ms-box-sizing: border-box;
+   box-sizing: border-box;
+   position: relative;
+   width: 35em;
+   height: 15em;
+   overflow: auto;
+   padding: 15px;
+}
+
+
+
+
+.NiceInput_QuickResults
+{
+   top: 183px;
+   left: 463px;
+   height: 10em;
+   width: 550px;
+   min-width: 200px;
+   overflow: auto;
+}
+
+	#template_calendar, #template_calendar_period { font-size: 0.75em; }
+		#template_calendar_period .cal_item { float: left; width: 17em; }
+			#template_calendar .calendar_wrapper { padding: .5em; }
+			#template_calendar_period .cal_item p { text-align: center; font-weight: bold; margin: .4em 0 .2em 0; }
+
+
+
+#template_params_date, #template_params_string { white-space: nowrap; }
+#template_params_date ul, #template_params_string ul { width: 7em; }
+
+#template_quickresults { max-height: 10em; overflow: auto; }
+
+
+/* загрузка контента
+
+.dropdown .spinner_wrapper { display: none; }
+.dropdown.loading { height: 40px; overflow: hidden; }
+.dropdown.loading .spinner_wrapper { display: table; _display: block; }
+.dropdown.loading .content_wrapper { display: none; }
+ */
+
+
+
+
+/*
+   2.5. Модальные окна (#modal)
+*/
+
+#modal {
+   xxxdisplay: table;
+   display: none;
+   text-align: center;
+   width: 100%;
+   height: 100%;
+   _height: 99.5%;
+   position: absolute;
+   top: 0;
+   left: 0;
+   background: url('../images/modal_bg.png');
+   _background: url('../images/modal_bg_indexed.png');
+   z-index: 9999;
+   cursor: wait;
+}
+
+	#modal .valign_middle {
+	   display: table-cell;
+	   vertical-align: middle;
+	   width: 100%;
+	   height: 100%;
+	   *display: inline;
+	   *height: auto;
+	   _zoom: 1;
+	}
+
+	#modal .ie {
+	   display: none;
+	   *display: inline;
+	   width: 1px;
+	   margin-left: -1px;
+	   vertical-align: middle;
+	   height: 100%;
+	}
+
+		.modal_window {
+		   display: none;
+		   width: 608px;
+		   height: 450px;
+		   margin: 0 auto;
+		   padding: 5px;
+		   xxxbackground: #fff;
+		   text-align: left;
+		   -moz-box-sizing: border-box;
+		   -webkit-box-sizing: border-box;
+		   -ms-box-sizing: border-box;
+		   box-sizing: border-box;
+		   -moz-border-radius: 10px;
+		   -webkit-border-radius: 10px;
+		   //-webkit-box-shadow: 4px 4px 15px #030813;
+		   //-moz-box-shadow: 4px 4px 15px #030813;
+		   _zoom: 1;
+		   cursor: default;
+		}
+
+		#modal .alert
+		{
+		   display: none;
+		   width: 450px;
+		   height: 250px;
+		   margin: 0 auto;
+		   padding: 20px;
+		   background: #fff;
+		   text-align: left;
+		   -moz-box-sizing: border-box;
+		   -webkit-box-sizing: border-box;
+		   -ms-box-sizing: border-box;
+		   box-sizing: border-box;
+		   -moz-border-radius: 10px;
+		   -webkit-border-radius: 10px;
+		   //-webkit-box-shadow: 4px 4px 15px #030813;
+		   //-moz-box-shadow: 4px 4px 15px #030813;
+		   _zoom: 1;
+		   color: #000 !important;
+		   cursor: default;
+		}
+
+		#alert_ContentNotLoaded {  }
+			#modal h2 { margin: 0 0 1em 0; }
+			#modal .info { font-size: .75em; line-height: 1.2em; }
+		#InfoBox.alert {  }
+			#InfoBox .Buttons3 button { width: 8em; }
+		#template_classificators {
+		   background: #fff;
+		   _overflow: hidden;
+		}
+		#Folders_add {
+		   position: relative;
+		   background: #fff;
+		   _overflow: hidden;
+		   height: 400px;
+		}
+		#Folders_add.Param_enabled { height: 435px; }
+		#template_formula { background: #ededed; }
+		#Settings_window {
+		   position: relative;
+		   background: #fff;
+		   _overflow: hidden;
+		   height: 270px;
+		   width: 457px;
+		}
+
+#modal .modal_spinner { display: none; color: #fff; }
+	#modal .modal_spinner img { vertical-align: middle; }
+#modal.loading .modal_spinner { display: block; }
+#modal.loading .modal_window { display: none !important; }
+
+		.modal_window .pic_Close {
+		   position: absolute;
+		   right: -14px;
+		   top: -14px;
+		   width: 29px;
+		   height: 29px;
+		   background: url('../images/pic_niceclose.png') no-repeat 0 0;
+		   _background: url('../images/pics.png') no-repeat 0 -120px;
+		   _top: 2px;
+		   _right: -10px;
+		}
+
+
+
+/*
+   2.6. Контекстное меню (.ContextMenu)
+*/
+
+.ContextMenu
+{
+   position: absolute;
+   width: 14em;
+   z-index: 99999;
+   display: none;
+   border: 1px solid #aaa;
+   background: #fff;
+   -webkit-box-shadow: 2px 2px 5px #555;
+   -moz-box-shadow: 2px 2px 5px #555;
+   box-shadow: 2px 2px 5px #555;
+   -moz-opacity: .95;
+   opacity: .95;
+   list-style: none;
+}
+
+	.ContextMenu a,
+	.ContextMenu a:visited
+	{
+	   color: #000;
+	   text-decoration: none;
+	   display: block;
+	   width: 100%;
+	   padding: 2px 5px 4px 5px;
+	   -moz-box-sizing: border-box;
+	   -webkit-box-sizing: border-box;
+	   -ms-box-sizing: border-box;
+	   box-sizing: border-box;
+	 }
+
+	.ContextMenu a:hover
+	{
+	   color: #fff;
+	   background: #00c;
+	}
+
+	.ContextMenu .separator { border-top: 1px solid #aaa; }
+

@@ -1,0 +1,6 @@
+#panel.preview .previewBody img{
+	border: 2px solid grey;
+}
+div#header div#prevHistoryList, div#header div#nextHistoryList{
+	border: 1px solid LightSteelBlue;
+}

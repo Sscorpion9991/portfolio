@@ -1,0 +1,8 @@
+@font-face {
+    font-family: 'PFDinTextProRegular';
+    src: url('pfdintextpro-regular.eot');
+    src: url('pfdintextpro-regular.eot') format('embedded-opentype'),
+         url('pfdintextpro-regular.woff') format('woff'),
+         url('pfdintextpro-regular.ttf') format('truetype'),
+         url('pfdintextpro-regular.svg#PFDinTextProRegular') format('svg');
+}

@@ -1,0 +1,397 @@
+.suggest{
+	background-color:white;
+	border:1px solid #DDDDDD;
+	float:left;
+	margin-bottom:-600px;
+	position:relative;
+	z-index:10;
+	margin-top: 20px;
+	display: none;
+	-moz-box-shadow:2px 2px 5px #555555;
+	box-shadow:2px 2px 5px #555555;
+  	-webkit-box-shadow:2px 2px 5px #555555;
+	font-size:15px;
+}
+#aSearch.jurisprudence .value.numberVal .suggest{
+	position:absolute;	
+}
+#dialog .suggest {
+	margin-bottom:-1000px
+}
+.suggest ul{
+	list-style: none;
+}
+.suggest ul li{
+	padding: 2px 10px;
+	cursor:	pointer;
+	font-weight:bolder;
+	text-transform:lowercase;
+}
+.suggest ul li.selected{
+	background-color: #C2D5F5;
+}
+.suggest #endingBrackets {
+	font-weight:normal;
+}
+hr {
+	color:#DDDDDD;
+}
+#search .suggest,
+#indexPage .input .suggest{
+	margin-top: 26px;
+	max-height: 300px;
+	overflow-y: auto;
+	font-family: arial;
+	font-size:16px;
+	position: absolute;
+	z-index: 101;
+}
+#search .suggest{
+	max-height: none;
+	overflow-y: hidden;
+}
+#search .suggest li,
+#indexPage .input .suggest li{
+	font-weight: normal;
+	padding:6px 12px;
+	font-size: 17px;
+	padding-left: 14px; 
+}
+
+#search .suggest li.searchLink,
+#indexPage .input .suggest li.searchLink,
+#indexPage .input .suggest li.searchWord,
+#search .suggest li.searchWord{
+	background-image: url('../images/pic_search.png');
+	background-repeat: no-repeat;
+	padding-left: 36px;
+	background-position: 14px 7px;
+}
+#indexPage .input .suggest li.searchDoc,
+#search .suggest li.searchDoc{
+	background-image: url("../images/list_documents.png");
+	background-position: -3px -2px;
+	background-repeat: no-repeat;
+	min-height: 25px;
+	padding-left: 43px;
+	font-size: 0.9em;
+}
+#indexPage .input .suggest li.searchDoc.chapSearchDoc,
+#search .suggest li.searchDoc.chapSearchDoc{
+	background-image: none;
+	min-height: 10px;
+	padding-left: 50px;
+	color: #1545b7;
+	margin-top: -8px;
+	font-size: 0.9em;
+}
+#indexPage .input .suggest li.searchDoc .refdocattrs,
+#search .suggest li.searchDoc .refdocattrs{
+	color: #5C5C5C;
+	clear: left;
+	display: block;	
+	font-size: 0.9em;
+	font-style: italic;
+}
+#indexPage .input .suggest li.searchDoc .refchapname,
+#search .suggest li.searchDoc .refchapname{
+	clear: left;
+	display: block;	
+	font-size: 0.9em;
+	font-weight: bold;
+}
+#indexPage .input .suggest ul div.searchDocsHeader,
+#search .suggest ul div.searchDocsHeader{
+	border-top: 1px solid #e5e5e5;
+	color: #b7b7b7;
+	padding: 5px 14px;
+	font-size: 0.9em;
+    font-weight: bold;
+}
+#aSearch .above{
+	margin-top: 21px;
+	max-height: 100px;
+	overflow-y: auto;
+}
+.tooltip{
+	background-color: white;
+	position:relative;
+	float: left;
+	padding: 10px;
+	z-index: 100;
+	font-size: 12px;
+	-moz-box-shadow:2px 2px 5px #555555;
+	box-shadow:2px 2px 5px #555555;
+  	-webkit-box-shadow:2px 2px 5px #555555;
+	z-index: 1010;
+	border:1px solid black \0/;
+}
+#iSearchBtn .tooltip{
+}
+#search .tooltip{
+	background-color:infobackground;
+	border:1px solid orange;
+	color:LightSlateGray;
+	font-size:16px;
+	font-weight:bold;
+	margin:4px 0px 0px -4px;
+	padding:10px;
+	text-align:center;
+	width:100%;
+}
+#search .suggest .noise{
+	font-style: italic;
+	font-size:14px;
+	padding:10px;
+	text-align:center;
+}
+
+#header .contextEmpty{
+	border:1px solid #AAAAAA;
+	float:right;
+	margin-right:211px;
+	margin-top:-6px;
+	position:relative;
+	width:400px;	
+	z-index: 1000;
+}
+
+#indexPage .contextEmpty, #indexPage .iSearchWarning{
+	margin-left:-90px;
+	margin-top:6px;
+	padding-left:20px;
+	padding-top:0;
+}
+
+#indexPage .iSearchTd .tooltip {
+	position: absolute;
+	width: 350px;
+}
+
+#indexPage .tight .iSearchTd .tooltip {
+	right: 50px;
+}
+
+#header .iSearchWarning{
+    margin-left: 350px;
+}
+#indexPage  .iSearchWarning{
+	margin-left:-590px;
+	margin-top:7px;
+}
+#header .iSearchWarning, #indexPage  .iSearchWarning{
+    position: absolute;	
+	background-image:url("../images/warning_yellow.png");
+	background-position: 20px 20px;
+	background-repeat: no-repeat;
+	padding-left:70px;
+	padding-bottom: 30px;
+	margin-right: 20px;
+	opacity: 1;
+    width: 450px;
+	-moz-border-radius: 6px;
+	-khtml-border-radius: 6px;
+	-webkit-border-radius: 6px;
+	-moz-box-shadow: 3px 3px 20px #555555;
+	-webkit-box-shadow: 3px 3px 20px #555555;
+	box-shadow: 3px 3px 20px #555555 ;
+
+}
+#header .asearchTooltip {
+	border:1px solid #AAAAAA;
+	float:right;
+	margin-right:79px;
+	margin-top:-10px;
+	position:relative;
+	width:400px;	
+}
+
+#header .ssearchTooltip {
+	border:1px solid #AAAAAA;
+	float:right;
+	margin-right:100px;
+	margin-top:-10px;
+	position:relative;
+	width:400px;	
+}
+
+#header .helpNotFound {
+	border:1px solid #AAAAAA;
+	float:right;
+	margin-right:20px;
+	margin-top:-2px;
+	position:relative;
+	width:300px;	
+}
+
+.iSearchList .tooltip{
+	border:1px solid #AAAAAA;
+	float:right;
+	margin-right:70px;
+	margin-top:12px;
+	margin-left:-420px;
+	max-height:250px;
+	overflow-y:auto;
+	position:absolute;
+	right: 0;
+	width:420px;	
+	-webkit-overflow-scrolling: touch;
+}
+
+.documentNotFound {
+	width: 400px;
+	font-weight: bold;
+	text-align: center;
+	background-color:infobackground;
+	border:1px solid orange;
+	color:LightSlateGray;
+	font-size:16px;
+	margin:4px 0px 0px -4px;
+	padding:10px;
+	text-align:center;
+}
+
+.dateError {
+	width: 400px;
+	font-weight: bold;
+	text-align: center;
+	background-color:infobackground;
+	border:1px solid orange;
+	color:LightSlateGray;
+	font-size:16px;
+	margin:4px 0px 0px -4px;
+	padding:10px;
+	text-align:center;
+	z-index: 1007;
+}
+
+.noResults, .emptySearchResults {
+	margin-top: -62px;
+	background-color: infobackground;
+	border: 1px solid orange;
+	color: LightSlateGray;
+	font-size: 16px;
+	font-weight: bold;
+	padding:10px;
+	text-align:center;
+	width:100%;
+	float: none;
+}
+
+.emptySearchResults {
+	margin-top: -60px;
+	padding:6px;
+}
+
+.noDocument {
+	background-color:infobackground;
+	border:1px solid PaleGoldenRod;
+	color:black;
+	font-size:15px;
+	margin:25px 0 -400px 4px;
+	padding:10px;
+	width: 300px;
+	text-align: left;
+}
+
+div.tree_filter .emptyTreeFilter {
+    width:160px;
+    position:absolute;
+    padding: 0px;
+    left:60px;
+    bottom:30px;
+    border:0;
+	-moz-box-shadow: none;
+	box-shadow: none;
+  	-webkit-box-shadow: none;
+    
+}
+div.tree_filter .emptyTreeFilter .body{
+    height:23px;
+    text-align:center;
+    font-weight:bolder;
+    padding-top:5px;
+    border-radius:5px;
+    -moz-border-radius:5px;
+    -webkit-border-radius:5px;
+    -moz-box-shadow: 3px 3px 6px grey;
+	-webkit-box-shadow: 3px 3px 6px grey;
+	box-shadow: 3px 3px 6px grey ;
+    border: 1px solid lightgrey;
+    background-color:white;
+    cursor:default;
+}
+div.textSearch .textSearchEmpty{
+	width: 441px;
+	position:absolute;
+	left:300px;
+	top:-117px;
+	padding:0;
+	padding: 0px;
+	background-color:transparent;
+	border:0;
+	-moz-box-shadow: none;
+	box-shadow: none;
+  	-webkit-box-shadow: none;
+}
+div.textSearch .textSearchEmpty .body{
+	background-image:url("../images/border.png");
+	background-position:center top;
+	background-repeat:repeat-y;
+	padding: 12px 30px;
+	min-height: 70px;
+}
+div.textSearch .textSearchEmpty .top,{
+	background-image:url("../images/border2.png");
+	background-position:center top;
+	background-repeat:no-repeat;
+	width: 441px;
+	height:13px;
+}
+div.textSearch .textSearchEmpty .bottom{
+	background-image:url("../images/border2.png");
+	background-position:center bottom;
+	background-repeat:no-repeat;
+	width: 441px;
+	height:13px;
+}
+.printDjvuDlg{
+	border:0 none;
+	margin-bottom:-200px;
+	opacity:1;
+	padding:10px 20px;
+	position:absolute;
+	z-index:1000;
+	margin-left: 10px;
+    margin-top: 14px;
+	height: 200px;
+	width: 500px;
+	-moz-border-radius: 6px;
+	-khtml-border-radius: 6px;
+	-webkit-border-radius: 6px;
+	cursor: default;
+	-moz-box-shadow: 3px 3px 20px grey;
+	-webkit-box-shadow: 3px 3px 20px grey;
+	box-shadow: 3px 3px 20px grey ;
+}
+	.printDjvuDlg p {
+	    padding: 5px 10px 5px 2px;
+	    white-space: normal;
+	}
+	.printDjvuDlg .saveDoc, .printDjvuDlg .printPage{
+		float: left;	
+	}
+	.printDjvuDlg .saveDoc{
+		margin-right: 7px;
+		width: 130px;
+		background: url('../images/printDlgButton.png') -173px 0px no-repeat;
+	}
+	.printDjvuDlg .printPage{
+		width: 140px;
+		margin-left: 7px;
+		background: url('../images/printDlgButton.png') 0px 0px no-repeat;
+	}
+	.printDjvuDlg .canselPrint{
+		float: right;
+		background: url('../images/printDlgButton.png') -324px 0px no-repeat;
+	}

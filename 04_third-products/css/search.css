@@ -1,0 +1,591 @@
+#aSearch{
+	padding-left: 15px;	
+	padding-right: 15px;
+	display: none;	
+}
+#aSearch h2.header{	
+	font-size:22px;
+	font-weight:normal;
+	line-height:40px;
+	padding-left:45px;
+}
+
+#aSearch h2.header.asearch{
+	background:transparent url(../images/list_queries.png) no-repeat scroll 0 -850px;
+}
+
+#aSearch h2.header.ssearch{
+	background:transparent url(../images/list_queries.png) no-repeat scroll 0 -1700px;
+}
+
+#aSearch div.searchTabs{
+	padding-top:18px;
+	float: left;
+	width: 280px;
+	margin-bottom:-1000px;
+}
+#aSearch div.searchTabs ul{
+	padding-top: 30px
+}
+#aSearch div.searchTabs ul li{
+	list-style: none;
+	border-color: #C6C6C6;
+	border-width: 0px 1px 0px 0px;
+	border-style:solid;
+	cursor:pointer;
+	padding:4px 10px;
+}
+
+#aSearch div.searchTabs ul li > p{
+	margin-bottom:0;
+}
+
+#aSearch div.searchTabs ul li:hover{
+	background-color: #f0f0f0;
+	border-radius: 8px 0px 0px 8px;
+	-moz-border-radius: 8px 0px 0px 8px;
+	-webkit-border-radius: 8px 0px 0px 8px;
+	-khtml-border-radius: 8px 0px 0px 8px;
+	-opera-border-radius: 8px 0px 0px 8px;
+}
+#aSearch div.searchTabs ul li.active{
+	font-weight:bold;
+	border-color:#C6C6C6 #FFFFFF #C6C6C6 #C6C6C6;
+	border-width: 1px 0px 1px 1px;
+	cursor:default;
+	border-radius: 8px 0px 0px 8px;
+	-moz-border-radius: 8px 0px 0px 8px;
+	-webkit-border-radius: 8px 0px 0px 8px;
+	-khtml-border-radius: 8px 0px 0px 8px;
+	-opera-border-radius: 8px 0px 0px 8px;
+}
+
+
+div.searchTabs ul li p span{
+	font-size:17px;
+	margin: 6px 0px 0px 0px; 
+	float: left;
+}
+div.searchTabs ul li p{
+	background:transparent url(../images/groups_pics.png) no-repeat scroll -500px 0;
+	height:30px;
+	padding-left:40px;
+}
+div.searchTabs ul li p.RegionalLegislation {
+	background-position:0 0;
+	margin-top: 8px;
+}
+div.searchTabs ul li p.RegionalLegislation span{
+	margin-bottom:4px;
+	margin-top:-6px;
+}
+div.searchTabs ul li p.InternationalLegislation {
+	background-position:0 -100px;
+}
+div.searchTabs ul li p.TechnicalLegislation {
+	background-position:0 -200px;
+	margin-top: 8px;
+}
+div.searchTabs ul li p.TechnicalLegislation span{
+	margin-top: 4px;
+	margin-bottom: 7px;
+}
+div.searchTabs ul li.active p.TechnicalLegislation span{
+	margin-bottom: 7px;
+	margin-top: -2px;
+}
+div.searchTabs ul li p.JudgementPractice {
+	background-position:0 -300px;
+}
+div.searchTabs ul li p.RussianLegislation {
+	background-position:0 -400px;
+}
+div.searchTabs ul li p.DigitalPeriodics {
+	background-position:0 -500px;
+}
+div.searchTabs ul li p.AllLegislation {
+	background-position:0 -600px;
+}
+div.searchTabs ul li p.UsefulInformation {
+	background-position:0 -700px;
+}
+div.searchTabs ul li p.CommentsAndConsultations {
+	background-position:0 -800px;
+	margin-top: 6px;
+}
+div.searchTabs ul li p.Correspondence {
+	background-position:0 -1286px;
+	margin-top: 6px;
+}
+div.searchTabs ul li p.CommentsAndConsultations span{
+	margin-bottom: 7px;
+	margin-top: -3px;
+	padding-right: 40px;
+}
+div.searchTabs ul li p.TechnicalDocumentation {
+	background-position:0 -900px;
+}
+div.searchTabs ul li p.ProjectDocumentation {
+	background-position:0 -1391px;
+}
+div.searchTabs ul li p.SamplesAndForms {
+	background-position:0 -1000px;
+	margin-top: 3px;
+}
+div.searchTabs ul li p.SamplesAndForms span {
+	margin-top: 3px;
+}
+div.searchTabs ul li p.TechnicalDescriptions {
+	background-position:0 -1100px;
+}
+div.searchTabs ul li p.forensicAnalyst {
+	background-position:0 -1182px;
+	height: 47px;
+}
+div.searchTabs ul li p.SPbLegislativeAssemblyBills {
+	background-position: 0 -1715px;
+}
+div.searchTabs ul li p.SPLegislativeAssemblySupportMats {
+	background-position: 0 -1601px;
+}
+div.searchTabs.progress ul li p{
+	background:transparent url(../images/spinner_h_white.gif) no-repeat scroll left bottom	;
+}
+
+#aSearch div.searchForm{
+	margin-left: 300px;
+	padding-top: 31px;
+	min-width: 660px;
+}
+#aSearch div.searchForm select{
+	width: 130px;
+}
+#aSearch div.searchForm p.msg{
+	margin-bottom:30px;
+}
+div.searchForm div.infoKinds{
+	margin: 8px 0px;
+	display: none;
+	position:relative;
+}
+div.searchForm div.label{
+	float: left;
+	float:left;
+	font-family:Tahoma,sans-serif;
+	font-size:13px;
+	font-weight:bold;
+	text-align:right;
+	width:200px;
+}
+div.searchForm div.value{
+	margin-left: 200px;
+}
+div.value, div.value_from, div.value_to, div.value_num {
+	background:transparent url(../images/inputs3.png) no-repeat scroll 6px -60px;
+	height:22px;
+	padding-left: 16px;
+	padding-right: 48px;
+}
+
+.classificatorsInputBlur_left {
+	background:url("../images/inputs3.png") no-repeat scroll 6px -180px transparent !important;
+}
+
+.classificatorsInputBlur_right {
+	background:url("../images/inputs3.png") no-repeat scroll -1953px -150px transparent !important;
+}
+
+input.classificatorsInputBlur_middle {
+	background-color:#FFF !important;
+	border-color:#D4D4D4 !important;
+	border-style:solid !important;
+	border-width:1px 0 !important;
+}
+
+div.value_from {
+	padding-right:40px;
+	width:75px;
+	float: left;
+}
+div.value_to {
+	padding-right:40px;
+	width:75px;
+	float: left;
+	display: none;
+}
+div.value_num {
+	padding-right:40px;
+	margin-left: 335px;
+}
+div.active{
+	background:transparent url(../images/inputs3.png) no-repeat scroll 6px -120px;
+}
+div.value input.classificator{
+	cursor: pointer;
+	overflow:hidden;
+}
+div.value input,
+div.value_from input, div.value_to input,
+div.value_num input{
+	text-align: left;
+	padding-left:5px;
+	height:22px;
+	width: 100%;
+	border-style: solid;
+	border-color: #d4d4d4;
+	border-bottom-width: 1px;
+	border-top-width: 1px;
+	border-right-width: 0px;
+	border-left-width: 0px;
+	background-color: #f6f6f6;
+	color:#aaaaaa;
+	font-style:italic;
+	-moz-box-sizing:border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing:border-box;
+	-ms-box-sizing: border-box;
+}
+
+div.active input{
+	border-color: #ffd630;
+	background-color: white;
+	color: black;
+	font-style:normal;
+}
+div.value div.btn,
+div.value_from div.btn, div.value_to div.btn,
+div.value_num div.btn {
+	float: right;
+	background:transparent url(../images/inputs3.png) no-repeat scroll -1953px -30px;
+	height:22px;
+	width: 48px;
+	margin-right: -48px;
+}
+div.active div.btn{
+	background:transparent url(../images/inputs3.png) no-repeat scroll -1953px -90px;
+}
+div.btn span{
+	float:right;
+	height:19px;
+	width:16px;
+	margin: 0px 4px;
+	cursor: pointer;
+}
+
+
+div.active div.btn span.clear{
+	background:transparent url(../images/inputs3.png) no-repeat scroll -3px 0px;
+}
+span.clear{
+	background:transparent url(../images/inputs3.png) no-repeat scroll -23px 0px;
+	cursor: pointer;
+}
+div.btn span.treeFilterSearch{
+	background:transparent url(../images/icons/pics/pic_search.png) no-repeat 0 4px;
+	cursor: pointer;
+}
+div.btn span.treeFilterSearchCancel{
+	background:transparent url(../images/spinner_l.gif) no-repeat 0 4px;
+	cursor: pointer;
+}
+div.btn span.classificator{
+	background:transparent url(../images/inputs3.png) no-repeat scroll -120px -0px;
+}
+div.btn span.datefrom, div.btn span.dateto{
+	background:transparent url(../images/inputs3.png) no-repeat scroll -60px 0;
+}
+span.treeFilterSearch{
+	background:transparent url(../images/inputs3.png) no-repeat scroll -3px 0px;
+	cursor: pointer;
+}
+div.searchForm .send, div.searchForm span.progress{
+	margin-left: 206px;
+}
+.searchForm.NTDCenter .send, div.searchForm.NTDCenter span.progress {
+	margin-left: 220px;
+}
+div.searchForm span.progress{
+	display: none;
+}
+
+div.searchForm span.progress div{
+	float: left;
+	margin: 5px 10px 0px -26px;
+	background:transparent url(../images/asearch.gif) no-repeat scroll 0px 0px;
+	height: 16px;
+	width: 16px;
+	
+	
+}
+.button{
+	border:medium none;
+	cursor:pointer;
+	display:block;
+	float:left;
+	height:25px;
+	margin-right:8px;
+	max-height:25px;
+	overflow:hidden;
+	padding:0 11px 0 0;
+	width:auto;
+	background:transparent url(../images/buttons3_right.png) no-repeat scroll 0 0;
+}
+.button span{
+	cursor: pointer;
+	font-family:Arial;
+	border:medium none;
+	display:block;
+	float:left;
+	font-size:90%;
+	font-weight:bold;
+	height:25px;
+	cursor:pointer;
+	line-height:25px;
+	margin:0;
+	background: url(../images/buttons3.png) no-repeat scroll 0 0;
+}
+.gray{
+	background-position:right -52px;
+	cursor: default;
+}
+.gray span{
+	cursor: default;
+	background-position:left -52px;
+	text-shadow:1px 1px 0 #F5F5F5;
+	color:#808080 !important;
+	padding-left:49px;
+	padding-right:38px;
+}
+.yellow{
+	background-position:right 0;
+}
+.yellow > span{
+	padding-left:49px;
+	padding-right:38px;
+}
+.blue{
+	background-position:right -26px;
+}
+.blue > span{
+	background-position:left -26px;
+	text-shadow:1px 1px 0 #D6DBE8;
+	padding-left:16px;
+	padding-right:4px;
+}
+.aSearch {
+	margin-top:14px;
+}
+#searchList{
+	height: 100%;	
+	display: none;
+	position:relative;
+}
+#searchList .title{
+	padding: 2px 0px 0px 0px;
+}
+#searchList .asearchHeader{
+	float:left;
+	font-size:20px;
+	height:40px;
+	padding:7px 0 0 47px;
+	background: transparent url(../images/list_queries.png) no-repeat scroll 0 -850px
+}
+.buttonReturn{
+	height: 32px;	
+}
+#searchList .return{
+	margin-top:7px;
+	float: right;
+	position:relative;
+}
+.searchTabs ul li span{
+	cursor:pointer;	
+	margin-left: 40px;
+	font-size:12px;
+}
+
+.searchTabs ul li span.result{
+	color: #000099;
+}
+.searchTabs ul li span.empty{
+	color: #808080;
+}
+.searchTabs ul li.active span.result, .searchTabs ul li.active span.empty {
+	font-size:13px;
+}
+.searchTabs ul li span.result:hover{
+	color:#DE0000;
+	text-decoration: underline;	
+}
+div.searchAttrs{
+	border-color:#DDDDDD;
+	border-style:solid;
+	border-width:1px;
+	margin: 0px 0px 4px 0px;
+	padding: 0px;
+}
+div.searchAttrs .head{
+	background-color:#F4F4F4;
+	padding: 7px 7px;
+	border-color:#DDDDDD;
+	border-style:solid;
+	border-width: 0px 0px 1px 0px;
+}
+div.searchAttrs .attr{
+	font-weight:bold;
+	padding: 10px 12px;
+	margin: 0px;
+	font-size:14px;
+}
+div.searchAttrs .attr div{
+	float: left;
+	margin: 3px 0px 0px 0px; 
+}
+
+div.searchAttrs .attr table .col1{
+	width: 120px;
+	white-space:nowrap;
+}
+div.searchAttrs .attr table .col2{
+	font-weight:normal;
+	font-style:italic;
+	padding-right: 100px;
+}
+div.searchAttrs span{
+	font-weight:normal;
+	font-style:italic;
+}
+div.searchInfo{
+	background-color:#F4F4F4;
+	font-weight:normal;
+	border-color:#DDDDDD;
+	border-style:solid;
+	border-width:1px 1px 0;
+}
+.aList div.searchInfo{
+	border: 1px solid #DDDDDD; 
+	margin-top: 0px;
+}
+div.searchInfo > span{
+	display: none;
+}
+
+.docList .scroll{
+	overflow-y: scroll;
+	height: 100%;
+	border-bottom:1px solid #DDDDDD;
+    -webkit-overflow-scrolling: touch;
+}
+.iSearch .scroll{
+	position: relative;
+	overflow: auto;
+	height: 100%;
+    -webkit-overflow-scrolling: touch;
+}
+
+.docList .searchAttrs {
+	font-size: 0.875em;
+}
+.docList  .searchAttrs span{
+	margin: 5px;
+	font-weight: normal;
+	font-style: italic;
+	overflow-y:auto;
+}
+.docList  .searchAttrs div{
+	max-width: 95%;
+	overflow-x: hidden;
+}
+
+.period {
+	float: left;
+	margin-left:15px;
+	width: 120px;
+}
+.numberType {
+	float: left;
+	margin-left:15px;
+	width: 120px;
+}
+.searchForm .value.numberVal {
+	margin-left: 345px;
+}
+#ui-datepicker-div {
+	font-size: 11px;
+	display: none;
+}
+span.from, span.to {
+	display: none;
+	float: left;
+	padding-left: 10px;
+}
+#dialog #filterSearch{
+	height:480px;
+	margin: 10px;	
+	padding: 2px;
+	overflow-y: auto;	
+}
+
+#dialog #filterSearch .filterSearchForm > div{
+	margin: 9px 0px;	
+}
+
+#dialog #filterSearch .label{
+	float:left;
+	width:200px;
+	font-weight:bold;
+	text-align:right;
+	font-size: 12px;
+}
+#dialog .filterSearchForm{
+	padding: 0px 6px;
+}
+#dialog #filterSearch .value{
+	margin-left:200px;
+}
+.dialogButton{
+	margin-left: 210px;
+}
+#filterSearch .treeFilterSearch{
+	cursor: pointer;
+}
+
+.searchTabs li.locked span {
+	display: none;
+}
+
+.searchTabs li.locked {
+	color: #909090;
+}
+#searchList .showASearchInfoMsg{
+	background:url("../images/pics.png") no-repeat scroll 293px -58px transparent;
+	color: #959597;
+	cursor: pointer;
+	padding: 0 30px 0 0;
+	font-size: 12px;
+	float:right;
+	font-style: italic;
+	display: none;
+}
+#searchList .showASearchInfoMsg:hover{
+	text-decoration: underline;
+}
+#searchList .hideASearchInfoMsg{
+ 	background:url("../images/pics.png") no-repeat scroll 10px 2px transparent;
+	cursor:pointer;
+	display:block;
+	float:right;
+	height:26px;
+	width:26px;
+	margin:0 0 0 0;
+	right:23px;
+	top:122px;
+}
+#iSearch .qf{
+	background-color: white;
+	border: 1px solid #D4D4D4;
+	padding: 1px 3px;
+	width: 200px;
+	float: right;
+	margin: -2px 6px 0px;
+}

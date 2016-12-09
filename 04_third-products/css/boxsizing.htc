@@ -1,0 +1,137 @@
+<component lightWeight="true">
+<script language="JScript">
+//<![CDATA[
+function getElementBoxSizing()
+{
+  if (element.style['box-sizing'] != undefined && element.style['box-sizing'] != '')
+    return element.style['box-sizing'];
+  if (element.currentStyle['box-sizing'] != undefined && element.currentStyle['box-sizing'] != '')
+    return element.currentStyle['box-sizing'];
+  return getDocumentBoxSizing();
+}
+
+function getDocumentBoxSizing()
+{
+  var doc = element.document;
+  if (doc.compatMode == null || doc.compatMode == 'BackCompat')
+    return 'border-box';
+  return 'content-box';
+}
+
+function getBorderWidth(side)
+{
+  if (element.currentStyle['border' + side + 'Style'] == 'none')
+    return 0;
+  return parseInt(element.currentStyle['border' + side + 'Width']);
+}
+
+function getPadding(side)
+{
+  return parseInt(element.currentStyle['padding' + side]);
+}
+
+function setBorderBoxWidth(n)
+{
+  element.runtimeStyle.width = Math.max(0, n - getBorderWidth('Left') -
+    getPadding('Left') - getPadding('Right') - getBorderWidth('Right')) + 'px';
+}
+function setBorderBoxWidthPercent(n)
+{
+  var c = getBorderWidth('Left') + getPadding('Left') + getPadding('Right') + getBorderWidth('Right');
+  element.runtimeStyle.cssText = 'width: expression((this.parentNode.clientWidth * ' + (n / 100) + ' - ' + c + '  - (((this.parentNode.style.paddingLeft) ? this.parentNode.style.paddingLeft : 0) + ((this.parentNode.style.paddingRight) ? this.parentNode.style.paddingRight : 0))) + "px");';
+}
+
+function setBorderBoxHeight(n)
+{
+  element.runtimeStyle.height = Math.max(0, n - getBorderWidth('Top') -
+    getPadding('Top') - getPadding('Bottom') - getBorderWidth('Bottom')) + 'px';
+}
+function setBorderBoxHeightPercent(n)
+{
+  var c = getBorderWidth('Top') + getPadding('Top') + getPadding('Bottom') + getBorderWidth('Bottom');
+  if (element.parentNode.tagName.toLowerCase() == 'body')
+    element.runtimeStyle.cssText = 'height: expression((Math.round(this.document.documentElement.clientHeight * ' + (n / 100) + ') - ' + c + ' - (((this.parentNode.style.paddingTop) ? this.parentNode.style.paddingTop : 0) + ((this.parentNode.style.paddingBottom) ? this.parentNode.style.paddingBottom : 0))) + "px");';
+  else
+    element.runtimeStyle.cssText = 'height: expression(((this.parentNode.clientHeight * ' + (n / 100) + ') - ' + c + '  - (((this.parentNode.style.paddingTop) ? this.parentNode.style.paddingTop : 0) + ((this.parentNode.style.paddingBottom) ? this.parentNode.style.paddingBottom : 0))) + "px");';
+}
+
+
+function setContentBoxWidth(n)
+{
+  element.runtimeStyle.width = Math.max(0, n + getBorderWidth('Left') +
+    getPadding('Left') + getPadding('Right') + getBorderWidth('Right')) + 'px';
+}
+function setContentBoxWidthPercent(n)
+{
+  var c = getBorderWidth('Left') + getPadding('Left') + getPadding('Right') + getBorderWidth('Right');
+  element.runtimeStyle.cssText = 'width: expression((this.parentNode.clientWidth * ' + (n / 100) + ' + ' + c + ' - (((this.parentNode.style.paddingLeft) ? this.parentNode.style.paddingLeft : 0) + ((this.parentNode.style.paddingRight) ? this.parentNode.style.paddingRight : 0))) + "px");'
+}
+
+function setContentBoxHeight(n)
+{
+  element.runtimeStyle.height = Math.max(0, n + getBorderWidth('Top') +
+    getPadding('Top') + getPadding('Bottom') + getBorderWidth('Bottom')) + 'px';
+}
+function setContentBoxHeightPercent(n)
+{
+  var c = getBorderWidth('Top') + getPadding('Top') + getPadding('Bottom') + getBorderWidth('Bottom');
+  if (element.parentNode.tagName.toLowerCase() == 'body')
+    element.runtimeStyle.cssText = 'height: expression((Math.ceil(this.document.documentElement.clientHeight * ' + (n / 100) + ') + ' + c + '  - (((this.parentNode.style.paddingTop) ? this.parentNode.style.paddingTop : 0) + ((this.parentNode.style.paddingBottom) ? this.parentNode.style.paddingBottom : 0))) + "px");'
+  else
+    element.runtimeStyle.cssText = 'height: expression((Math.ceil(this.parentNode.clientHeight * ' + (n / 100) + ') + ' + c + '  - (((this.parentNode.style.paddingTop) ? this.parentNode.style.paddingTop : 0) + ((this.parentNode.style.paddingBottom) ? this.parentNode.style.paddingBottom : 0))) + "px");'
+}
+
+function borderBoxWidth()
+{
+  element.runtimeStyle.width = '';
+  var bs = getElementBoxSizing();
+  if (getDocumentBoxSizing() == bs)
+    return;
+  var w = element.currentStyle.width;
+  if (w.indexOf('px') != -1)
+  {
+    if (bs == 'border-box')
+      setBorderBoxWidth(parseInt(w));
+    else
+      setContentBoxWidth(parseInt(w));
+  }
+  else if (w.indexOf('%') != -1)
+  {
+    if (bs == 'border-box')
+      setBorderBoxWidthPercent(parseInt(w));
+    else
+      setContentBoxWidthPercent(parseInt(w));
+  }
+}
+
+function borderBoxHeight()
+{
+  element.runtimeStyle.height = '';
+  var bs = getElementBoxSizing();
+  if (getDocumentBoxSizing() == bs)
+    return;
+  var h = element.currentStyle.height;
+  if (h.indexOf('px') != -1)
+  {
+    if (bs == 'border-box')
+      setBorderBoxHeight(parseInt(h));
+    else
+      setContentBoxHeight(parseInt(h));
+  }
+  else if (h.indexOf('%') != -1)
+  {
+    if (bs == 'border-box')
+      setBorderBoxHeightPercent(parseInt(h));
+    else
+      setContentBoxHeightPercent(parseInt(h));
+  }
+}
+function init()
+{
+  borderBoxWidth();
+  borderBoxHeight();
+}
+init();
+//]]>
+</script>
+</component>

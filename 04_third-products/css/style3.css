@@ -1,0 +1,146 @@
+﻿/*-----------------------------------------------------------
+
+                 Общие стилевые описания v1.8
+
+Содержание:
+
+1. Общее
+2. Размеры шрифта
+3. Гиперссылки
+4. Заголовки
+5. Прочее
+   5.1. Стили для текста документа
+   5.2. Найденные совпадения из строки фильтра/быстрого поиска
+
+------------------------------------------------------------*/
+
+/*-----------------------------------------------------------
+  1. Общее
+------------------------------------------------------------*/
+
+td { vertical-align: top; }
+p { margin-bottom: 0.3em; margin-top: 0;}
+
+
+
+
+
+/*-----------------------------------------------------------
+  2. Размеры шрифта
+------------------------------------------------------------*/
+
+html { font-size: 100.01%; }
+body { font-size: 16px; line-height: 1.125em; font-family: "DejaVu Sans Condensed", "Liberation Sans", "Nimbus Sans L", "xxxLucida Grande", Geneva, xxxCalibri, Arial, sans-serif; }
+* html body { font-size: 100%; }
+
+/*
+	font-size: .6875em for 11px (16x0.6875=11)
+	font-size: .75em for 12px (16x0.75=12)
+	font-size: .875em for 14px (16x.875=14)
+*/
+
+
+
+
+
+/*-----------------------------------------------------------
+  3. Гиперссылки
+------------------------------------------------------------*/
+/*
+a { color: #00a; text-decoration: none; }
+a:visited { color: #009; }
+a:hover { color: #de0000; text-decoration: underline; }
+*/
+/* кое-где оставляем подчеркивание */
+#section_Document .scroller_section .content_wrapper a,
+#template_annotation a
+{ text-decoration: underline; }
+
+/* .softlink - для выполнения действий на странице, без перезагрузки */
+a.softlink { text-decoration: none; border-bottom: 0.09em dashed #00a; }
+a.softlink:visited { color: #00a; }
+a.softlink:hover { color: #de0000; border-bottom-color: #de0000; text-decoration: none; }
+
+/* горячие новости */
+.hot { background: url('../images/pics.png') no-repeat 0 -783px; padding-left: 20px; display: block; }
+
+
+
+/*-----------------------------------------------------------
+4. Заголовки
+------------------------------------------------------------*/
+
+h1 { font-size: 1.5em; }
+h2 { font-size: 1.25em; }
+h3 { font-size: 1.125em; }
+
+h1.ISearch, h2.ISearch,
+h1.ASearch, h2.ASearch,
+h1.SSearch, h2.SSearch
+{
+   background: url('../images/list_queries.png') no-repeat;
+   padding-left: 45px;
+   line-height: 40px;
+   font-weight: normal;
+}
+
+h1.ISearch, h2.ISearch { background-position: 0 0; }
+h1.ASearch, h2.ASearch { background-position: 0 -850px; }
+h1.SSearch, h2.SSearch { background-position: 0 -1700px; }
+
+
+
+
+
+/*-----------------------------------------------------------
+5. Прочее
+------------------------------------------------------------*/
+
+	/*
+	   5.1. Стили для текста документа - то, что приходит из базы
+	*/
+.headertext {line-height:22px; color: #2b4279; font-weight: bold; font-size: 120%;}
+.formattext {line-height:22px; }
+.unformattext, .unformattext * { font-family: Courier New, monospace; white-space: nowrap; margin-bottom:0; display: inline-block;  background-color: white;}
+.unformattext{
+	min-width: 100%;
+}
+.document .headertext {margin-bottom: 1em; margin-top: 0.1em;}
+.document .formattext {margin-bottom: 0.1em; margin-top: 0.1em;}
+
+.headerText { color: #2b4279; font-weight: bold; font-size: 120%; text-align: center; }
+.formatText { line-height:22px; text-align: justify; text-indent: 30px; }
+.unformatText, .unformatText * { font-family: Courier New, monospace; white-space: nowrap; margin-bottom:0; display: inline-block;  background-color: white; }
+.unformatText{
+	min-width: 100%;
+}
+.alignLeft { text-align: left; }
+.alignRight { text-align: right; }
+.alignCenter { text-align: center; }
+
+.noIndent { text-indent: 0; }
+.indent { text-indent: 30px; }
+
+.centertext { page-break-after: avoid; page-break-inside: avoid; }
+
+.horizline { display: block; border-bottom: solid 1px black; max-width: 613px; height: 1em; }
+
+.middlePict {	vertical-align: -25%; }
+
+/* .empty_line ставится на пустые абзацы, содержимое которых вырезалось во время работы IndentFilter */
+.empty_line { padding-top: 1em; }
+
+	/*
+	   5.2. Найденные совпадения из строки фильтра/быстрого поиска
+	*/
+
+.match,
+.context
+{
+   background-color: #fff152; 
+   color: #000;
+}
+.match_current
+{
+   background: #ff9c3e;
+}

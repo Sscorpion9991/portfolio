@@ -1,0 +1,59 @@
+/* common */
+body { position: absolute; top: 0; left: 0; width: 100%; height: 100%; } 
+html { font-size: 100.01%; }
+body { font-size: 15px; line-height: 1.325em; }
+* html body { font-size: 100%; }
+
+.cleared:after {
+  content: ".";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+* html .cleared { display: inline-block; height: 1%; }
+
+/* Structure */
+
+
+.joinSocial_content{
+  position: absolute; 
+  top: 0;
+  left: 0; 
+  width: 100%; 
+  height: 100%;
+  overflow: hidden;
+  min-width: 701px;
+  min-height: 551px;
+}
+
+.joinSocial_locbody{
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  margin-top: -345px;
+}
+
+.joinSocial_container{
+  background: url('../images/bg_center.png') no-repeat center;
+  background-size: auto;
+  width: 701px; 
+  height: 701px;
+  margin: 0 auto; 
+}
+/* Elements */
+.joinSocial_topic{
+  padding: 180px 0 30px 170px;
+}
+.joinSocial_text_inside{
+  text-align:center;
+  font-family:Arial;
+  font-size:11pt;
+  color: #2c2c2c;
+  line-height: 1.5em;
+  padding: 0 0 40px 0;
+}
+.joinSocial_social{padding-right: 20px;}
+.joinSocial_social_links{text-align:center;}

@@ -1,0 +1,178 @@
+﻿@charset "utf-8";
+
+html{
+min-width: 1200;
+min-height: 800;
+}
+body{
+    padding:0;
+    display:block;	
+}
+.full{
+	margin:0 auto;
+	width: 1024px;
+    padding:0;
+    display:block;	
+}
+.cocial{
+  padding-right: 10px;
+}
+a:link {
+	color:#fff;
+	text-decoration: none; /* Отменяем подчеркивание у ссылки */
+	}
+
+a:visited {
+	color:#fff;
+	text-decoration: none; /* Отменяем подчеркивание у ссылки */
+	}
+
+#up_main_menu_right{
+	margin-top:-20px;
+	margin-left:480px;
+	 position: absolute;
+}
+.nav_style{
+	padding-right: 5px;
+	padding-left: 5px;
+	font-size:8pt;
+	color:#fff;
+	font-family: Myriad Pro semiextended ;
+	font-weight: bolder;
+	font-style: normal;	
+}
+#main_page{color:#00fcff;}
+
+#menu{
+	margin-left:399px;
+	margin-top: -120px;
+	padding-top: 115px;
+	padding-left: 82px;
+	height: 48px;
+	width: 110px;
+	background: url(images/blick_menu.png) no-repeat; 
+	font-size:12pt;
+	color:#fff;
+	font-family: Myriad Pro semiextended;
+	font-weight: bolder;
+	font-style: normal;
+	z-index: 100;
+	position: absolute;
+
+}
+#up_main_menu{
+	background: url(images/bg_nav.png) no-repeat; 
+	height: 60px;
+	width: 950px;
+	margin-left:40px;
+	margin-top: -92px;
+	padding-top: 86px;
+	padding-left: 65px;
+	z-index: 10;
+	color:#597f9f;
+	display: none;
+	 position: absolute;
+}
+#cocial_links{
+ margin-left:120px;
+ margin-top: 50px;
+ position: absolute;
+}
+
+#lang{
+	background: url(images/small.png) no-repeat; 
+	height: 50px;
+	margin-left:860px;
+	 margin-top: 30px;
+	padding-top: 20px;
+		padding-left: 8px;
+	 position: absolute;
+}
+.lan_style{
+	font-size:11pt;
+	color:#fff;
+	font-family: Arial bold;
+	font-weight: bolder;
+	margin-left:12px;
+}
+
+#ill{
+ margin-left:255px;
+ margin-top: 100px;
+ position: absolute;
+}
+#exposition{
+ margin-left:435px;
+ margin-top:160px;
+ position: absolute;
+ z-index:8;
+}
+#partners{
+ margin-left:290px;
+ margin-top:170px;
+ position: absolute;
+ z-index:6;
+}
+#prices{
+ margin-left:328px;
+ margin-top:210px;
+ position: absolute;
+ z-index:7;
+}
+#navi_souv{
+ margin-left:613px;
+ margin-top:165px;
+ position: absolute;
+ z-index:4;
+}
+#chidren{
+ margin-left:610px;
+ margin-top:215px;
+ position: absolute;
+ z-index:5;
+}
+#news{
+ margin-left:451px;
+ margin-top:473px;
+position: absolute;
+z-index:3;
+}
+#diving{
+ margin-left:365px;
+ margin-top:475px;
+ position: absolute;
+ z-index:2;
+}
+#oc{
+ z-index:1;
+ margin-left:505px;
+ margin-top:460px;
+position: absolute;
+}
+#action{
+ margin-left:760px;
+ margin-top:600px;
+ position: fixed;
+ bottom: 50px;
+}
+#ticket{
+ margin-left:870px;
+ margin-top:500px;
+ position: fixed;
+ bottom: 50px;
+}
+footer
+{
+    margin-left:295px;
+    margin-top:573px;
+    margin-bottom:10px;
+    display:block;
+    font-size:10pt;
+    color:#878e93;
+    font-family: Myriad Pro regular;
+	text-shadow:0 0 1px #aaa;
+	font-style: normal;
+	width: 1000px;
+	position: fixed;
+	bottom: -5px;
+}

@@ -1,0 +1,64 @@
+﻿/* Dialog
+----------------------------------*/
+.ui-dialog { position: relative; padding: .2em; width: 300px;}
+.ui-dialog .ui-dialog-titlebar { padding: .5em .3em .3em 1em; position: relative;  }
+.ui-dialog .ui-dialog-title { float: left; margin: .1em 0 .2em; } 
+.ui-dialog .ui-dialog-titlebar-close { position: absolute; right: .3em; top: 50%; width: 19px; margin: -10px 0 0 0; padding: 1px; height: 18px; }
+.ui-dialog .ui-dialog-titlebar-close span { display: block; margin: 1px; }
+.ui-dialog .ui-dialog-titlebar-close:hover, .ui-dialog .ui-dialog-titlebar-close:focus { padding: 0; }
+.ui-dialog .ui-dialog-content { border: 0; padding: .5em 1em; background: none; overflow: auto; zoom: 1; }
+.ui-dialog .ui-dialog-buttonpane { text-align: left; border-width: 1px 0 0 0; background-image: none; margin: .5em 0 0 0; padding: .3em 1em .5em .4em; }
+.ui-dialog .ui-dialog-buttonpane button { float: right; margin: .5em .4em .5em 0; cursor: pointer; padding: .2em .6em .3em .6em; line-height: 1.4em; width:auto; overflow:visible; }
+.ui-dialog .ui-resizable-se { width: 14px; height: 14px; right: 3px; bottom: 3px; }
+.ui-draggable .ui-dialog-titlebar { cursor: move; }
+
+
+.ui-keyboard{
+	background-color: white;	
+	border-radius: 6px;
+	-moz-border-radius: 6px;
+	-webkit-border-radius: 6px;
+	border: 1px solid grey;
+	padding: 10px;
+	visibility: hidden;
+}
+.openKeyboard{
+	background:url("../images/keyboard.png") no-repeat scroll 0 0 transparent;
+	cursor: pointer;
+	float: right;
+	position: relative;
+	margin-left: -22px;
+	width: 22px;
+	height: 22px;
+}
+.searchForm .value .openKeyboard, .textSearch .openKeyboard{
+	margin-left: 0px;
+    margin-right: -22px;
+    margin-top: -1px;
+}
+
+#kodeksDialog.ui-dialog-buttonpane {
+    bottom: 0;
+    margin: -41px 0 0;
+    padding: 0 0 5px;
+    right: 0;
+    text-align: center;
+}
+#kodeksDialog.ui-dialog-buttonpane button {
+	color: #000;
+    font-family: Arial;
+    font-size: 90%;
+    font-weight: bold;
+    border: 1px solid #AEA447;
+    border-radius: 30px 30px 30px 30px;
+    cursor: pointer;
+    float: none;
+    line-height: 1.4em;
+    min-width: 115px;
+   	padding:0;
+    margin: 0 0 0 15px;
+    width: auto;
+	height: 25px;
+	background-image:url(data:;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAAXCAIAAABF+LJYAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAE5JREFUeNoMyTsOgDAMBFF7nNz/JnSciIIKIVHkI0TMFk+z0tp1bjbbgXsl82WtKUNb1PU16Vh2nnuHYkR1FbwGIBG4klEI09ad7r8AAwAmACEIqFtRJQAAAABJRU5ErkJggg==);
+	background-position: center center;
+}

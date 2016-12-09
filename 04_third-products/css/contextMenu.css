@@ -1,0 +1,63 @@
+.contextMenu{
+	width: 220px;
+	background-color:white;
+	border:1px solid #DDDDDD;
+	float:left;
+	margin-bottom:-600px;
+	position:absolute;
+	z-index:1000;
+	margin-top: 20px;
+	-moz-box-shadow:2px 2px 5px #555555;
+	box-shadow:2px 2px 5px #555555;
+  	-webkit-box-shadow:2px 2px 5px #555555;
+	font-size:15px;
+}
+.contextMenu ul{
+	list-style: none;
+	padding-top: 7px;
+	padding-bottom: 7px;
+}
+.contextMenu li{
+	padding: 5px 10px 5px 48px;
+	cursor: pointer;
+	background-position: 14px 7px;
+	background-repeat: no-repeat;
+}
+.contextMenu li.flashMenu{
+	padding: 0;
+	padding-left: 38px;
+}
+.contextMenu li:hover{
+	background-color: #025fbe;
+	color: white;
+}
+div.contextMenu ul div.separator{
+	border-top:1px solid #e3e3e3;
+	margin: 7px 0px;
+}
+
+.contextMenu li.cxtMenuPrint{
+	background-image: url('../images/icons/printer.png');
+}
+.contextMenu li.cxtMenuBookmark{
+	background-image: url('../images/icons/document-bookmark.png');
+}
+.contextMenu li.cxtMenuCopy{
+	background-image: url('../images/icons/document-copy.png');
+}
+.contextMenu li.cxtMenuCopyLink{
+	/* на будущее */
+	/* background-image: url('../images/icons/document-copy.png'); */
+}
+.contextMenu li.cxtMenuCTW{
+	background-image: url('../images/icons/two-window-off.png');
+}
+.contextMenu li.cxtMenuOPW{
+	background-image: url('../images/icons/two-window-on.png');
+}
+.contextMenu li.cxtMenuONW{
+	background-image: url('../images/icons/new-window.png');
+}
+.contextMenu li.cxtMenuSimilar{
+	background-image: url('../images/icons/find_similar.png');
+}
