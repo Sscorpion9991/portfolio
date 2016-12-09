@@ -1,0 +1,7 @@
+.tooltip, #prevHistoryList, #nextHistoryList {
+	opacity:1 !important;
+}
+html{
+	min-height: 700px;
+	min-width: 500px;
+}

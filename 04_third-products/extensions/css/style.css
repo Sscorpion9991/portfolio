@@ -1,0 +1,632 @@
+@font-face
+{
+    src:url(fonts/PFDinTextPro-Medium.eot);
+    src:local(PFDinTextPro-Medium),url(fonts/PFDinTextPro-Medium.ttf);
+    font-family:PFDinTextPro;
+}
+.martixOfProd_html{
+	position: absolute; 
+	top: 0;
+	left: 0; 
+	width: 100%; 
+	height: 100%;
+	overflow: hidden;
+	min-width: 1100px;
+	min-height: 1400px;
+	background-color: #ededed;
+}
+.martixOfProd_html a{
+color: #fff !important;
+
+}
+.martixOfProd_content{
+	position: absolute;
+	top: 50%;
+	left: 0;
+	width: 100%;
+	height: 1px;
+	margin-top: -305px;
+}
+
+/* ===========================================  HEADER  ========================================= */
+.martixOfProd_header{
+	position: absolute;
+	top: 25px;
+	left: 50%;
+	margin-left: -600px;
+	border-bottom: 2px solid #c8c8c8;
+	box-shadow: 0 6px 4px -2px #e1e1e1;
+	background-color: #ffffff;
+	border-top-left-radius: 10px;
+	border-top-right-radius: 10px;
+	height: 90px;
+	width: 1200px; 
+	z-index: 2;
+}
+div.martixOfProd_header .icon{
+	position: relative;
+	display: block;
+	width: 500px;
+	left: 50%;
+	height: 92px;
+	background-repeat: no-repeat; 
+}
+div.martixOfProd_header .second{
+	display:none;
+}
+div.martixOfProd_header .mainIcon{
+	height: 106px;
+}
+div.martixOfProd_header .infoProd{
+	background-image: url(../images/infoProd.png); 
+	margin-left: -500px;
+	float: left;
+}
+div.martixOfProd_header .servWight{
+	background-image: url(../images/services_white.png); 
+	margin-left: 0px;
+	clear: right;
+}
+div.martixOfProd_header .infoProdWight{
+	background-image: url(../images/infoProd_white.png); 
+	margin-left: -500px;
+	float: left;
+}
+div.martixOfProd_header .serv{
+	background-image: url(../images/services.png); 
+	margin-left: 0px;
+	clear: right;
+}
+/* ---------------------------------------------------------------------------------------------- */
+
+/* ===========================================  BODY  ========================================= */
+.martixOfProd_body{
+	position: absolute;
+	top: 50px;
+	left: 50%;
+	margin-left: -600px;
+	background-color: #f7f7f7;
+	height: 100%;
+	width: 1200px; 
+	z-index: 1;
+}
+
+/* ===========================================  PROD  ========================================= */
+.martixOfProd_Prod_body{
+	position: absolute;
+	bottom:0px;
+	top: 68px;
+	left: 50%;
+	margin-left: -600px;
+	background-color: #f7f7f7;
+	height: 1600px;
+	width: 1200px;  
+	z-index: 102;
+}
+
+/* ===========================================  I LINE  ========================================= */
+.martixOfProd_prod_firstLine{
+	position: relative;
+	display: block;
+	left: 50%;
+	margin-left: -500px;
+	z-index: 102;
+}
+.specialization:hover{
+	background-color: #efefef;
+}
+.specialization{
+	position: relative;
+	display: block;
+	height: 293px;
+	width: 207px;
+	background-repeat: no-repeat; 
+}
+.martixOfProd_prod1{
+	position: relative;
+	background-image: url(../images/prod_1_1.png); 
+	float: left;
+}
+.martixOfProd_prod2{	
+	background-image: url(../images/prod_1_2.png); 
+	float: left;
+	margin-left: 57.5px;
+}
+.martixOfProd_prod3{
+	background-image: url(../images/prod_1_3.png); 
+	float: left;
+	margin-left: 57.5px;
+}
+.martixOfProd_prod4{
+	background-image: url(../images/prod_1_4.png); 
+	float: left;
+	clear: right;
+	margin-left: 57.5px;
+}
+.clicked{
+	position: absolute;
+	top: 283px;
+	height: 28px;
+	width: 207px;
+	z-index: 1000;
+	background-image: url(../images/serv_click.png); 
+}
+.isclicked{
+	position: absolute;
+	top: 283px;
+	height: 28px;
+	width: 207px;
+	z-index: 1000;
+	background-image: url(../images/prod_click.png); 
+}
+/* ---------------------------------------------------------------------------------------------- */
+/* ========================================  PROD MENU  ========================================= */
+.martixOfProd_Prod_menu{
+	position: absolute;
+	display: block;
+	top: 293px;
+	height: 300px;
+	background-color: #484848;
+	width: 1198px; 
+	z-index: 10;
+	border: 1px solid #000000;
+	box-shadow: inset 0 0 2px 2px #333333;
+	display:none;
+}
+.martixOfProd_Prod_menu a:link{
+	text-decoration: none;
+}
+.martixOfProd_Prod_cont{
+	position: relative;
+	display: block;
+	top: 50px;
+	left: 50%;
+	width: 260px;
+}
+.icon{
+	height: 30px;
+	width: 30px;
+	position: absolute;
+	display: block;
+	background-repeat: no-repeat; 
+}
+.martixOfProd_Title{
+	font-family: PFDinTextPro;
+	font-size: 13pt;
+	color: #f8f8fb;
+	text-align: left;
+	line-height: 1em;
+}
+.martixOfProd_Prod_Main{
+	font-family: Arial;
+	font-size: 10pt;
+	color: #858585;
+	text-align: left;
+	line-height: 15px;
+}
+.main_prod{
+	position: absolute;
+	padding-left: 40px;
+}
+.oneLine{
+	margin-top: -3px;
+}
+.twoLine{
+	margin-top: -10px;
+}
+.threeLine{
+	margin-top: -10px;
+}
+.oneLineTitle{
+	margin-top: 25px;
+}
+.twoLineTitle{
+	margin-top: 35px;
+}
+.threeLineTitle{
+	margin-top: 50px;
+}
+.cont_first_Img{
+	background-image: url(../images/icon_prod_menu1.png); 
+	float: left;
+	margin-top: -10px;
+}
+.cont_1{
+	margin-left: -490px;
+}
+.cont_2{
+	margin-left: -150px;
+}
+.cont_3{
+	margin-left: 190px;
+}
+.cont_4{
+	top: 220px;
+	margin-left: -490px;
+}
+.cont_5{
+	top: 220px;
+	margin-left: -150px;
+}
+.cont_6{
+	top: 220px;
+	margin-left: 190px;
+}
+.cont_7{
+	top: 440px;
+	margin-left: -490px;
+}
+.cont_8{
+	top: 440px;
+	margin-left: -150px;
+}
+.cont_9{
+	top: 440px;
+	margin-left: 190px;
+}
+.cont_10{
+	top: 660px;
+	margin-left: -490px;
+}
+.cont_11{
+	top: 660px;
+	margin-left: -150px;
+}
+.cont_12{
+	top: 660px;
+	margin-left: 190px;
+}
+.cont_13{
+	top: 880px;
+	margin-left: -490px;
+}
+.cont_14{
+	top: 880px;
+	margin-left: -150px;
+}
+.cont_15{
+	top: 880px;
+	margin-left: 190px;
+}
+.cont_16{
+	top: 1100px;
+	margin-left: -490px;
+}
+.cont_17{
+	top: 1100px;
+	margin-left: -150px;
+}
+.small_text_2Line{
+	top: 180px;
+}
+.big_text_2Line{
+	top: 270px;
+}
+.verybig_text_2Line{
+	top: 350px;
+}
+.big_text_3Line{
+	top: 490px;
+}
+.verybig_text_3Line{
+	top: 570px;
+}
+.text_3Line_24{
+	top: 580px;
+}
+.big_text_4Line{
+	top: 710px;
+}
+.verybig_text_4Line{
+	top: 810px;
+}
+.text_4Line_23{
+	top: 870px;
+}
+.big_text_5Line{
+	top: 1000px;
+}
+.verybig_text_5Line{
+	top: 1200px;
+}
+.big_text_6Line{
+	top: 1260px;
+}
+.verybig_text_6Line{
+	top: 1440px;
+}
+.prod1_menu{
+	height: 500px;
+}
+.prod2_menu{
+	height: 280px;
+}
+.prod3_menu{
+	height: 685px;
+}
+.prod4_menu{
+	height: 710px;
+}
+.prod21_menu{
+	height: 1630px;	
+}
+.prod22_menu{
+	height: 1660px;	
+}
+.prod23_menu{
+	height: 1110px;	
+}
+.prod24_menu{
+	height: 910px;	
+}
+.prod31_menu{
+	height: 580px;	
+}
+.prod32_menu{
+	height: 750px;	
+}
+.prod33_menu{
+	height: 380px;	
+}
+.prod34_menu{
+	height: 210px;	
+}
+.prod41_menu{
+	height: 440px;	
+}
+.prod42_menu{
+	height: 240px;	
+}
+.menu_2{
+	top: 586px;
+	z-index: 4;
+}
+.menu_3{
+	top: 879px;
+	z-index: 3;
+}
+.menu_4{
+	top: 1172px;
+	z-index: 2;
+}
+/* ---------------------------------------------------------------------------------------------- */
+
+/* ===========================================  II LINE  ======================================== */
+.martixOfProd_prod_SecondLine{
+	position:absolute;
+	display: block;
+	margin-top: 293px;
+	left: 50%;
+	margin-left: -500px;	
+}
+.martixOfProd_prod2_1{
+	background-image: url(../images/prod_1_5.png); 
+	float: left;
+}
+.martixOfProd_prod2_2{
+	background-image: url(../images/prod_1_6.png); 
+	float: left;
+	margin-left: 57.5px;
+}
+.martixOfProd_prod2_3{ 
+	background-image: url(../images/prod_1_7.png);   
+	float: left;
+	margin-left: 57.5px;
+}
+.martixOfProd_prod2_4{
+	background-image: url(../images/prod_1_8.png); 
+	float: left;
+	clear: right;
+	margin-left: 57.5px;
+}
+/* ---------------------------------------------------------------------------------------------- */
+
+/* ==========================================  III LINE  ======================================== */
+
+.martixOfProd_prod_ThirdLine{
+	position:relative;
+	display: block;
+	margin-top: 586px;
+	left: 50%;
+	margin-left: -500px;
+	z-index: 102;
+}
+.martixOfProd_prod3_1{  
+	background-image: url(../images/prod_1_9.png); 
+	float: left;
+}
+.martixOfProd_prod3_2{
+	background-image: url(../images/prod_1_10.png); 
+	float: left;
+	margin-left: 57.5px;
+}
+.martixOfProd_prod3_3{
+	background-image: url(../images/prod_1_11.png); 
+	float: left;
+	margin-left: 57.5px;
+}
+.martixOfProd_prod3_4{
+	background-image: url(../images/prod_1_12.png); 
+	float: left;
+	clear: right;
+	margin-left: 57.5px;
+}
+
+/* ---------------------------------------------------------------------------------------------- */
+
+/* ===========================================  IV LINE  ======================================== */
+.martixOfProd_prod_FourthLine{
+	position:relative;
+	display: block;
+	margin-top: 879px;
+	left: 50%;
+	margin-left: -500px;
+	z-index: 102;
+}
+.martixOfProd_prod4_1{  
+	background-image: url(../images/prod_1_13.png); 
+	float: left;
+	margin-left: 264.5px;
+}
+
+.martixOfProd_prod4_2{ 
+	background-image: url(../images/prod_1_14.png); 
+	float: left;
+	clear: right;
+	margin-left: 57.5px;
+}
+/* ---------------------------------------------------------------------------------------------- */
+/* ---------------------------------------------------------------------------------------------- */
+
+/* ===========================================  SERVE  ======================================== */
+.martixOfProd_serv_body{
+	position: absolute;
+	bottom:0px;
+	top: 68px;
+	left: 50%;
+	margin-left: -600px;
+	background-color: #f7f7f7;
+	height: 1600px;
+	width: 1200px;
+	z-index: 10;
+	display:none;
+}
+/* ---------------------------------------------------------------------------------------------- */
+
+/* ===========================================  I LINE  ========================================= */
+.martixOfProd_serv_firstLine{
+	position: relative;
+	display: block;
+	left: 50%;
+	margin-left: -500px;
+	z-index: 100;
+}
+.martixOfProd_serv1{
+	background-image: url(../images/serv_1.png); 
+	float: left;
+	z-index: 40;
+}
+.martixOfProd_serv2{  
+	background-image: url(../images/serv_2.png); 
+	z-index: 3;
+	float: left;
+	margin-left: 57.5px;
+}
+.martixOfProd_serv3{
+	background-image: url(../images/serv_3.png); 
+	z-index: 30;
+	float: left;
+	margin-left: 57.5px;
+}
+.martixOfProd_serv4{
+	background-image: url(../images/serv_4.png); 
+	z-index: 30;
+	float: left;
+	clear: right;
+	margin-left: 57.5px;
+}
+/* ---------------------------------------------------------------------------------------------- */
+
+/* ========================================  SERVE MENU ========================================= */
+.martixOfProd_serv_menu{
+	position: absolute;
+	display: block;
+	top: 293px;
+	height: 770px;
+	background-color: #484848;
+	width: 1198px;
+	z-index: 1;
+	border: 1px solid #000000;
+	box-shadow: inset 0 0 2px 2px #333333;
+	display:none;
+}
+.martixOfProd_serv_menu a:link{
+	text-decoration: none;
+}
+.martixOfProd_serv_cont{
+	position: relative;
+	display: block;
+	top: 50px;
+	left: 50%;
+	width: 470px;
+}
+.martixOfProd_menu_Close{
+	position: absolute;
+	display: block;
+	background-image: url(../images/serveClose.png); 
+	background-repeat: no-repeat; 
+	background-position: right;
+	top: 5px;
+	right: 10px;
+	height: 30px;
+	width: 30px;
+	z-index: 20;
+}
+.serv_cont_1{
+	margin-left: -500px;
+}
+.serv_cont_2{
+	margin-left: 30px;
+}
+.serv_cont_3{
+	margin-left: -500px;
+}
+.serv_cont_4{
+	margin-left: 30px;
+}
+.text_2Line_serv{
+	top: 290px;
+}
+.text_2Line_serv_12{
+	top: 290px;
+}
+.text_2Line_serv_13{
+	top: 240px;
+}
+.eMail{
+	font-style: normal ;
+	padding-left: 15px;
+}
+.serv1_Img{
+	background-image: url(../images/icon_serv_menu1.png);
+	float: left;
+	margin-top: -10px;
+}
+.serv2_Img{	
+	background-image: url(../images/icon_serv_menu2.png); 
+	float: left;
+	margin-top: -10px;
+}
+.serv3_Img{ 
+	background-image: url(../images/icon_serv_menu3.png); 
+	float: left;
+	margin-top: -10px;
+}
+.serv4_Img{
+	background-image: url(../images/icon_serv_menu4.png); 
+	float: left;
+	margin-top: -10px;
+}
+.serv_prod{
+	position: absolute;
+	padding-left: 40px;
+	line-height: 15px;
+}
+.serv1_menu{
+	height: 490px;
+	z-index: 1;
+}
+.serv2_menu{
+	height: 610px;
+	z-index: 1;
+}
+.serv3_menu{
+	height: 450px;
+	z-index: 1;
+}
+.serv4_menu{
+	height: 440px;
+	z-index: 1;
+}
+/* ---------------------------------------------------------------------------------------------- */
+/* ---------------------------------------------------------------------------------------------- */

@@ -1,0 +1,101 @@
+﻿.debug { border: 1px dashed #f00 !important; }
+	.debug .debug { border: 1px dashed #000 !important; }
+
+
+#debug_info
+{
+   display: none;
+   padding: 5px 5px 5px 25px;
+   position: absolute;
+   right: 0;
+   bottom: 0;
+   background: #f00 url('../images/spinner_l_red.gif') no-repeat left top;
+   color: #fff;
+   z-index: 9999999999;
+   font-size: .6875em;
+   max-height: 500px;
+   max-width: 500px;
+   overflow: auto;
+}
+
+/*
+кодирование изображений в base64 для использования data:uri
+base64_encode(file_get_contents("../images/folder16.gif"))
+*/
+
+/*
+информация о всех z-index'ах в одном месте, для удобства:
+*/
+
+ul.Menu .BackTo { z-index: 20; }
+ul.Menu .ForwardTo { z-index: 20; }
+.Navigate_History { z-index: 100; }
+.ISearch_QuickResults { z-index: 100; }
+.ISearch_Tip { z-index: 100; }
+.pics_and_tabs_wrapper { _z-index: 500; } /* это хочет ie, чтобы нормально показывать дропдаун непоместившихся табов */
+.pics_and_tabs_wrapper .tabs_dropdown { z-index: 501; }
+
+/*
+#content ul.Pics_v3 { z-index: 2; }
+#content ul.Tabs_v3 { z-index: 1; }
+*/
+
+.dd_Select { z-index: 1000; }
+* html .NiceInput.active { z-index: 999; }
+.dd_QuickResults { z-index: 1000; }
+.dd_Select { z-index: 1001; }
+#modal { z-index: 9999; }
+
+
+
+
+/*
+для удобства отладки переключение отображаемого содержимого вынесено в одно место
+*/
+
+#aside { xxxdisplay: none; }
+#section { xxxdisplay: none; }
+
+.Pics_v3 { xxxdisplay: none; }
+.Tabs_v3 { xxxdisplay: none; }
+
+.Documents { xxxdisplay: none; }
+.DocumentsWithAnnotations { xxxdisplay: none; }
+.Situations { xxxdisplay: none; }
+.SituationsWithAnnotations { display: none; }
+.Classificators { xxxdisplay: none; }
+.Tree { xxxdisplay: none; }
+.DocumentContents { display: none; }
+.Sections { display: none; }
+.DbVolumes { xxxdisplay: none; }
+
+
+#section_SearchForm { display: none; }
+#section_SearchForm2 { display: none; }
+#section_SearchResults { display: none; }
+#section_UserData { display: none; }
+#section_Document { display: none; }
+#section_Content { xxxdisplay: none; }
+
+
+#templates { display: none; }
+
+
+
+/*
+	#content_StartPage { display: none; }
+	#content_Blocks { display: none; }
+	#content_DocumentText { xxxdisplay: none; }
+	#content_Section { display: none; }
+	#content_AdvancedSearchForm { display: none; }
+	#content_AdvancedSearchResults { display: none; }
+	#content_IntellectualSearchResults { display: none; }
+
+.Situations { display: none; }
+.Thematics { display: none; }
+.Tree { display: none; }
+.Classificators { display: none; }
+.TSearchAnnotations { display: none; }
+*/
+
+/* todo: .zebra, .sections,  .tsearch_annotations, .ContentsTree, .products, h1 */

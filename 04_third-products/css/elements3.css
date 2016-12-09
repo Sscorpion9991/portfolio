@@ -1,0 +1,1278 @@
+﻿/***********************************************************************/
+/*                    Different interface elements                     */
+/*                            DO NOT modify                            */
+/***********************************************************************/
+
+/*-----------------------------------------------------------
+
+Содержание:
+
+1. Пиктограммы (.Pics_v3)
+2. Вкладки, они же табы
+   2.1. Обычные вкладки (.Tabs_v3)
+   2.2. Перевернутые вкладки, для дополнительных сервисов в разделах (.pTabs)
+3. Стилизованные поля ввода
+   3.1. input
+        3.1.1. Выпадающий список с результатами быстрого поиска
+        3.1.2. Выпадающее окно календаря
+   3.2. textarea                                   <---- TO DO
+4. Стилизованные кнопки (.Buttons3)
+5. Блоки с закругленными уголками (.rounded, .Rounded4)       <---- TO RE-DO
+
+------------------------------------------------------------*/
+
+/*-----------------------------------------------------------
+1. Пиктограммы (.Pics_v3)
+------------------------------------------------------------*/
+
+.Pics_v3
+{
+   bottom: 3px;
+   left: 0;
+   position: absolute;
+   height: 20px;
+   line-height: 20px;
+   margin: 1px 0 0 0;
+   list-style: none;
+}
+
+	.Pics_v3 li
+	{
+	   float: left;
+	   position: relative;
+	   width: 20px;
+	   height: 20px;
+	   xxxoverflow: hidden;
+	   margin: 0 0 0 2px;
+	   cursor: pointer;
+	}
+
+	.Pics_v3 .distant
+	{
+	   margin-left: 8px;
+	}
+
+		.Pics_v3 a
+		{
+		   display: block;
+		   width: 20px;
+		   height: 20px;
+		   text-indent: -9999px;
+		   background: url('../images/icons_p.png') no-repeat;
+		}
+
+			.Pics_v3 img
+			{
+			   position: absolute;
+			   top: 0;
+			   left: 0;
+			}
+
+		.Pics_v3 li.bookmark_delete a { background-position: 0 0; }
+		.Pics_v3 li.bookmark_delete a:hover { background-position: -20px 0; }
+		.Pics_v3 li.bookmark_delete_d a { background-position: -40px 0; }
+
+		.Pics_v3 li.bookmark_set a { background-position: 0 -20px; }
+		.Pics_v3 li.bookmark_set a:hover { background-position: -20px -20px; }
+		.Pics_v3 li.bookmark_set_d a { background-position: -40px -20px; }
+
+		.Pics_v3 li.card_add a { background-position: 0 -40px; }
+		.Pics_v3 li.card_add a:hover { background-position: -20px -40px; }
+		.Pics_v3 li.card_add_d a { background-position: -40px -40px; }
+
+		.Pics_v3 li.card_delete a { background-position: 0 -60px; }
+		.Pics_v3 li.card_delete a:hover { background-position: -20px -60px; }
+		.Pics_v3 li.card_delete_d a { background-position: -40px -60px; }
+
+		.Pics_v3 li.card_edit a { background-position: 0 -80px; }
+		.Pics_v3 li.card_edit a:hover { background-position: -20px -80px; }
+		.Pics_v3 li.card_edit_d a { background-position: -40px -80px; }
+
+		.Pics_v3 li.card_save a { background-position: 0 -100px; }
+		.Pics_v3 li.card_save a:hover { background-position: -20px -100px; }
+		.Pics_v3 li.card_save_d a { background-position: -40px -100px; }
+
+		.Pics_v3 li.copy a { background-position: 0 -120px; }
+		.Pics_v3 li.copy a:hover { background-position: -20px -120px; }
+		.Pics_v3 li.copy_d a { background-position: -40px -120px; }
+
+		.Pics_v3 li.edit a { background-position: 0 -140px; }
+		.Pics_v3 li.edit:hover a { background-position: -20px -140px; }
+		.Pics_v3 li.edit_d a { background-position: -40px -140px; }
+
+		.Pics_v3 li.filter a { background-position: 0 -160px; }
+		.Pics_v3 li.filter:hover a { background-position: -20px -160px; }
+		.Pics_v3 li.filter_d a { background-position: -40px -160px; }
+
+		.Pics_v3 li.find a { background-position: 0 -180px; }
+		.Pics_v3 li.find:hover a { background-position: -20px -180px; }
+		.Pics_v3 li.find_d a { background-position: -40px -180px; }
+
+		.Pics_v3 li.folder_add a { background-position: 0 -200px; }
+		.Pics_v3 li.folder_add a:hover { background-position: -20px -200px; }
+		.Pics_v3 li.folder_add_d a { background-position: -40px -200px; }
+
+		.Pics_v3 li.folder_clean a { background-position: 0 -220px; }
+		.Pics_v3 li.folder_clean a:hover { background-position: -20px -220px; }
+		.Pics_v3 li.folder_clean_d a { background-position: -40px -220px; }
+
+		.Pics_v3 li.folder_copy a { background-position: 0 -240px; }
+		.Pics_v3 li.folder_copy a:hover { background-position: -20px -240px; }
+		.Pics_v3 li.folder_copy_d a { background-position: -40px -240px; }
+
+		.Pics_v3 li.folder_delete a { background-position: 0 -260px; }
+		.Pics_v3 li.folder_delete a:hover { background-position: -20px -260px; }
+		.Pics_v3 li.folder_delete_d a { background-position: -40px -260px; }
+
+		.Pics_v3 li.folder_put a { background-position: 0 -280px; }
+		.Pics_v3 li.folder_put a:hover { background-position: -20px -280px; }
+		.Pics_v3 li.folder_put_d a { background-position: -40px -280px; }
+
+		.Pics_v3 li.list_back a { background-position: 0 -300px; }
+		.Pics_v3 li.list_back a:hover { background-position: -20px -300px; }
+		.Pics_v3 li.list_back_d a { background-position: -40px -300px; }
+
+		.Pics_v3 li.list_nextitem a { background-position: 0 -320px; }
+		.Pics_v3 li.list_nextitem a:hover { background-position: -20px -320px; }
+		.Pics_v3 li.list_nextitem_d a { background-position: -40px -320px; }
+
+		.Pics_v3 li.list_previtem a { background-position: 0 -340px; }
+		.Pics_v3 li.list_previtem a:hover { background-position: -20px -340px; }
+		.Pics_v3 li.list_previtem_d a { background-position: -40px -340px; }
+
+		.Pics_v3 li.logic a { background-position: 0 -360px; }
+		.Pics_v3 li.logic a:hover { background-position: -20px -360px; }
+		.Pics_v3 li.logic_d a { background-position: -40px -360px; }
+
+		.Pics_v3 li.panel a { background-position: 0 -380px; }
+		.Pics_v3 li.panel a:hover { background-position: -20px -380px; }
+		.Pics_v3 li.panel_d a { background-position: -40px -380px; }
+
+		.Pics_v3 li.print a { background-position: 0 -400px; }
+		.Pics_v3 li.print a:hover { background-position: -20px -400px; }
+		.Pics_v3 li.print_d a { background-position: -40px -400px; }
+
+		.Pics_v3 li.save a { background-position: 0 -420px; }
+		.Pics_v3 li.save a:hover { background-position: -20px -420px; }
+		.Pics_v3 li.save_d a { background-position: -40px -420px; }
+
+		.Pics_v3 li.savequery a { background-position: 0 -440px; }
+		.Pics_v3 li.savequery a:hover { background-position: -20px -440px; }
+		.Pics_v3 li.savequery_d a { background-position: -40px -440px; }
+
+		.Pics_v3 li.settings a { background-position: 0 -460px; }
+		.Pics_v3 li.settings a:hover { background-position: -20px -460px; }
+		.Pics_v3 li.settings_d a { background-position: -40px -460px; }
+
+		.Pics_v3 li.sort a { background-position: 0 -480px; }
+		.Pics_v3 li.sort a:hover { background-position: -20px -480px; }
+		.Pics_v3 li.sort_d a { background-position: -40px -480px; }
+
+		.Pics_v3 li.word a { background-position: 0 -500px; }
+		.Pics_v3 li.word a:hover { background-position: -20px -500px; }
+		.Pics_v3 li.word_d a { background-position: -40px -500px; }
+		
+		.Pics_v3 li.quickfilter a { background-position: 0 -520px; }
+		.Pics_v3 li.quickfilter a:hover { background-position: -20px -520px; }
+		.Pics_v3 li.quickfilter_d a { background-position: -40px -520px; }
+
+		.Pics_v3 li.document_delete a { background-position: 0 -540px; }
+		.Pics_v3 li.document_delete a:hover { background-position: -20px -540px; }
+		.Pics_v3 li.document_delete_d a { background-position: -40px -540px; }
+
+
+
+
+/*-----------------------------------------------------------
+2. Вкладки, они же табы
+------------------------------------------------------------*/
+
+	/*
+	   2.1. Обычные вкладки (.Tabs_v3)
+	*/
+
+/*
+Типы вкладок: "inactive" — неактивная вкладка
+              "active" — активная вкладка
+              "disabled" — недоступная вкладка
+
+Для вкладок, помимо указания типа через соответствующий класс для элемента li,
+нужно указывать класс, который оформляет "стык" между текущей вкладкой и следующей.
+Формат имени класса для описания этого стыка такой:
+"сокращенный тип текущей вкладки2сокращенный тип следующей вкладки"
+
+Сокращения:   i — inactive
+              a — active
+              d — disabled
+
+Например: "a2i" - текущая вкладка активная, следующая неактивная
+          "d2d" - текущая вкладка недоступна, следующая также недоступна
+          и т.д. Для последней вкладки указывать этот класс не нужно.
+
+Кроме этого, для первой вкладки надо добавлять класс вида: "сокращенный тип_f" (f означает first)
+
+Тут возможны три варианта: "i_f" — первая вкладка неактивна
+                           "a_f" - первая вкладка активна
+                           "d_f" - первая вкладка недоступна
+
+
+
+Таким образом, имя класса для вкладки формируется из нескольких составляющих:
+   a) обязательно — тип вкладки (inactive|active|disabled)
+   b) для всех вкладок, кроме последней, — класс оформления стыка со следующей (i2i|i2a|i2d|a2i|a2d|d2d|d2i|d2a)
+   c) для первой вкладки — класс для обозначения того, что эта вкладка первая (i_f|a_f|d_f)
+
+
+
+Примеры задания имен классов для разных вкладок:
+   1. "inactive i_f i2a" — неактивная вкладка, первая в списке, за ней идет активная вкладка
+   2. "active a_f" — список из единственной активной вкладки
+   3. "disabled d2d" — недоступная вкладка, НЕ первая и НЕ последняя, т.к. указан класс стыка, за ней идет недоступная вкладка
+   4. "inactive" — неактивная вкладка, последняя в списке вкладок
+
+*/
+
+.Tabs_v3
+{
+   position: absolute;
+   right: 0;
+   bottom: 0;
+   height: 24px;
+   margin: 3px 5px 0 130px;
+   list-style: none;
+   *bottom: -1px;
+   overflow: hidden;
+}
+
+	.Tabs_v3 li
+	{
+	   height: 24px;
+	   float: left;
+	}
+
+	.Tabs_v3 li,
+	.Tabs_v3 a
+	{
+	   background: url('../images/tabs3.png') no-repeat;
+	}
+
+	.Tabs_v3 a {
+	   display: block;
+	   margin-right: 12px;
+	   padding-left: 5px;
+	   text-decoration: none;
+	   font-weight: bold;
+	   xxxline-height: 2;
+	   height: 24px;
+	   line-height: 23px;
+	   font-size: 0.6875em;
+	   font-family: Tahoma;
+	   -moz-user-select: none;
+	   -webkit-user-select: none;
+	   user-select: none;
+	}
+
+	.Tabs_v3 a:hover { text-decoration: none; }
+
+	* html .Tabs_v3 a { display: inline; }
+
+	.Tabs_v3 .inactive a,
+	.Tabs_v3 .inactive a:hover,
+	.Tabs_v3 .inactive a:visited
+	{
+	   color: #fff;
+	}
+	.Tabs_v3 .inactive { background-position: right 0; }
+		.Tabs_v3 .inactive a { background-position: -12px 0; }
+		.Tabs_v3 .i_f a { background-position: 0 0; padding-left: 12px; }
+	.Tabs_v3 .i2i { background-position: right -150px; }
+	.Tabs_v3 .i2a { background-position: right -250px; }
+	.Tabs_v3 .i2d { background-position: right -450px; }
+
+		.Tabs_v3 .active a,
+		.Tabs_v3 .active a:hover,
+		.Tabs_v3 .active a:visited
+		{
+		   color: #000;
+		   cursor: default;
+		}
+	.Tabs_v3 .active { background-position: right -50px; }
+		.Tabs_v3 .active a { background-position: -12px -50px; }
+		.Tabs_v3 .a_f a { background-position: 0 -50px; padding-left: 12px; }
+	.Tabs_v3 .a2i { background-position: right -200px; }
+	.Tabs_v3 .a2d { background-position: right -350px; }
+
+		.Tabs_v3 .disabled a,
+		.Tabs_v3 .disabled a:hover,
+		.Tabs_v3 .disabled a:visited
+		{
+		   color: #000;
+		   cursor: default;
+		}
+	.Tabs_v3 .disabled { background-position: right -100px; }
+		.Tabs_v3 .disabled a { background-position: -12px -100px; }
+		.Tabs_v3 .d_f a { background-position: 0 -100px; padding-left: 12px; }
+	.Tabs_v3 .d2d { background-position: right -300px; }
+	.Tabs_v3 .d2i { background-position: right -500px; }
+	.Tabs_v3 .d2a { background-position: right -400px; }
+
+		.Tabs_v3 .i2i a,
+		.Tabs_v3 .i2a a,
+		.Tabs_v3 .i2d a,
+		.Tabs_v3 .a2i a,
+		.Tabs_v3 .a2d a,
+		.Tabs_v3 .d2d a,
+		.Tabs_v3 .d2i a,
+		.Tabs_v3 .d2a a
+		{ margin-right: 19px; }
+
+			.Tabs_v3 .hotkey { text-decoration: underline; display: inline; }
+
+#tabs_dropdown
+{
+   display: none;
+   position: absolute !important;
+   left: auto !important;
+   right: 14px !important;
+   width: auto !important;
+   _width: 12em !important;
+   height: auto !important;
+   z-index: 501;
+   background: #fff !important;
+   font-size: 100% !important;
+}
+
+
+
+	/*
+	   2.2. Перевернутые вкладки, для дополнительных сервисов в разделах (.pTabs)
+	*/
+
+.pTabs_wrapper { padding: 5px 5px 10px 5px; _padding-top: 9px; position: relative; }
+* html .pTabs_wrapper { margin-top: -4px; }
+
+ul.pTabs { list-style: none; margin: -4px 0 0 0; float: right; border: none; font-size: 0.6875em; font-family: Tahoma, sans-serif; font-weight: bold; }
+ul.pTabs li { margin: 0; padding: 0 9px 0 0; float: left; white-space: nowrap; }
+
+ul.pTabs li,
+ul.pTabs a,
+.pTabs_wrapper .fix
+{
+   background: url('../images/ptabs.png') no-repeat;
+}
+
+ul.pTabs a
+{
+   min-width: 100px;
+   height: 40px;
+   line-height: 39px;
+   text-decoration: none;
+   padding-left: 9px;
+   display: block;
+}
+* html ul.pTabs a { display: inline; }
+
+ul.pTabs a,
+ul.pTabs a:hover,
+ul.pTabs a:visited
+{
+   color: #000;
+}
+
+ul.pTabs.yellow li { background-position: right -40px; }
+ul.pTabs.yellow a { background-position: left -40px; }
+
+ul.pTabs.orange li { background-position: right -130px; }
+ul.pTabs.orange a { background-position: left -130px; }
+
+ul.pTabs.red li { background-position: right -220px; }
+ul.pTabs.red a { background-position: left -220px; }
+
+ul.pTabs.blue li { background-position: right -310px; }
+ul.pTabs.blue a { background-position: left -310px; }
+
+ul.pTabs.green li { background-position: right -400px; }
+ul.pTabs.green a { background-position: left -400px; }
+
+ul.pTabs.grey li { background-position: right -490px; }
+ul.pTabs.grey a { background-position: left -490px; }
+
+
+/* Мелкая фигулина для перекрытия дырки в закругленной области выше. Пока не используется. */
+
+.pTabs_wrapper .fix
+{
+   position: absolute;
+   top: -9px;
+   right: 5px;
+   width: 7px;
+   height: 5px;
+   font-size: 1%;
+   background-position: 0 -82px;
+}
+
+* html .pTabs_wrapper .fix { top: -5px; right: 4px; }
+
+
+
+
+
+/*-----------------------------------------------------------
+3. Стилизованные поля ввода
+------------------------------------------------------------*/
+
+	/*
+	   3.1. input
+	*/
+
+/*
+NiceInput4 - стилизованные поля ввода. v4
+
+TODO:	1. Видимо, логично было бы переработать кнопки и избавиться от лишнего класса b1|b2|b3,
+		   обозначающего необходимое количество кнопок в данном поле ввода
+		2. Использовать нормальный png для ie
+		  (iepngfix пока не умеет нормально позиционировать фоновое изображение,
+		   приходится для ie подменять полноцветный png индексированным)
+
+.NiceInput4 - блок, содержащий стилизованное поле ввода.
+Дополнительно этому блоку могут присваиваться классы:
+	paramed - наличие стилизованного селекта для выбора параметров поля. В поле ввода даты этот класс не требуется
+	date|date_period - поле ввода даты (точная дата|период)
+	b1|b2|b3|b4 - наличие и количество функциональных кнопок в этом поле ввода (одна, две, три и четре соответственно)
+	inactive|active|filled - состояние поля (неактивное|активное|заполненное)
+*/
+
+		.NiceInput4 {
+		   float: left;
+		   width: 100%;
+		   _width: 99.4%;
+		   -moz-box-sizing: border-box;
+		   -webkit-box-sizing: border-box;
+		   -ms-box-sizing: border-box;
+		   box-sizing: border-box;
+		   padding-left: 11px;
+		   display: table;
+		   position: relative;
+		   height: 22px;
+		}
+
+/*
+Ход лошадью для корректного вывода выпадающих меню в ie - присвоение z-index только
+активному полю, которое в данный момент времени может быть только одно.
+По сути, это обход бага старых версий ie, который для каждого относительно позиционированного элемента
+создает новый стек и перекрытие всех вложенных элементов с абсолютным позиционированием и z-index'ом
+считает относительно родительского элемента, а не глобально, как должен бы.
+В результате даже абсолютно позиционированные вложенные элементы с большим значением z-index
+в ie перекрываются идущими далее относительно позиционированными.
+Подробности тут: http://aplus.rs/lab/z-pos/
+*/
+		* html .NiceInput4.active { z-index: 1001; }
+
+		.NiceInput4,
+			.NiceInput4 .wrapper,
+					.NiceInput4 .pic
+		{
+		   background: url('../images/inputs3.png') no-repeat;
+		   _background: url('../images/inputs3_indexed.png') no-repeat;
+		}
+
+		.NiceInput4.inactive { background-position: 0 -60px; }
+			.NiceInput4.inactive .wrapper { background-position: right -30px; }
+				.inactive input { font-style: italic !important; color: #aaa; }
+		.NiceInput4.filled { background-position: 0 -180px; }
+			.NiceInput4.filled .wrapper { background-position: right -150px; }
+		.NiceInput4.active { background-position: 0 -120px; }
+			.NiceInput4.active .wrapper { background-position: right -90px; }
+				.inactive .params_wrapper input,
+				.active input,
+				.filled input
+				{
+				   font-style: normal !important;
+				   color: #000;
+				}
+
+			.NiceInput4 .wrapper
+			{
+			   -moz-box-sizing: border-box;
+			   -webkit-box-sizing: border-box;
+			   -ms-box-sizing: border-box;
+			   box-sizing: border-box;
+			   position: relative;
+			   width: 100%;
+			   height: 22px;
+			   padding: 0 5px 0 0;
+xxxdisplay: table-cell;
+xxxvertical-align: middle;
+			   _width: 100%;
+			   _padding-right: 0;
+			}
+
+.NiceInput4 .params_wrapper { display: none; }
+.NiceInput4.paramed .params_wrapper { display: block; }
+
+				.NiceInput4 input
+				{
+				   display: block;
+				   width: 100%;
+				   border: none;
+				   height: 1.2em;
+				   min-height: 22px;
+				   line-height: 20px;
+				   background: transparent;
+				   font-family: Tahoma, sans-serif;
+				   font-size: 1em;
+				   _display: inline-block;
+				   _height: 22px;
+				   _margin-right: 5px;
+				   _line-height: 18px;
+				}
+
+				@-moz-document url-prefix() { .NiceInput4 input { padding-top: 2px; } }
+
+				.NiceInput4 .params_wrapper
+				{
+				   position: absolute;
+				   top: 0;
+				   margin-left: -9em;
+				   height: 22px;
+				   line-height: 20px;
+				   text-align: left;
+				   width: 9em;
+				   _margin-left: 0;
+				}
+
+				.NiceInput4 .pics_wrapper
+				{
+				   position: absolute;
+				   top: 0;
+				   right: 0;
+				   height: 22px;
+				   _right: -1px;
+_xxxposition: relative;
+_xxxmargin-top: -22px;
+_xxxleft: 100%;
+_xxxmargin-left: -20px;
+				}
+
+					.NiceInput4 .pic {
+					   float: left;
+					   display: block;
+					   width: 20px !important;
+					   height: 20px;
+					   font-size: 1%;
+					   text-indent: -9999px;
+					}
+
+					.NiceInput4 .dropdown {
+					   display: none;
+					   -webkit-box-shadow: 2px 2px 5px #555;
+					   -moz-box-shadow: 2px 2px 5px #555;
+					   box-shadow: 2px 2px 5px #555;
+					   z-index: 1050;
+					   position: absolute;
+					   top: 19px;
+					   right: 5px;
+					   background: #fff;
+					   border: 1px solid #ffce08;
+					}
+
+
+
+/* разное количество кнопок */
+
+			.b1 .wrapper { padding: 0 20px 0 0;	_padding-right: 0; }
+				.b1 input { _margin-right: 20px; }
+				.b1 .pics_wrapper { width: 21px; }
+			.b2 .wrapper { padding: 0 40px 0 0;	_padding-right: 0; }
+				.b2 input { _margin-right: 40px; }
+				.b2 .pics_wrapper { width: 41px; }
+			.b3 .wrapper { padding: 0 60px 0 0;	_padding-right: 0; }
+				.b3 input { _margin-right: 60px; }
+				.b3 .pics_wrapper { width: 61px; }
+			.b4 .wrapper { padding: 0 80px 0 0;	_padding-right: 0; }
+				.b4 input { _margin-right: 80px; }
+				.b4 .pics_wrapper { width: 81px; }
+
+/* наличие выпадающего списка выбора параметров */
+
+			.paramed .wrapper { padding-left: 9em; _padding-left: 0; }
+				.paramed input { _margin-left: 9em; }
+
+
+
+/* кнопки */
+
+	/* очистить */
+					.inactive .pic.Clear
+					{
+					   background-position: -20px 0 !important;
+					}
+
+					.active .pic.Clear,
+					.filled .pic.Clear
+					{
+					   background-position: 0 0 !important;
+					}
+
+	/* формула */
+					.NiceInput4 .pic.Formula
+					{
+					   background-position: -40px 0;
+					}
+
+	/* выбрать дату */
+					.NiceInput4 .pic.Date
+					{
+					   background-position: -60px 0;
+					}
+
+	/* выбрать параметр */
+					.NiceInput4 .pic.Select
+					{
+					   background-position: -80px 0;
+					   float: none;
+					   position: absolute;
+					   top: 0;
+					   right: 0;
+					}
+
+	/* выбор классификатора */
+					.NiceInput4 .pic.Classificator
+					{
+					   background-position: -120px 0;
+					}
+
+
+
+
+/* поле выбора даты */
+
+		.date_period
+		{
+xxxwidth: 26.5em;
+		   width: auto !important;
+		   _width: 1px !important;
+		 }
+
+			.date_period input
+			{
+			   width: 13em;
+			}
+
+				.date_period .pics_wrapper .dropdown,
+				.date .pics_wrapper .dropdown
+				{
+				   right: 25px;
+				}
+
+				.date_period .pics_wrapper .dropdown
+				{
+				   width: 35.2em;
+				   _width: 36em;
+				}
+
+					.date_period .cal_item { float: left; }
+						.date_period .cal_item p { text-align: center; font-weight: bold; }
+
+	
+.dd_QuickResults
+{
+   display: none;
+   position: relative;
+   top: -4px;
+   right: 0;
+   width: 100%;
+   height: 10em;
+   _height: 0;
+xxxmargin-top: -5px;
+xxxheight: 0;
+   background: #000;
+   z-index: 1050;
+   _margin-right: 5px;
+}
+
+@-moz-document url-prefix() { .dd_QuickResults { top: -28px; } } /* какого хера оно нужно в полном макете и не нужно в отдельной форме поиска? */
+
+.b1 .dd_QuickResults { _margin-right: 20px; }
+.b2 .dd_QuickResults { _margin-right: 40px; }
+.b3 .dd_QuickResults { _margin-right: 60px; }
+.b4 .dd_QuickResults { _margin-right: 80px; }
+
+	.dd_QuickResults .wra
+	{
+	   position: absolute;
+	   xxxtop: -24px;
+	   width: 100%;
+	   height: 100%;
+	   _height: 10em;
+	   background: #fff;
+	   -webkit-box-shadow: 2px 2px 5px #555;
+	   -moz-box-shadow: 2px 2px 5px #555;
+	   box-shadow: 2px 2px 5px #555;
+	   border: 1px solid #ffce08;
+	   overflow: auto;
+	}
+
+/* загрузка контента */
+
+	.dd_QuickResults .spinner_wrapper { display: none; }
+	.dd_QuickResults.loading, .dd_QuickResults.loading .wra { height: 40px !important; }
+		.dd_QuickResults.loading .spinner_wrapper { display: table !important; _display: block !important; }
+		.dd_QuickResults.loading ul.QuickResults { display: none !important }
+
+
+
+		/*
+		   3.1.2. Выпадающее окно календаря
+		*/
+
+.calendar_wrapper,
+	.calendar_wrapper .header,
+	.calendar_wrapper .data
+{
+   -moz-box-sizing: border-box;
+   -webkit-box-sizing: border-box;
+   -ms-box-sizing: border-box;
+   box-sizing: border-box;
+}
+
+.calendar_wrapper
+{
+   float: left;
+   width: 16.5em;
+   background: #fff;
+   padding: 0 0 0 .5em;
+}
+
+	.calendar_wrapper .header
+	{
+	   background: #f0f0f0;
+	   height: 2em;
+	   width: 100%;
+	   _width: 16.5em;
+	   padding: 4px 5px;
+	}
+
+		.calendar_wrapper .months { float: left; }
+		.calendar_wrapper .years { float: right; }
+
+			.calendar_wrapper .ar
+			{
+			   background: url('../images/pics.png') no-repeat;
+			   text-indent: -9999px;
+			   width: 7px;
+			   height: 1.2em;
+			   float: left;
+			}
+
+			.calendar_wrapper .ar.left { background-position: 0 -89px; }
+			.calendar_wrapper .ar.right { background-position: 0 -29px; }
+
+			.calendar_wrapper select,
+			.calendar_wrapper input
+			{
+			   font-size: .9em;
+			   float: left;
+			   margin: 0 1px;
+			}
+
+			.calendar_wrapper input
+			{
+			   width: 3.8em;
+			   height: 1.5em;
+			   _height: 1.7em;
+			   line-height: 1.5em;
+			   min-height: 1.5em;
+			   xxxpadding-top: 0;
+			   background: #fff;
+			   border: 1px solid #ffce08;
+			   display: inline !important;
+			   position: static !important;
+			   margin-right: 0;
+			   text-align: center;
+			}
+
+			@-moz-document url-prefix() { .calendar_wrapper input { padding-top: 0; } }
+
+
+
+	.calendar_wrapper .data
+	{
+	   text-align: center;
+	   width: 100%;
+	   padding: 10px;
+	}
+
+
+
+		table.CalendarDays									/* дни месяца */
+		{
+		   width: 100%;
+		   margin: 0 auto;
+		   border-collapse: collapse;
+		   font-family: Tahoma, sans-serif;
+		   xxxfont-size: .75em;
+		   _font-size: 100%;
+		}
+
+			table.CalendarDays th,
+			table.CalendarDays td
+			{
+			   text-align: center;
+			   padding: .1em .05em .05em .05em;
+			}
+
+			table.CalendarDays th
+			{
+			   border-bottom: 1px solid #f2f2f2;
+			   padding-bottom: .4em;
+			   font-weight: bold;
+			}
+
+			table.CalendarDays td.today
+			{
+			   background-color: #fff152;
+			}
+
+			table.CalendarDays td.checked
+			{
+			   background-color: #bfc6d7;
+			}
+
+				table.CalendarDays a
+				{
+				   text-decoration: none;
+				   width: 2em;
+				   height: 1.5em;
+				   display: inline-block;
+				}
+
+				table.CalendarDays a,
+				table.CalendarDays a:visited
+				{
+				   color: #000;
+				}
+
+			table.CalendarDays td:hover,
+				* html table.CalendarDays a:hover
+			{
+			   background-color: #004499;
+			   color: #fff !important;
+			   cursor: pointer;
+			}
+
+			table.CalendarDays td:hover a
+			{
+			   color: #fff !important;
+			}
+
+				table.CalendarDays td.out a,				/* дни, не входящие в текущий месяц */
+				table.CalendarDays td.out a:visited
+				{
+				   color: #e1e1e1;
+				}
+
+
+
+	/*
+	   3.2. textarea
+	*/
+
+
+
+
+
+/*-----------------------------------------------------------
+4. Стилизованные кнопки (.Buttons3)
+------------------------------------------------------------*/
+
+/*
+Стилизованные кнопки v3.2
+
+В настоящее время поддерживается три цвета: желтый (.yellow), синий (.blue) и серый (.grey).
+
+Кнопки могут задаваться двумя путями:
+	1. В виде собственно кнопки тегом <button></button>
+	   В этом случае внутрь дива .Buttons3 помещается конструкция:
+	   <div class="yellow|blue|grey"><button>...</button></div>
+	2. В виде ссылки тегом <a href=""></a> 
+	   В этом случае внутрь дива .Buttons3 помещается конструкция:
+	   <a href="#" class="yellow|blue|grey"><span>...</span></a>
+
+Рекомендуется использовать первый вариант (задание тегом button), как семантически более правильный способ.
+
+По умолчанию ширина кнопки соответствует контенту.
+Можно задавать ширину явно; в этом случае ее следует указывать вложенному элементу:
+элементу button, если кнопка оформлена тегом button, и элементу span, если кнопка оформлена ссылкой, вот так:
+<div><button style="width: 10em;">...</button></div>
+<a href="#"><span style="width: 10em;">...</span></a>
+
+*/
+
+.Buttons3
+{
+   display: table;
+   margin: 0 auto;
+   padding: 5px;
+}
+
+	.Buttons3 a,
+	.Buttons3 a:hover,
+	.Buttons3 a:visited
+	{
+	   text-decoration: none;
+	   color: #000;
+	}
+
+	.Buttons3 a,
+	.Buttons3 span,
+	.Buttons3 div,
+	.Buttons3 button
+	{
+	   background: url('../images/buttons3.png') no-repeat;
+	   font-family: Arial;
+	   color: #000;
+	}
+
+	.Buttons3 a,
+	.Buttons3 div
+	{
+	   display: block;
+	   float: left;
+	   _display: inline;
+	   _float: none;
+	   height: 25px;
+	   max-height: 25px;
+	   width: auto;
+	   overflow: hidden;
+	   margin-right: 8px;
+	   padding: 0 11px 0 0;
+	   background-position: right 0;
+	   border: none;
+	   cursor: pointer;
+	}
+
+		.Buttons3 span,
+		.Buttons3 button
+		{
+		   display: block;
+		   _display: inline;
+		   line-height: 25px;
+		   height: 25px;
+		   padding: 0 0 0 12px;
+		   margin: 0;
+		   float: left;
+		   border: none;
+		   font-size: 90%;
+		   font-weight: bold;
+		   text-shadow: 1px 1px 0 #fff;
+		   cursor: pointer;
+		}
+
+		* html .Buttons3 button
+		{
+		   line-height: 22px;
+		   overflow: visible;
+		}
+
+		/* эмуляция нажатия кнопки для ff и safari */
+		.Buttons3 button[type]
+		{
+		   padding-bottom: 4px;
+		}
+		.Buttons3 button[type]:active
+		{
+		   padding-top: 1px;
+		}
+
+
+
+/* yellow */
+
+.Buttons3 .yellow
+{
+   background-position: right 0;
+}
+
+.Buttons3 .yellow span,
+.Buttons3 .yellow button
+{
+   background-position: left 0;
+   text-shadow: 1px 1px 0 #fffde9;
+}
+
+/* blue */
+
+.Buttons3 .blue
+{
+   background-position: right -26px;
+}
+
+.Buttons3 .blue span,
+.Buttons3 .blue button
+{
+   background-position: left -26px;
+   text-shadow: 1px 1px 0 #d6dbe8;
+}
+
+/* grey */
+
+.Buttons3 .grey
+{
+   background-position: right -52px;
+}
+
+.Buttons3 .grey span,
+.Buttons3 .grey button
+{
+   background-position: left -52px;
+   text-shadow: 1px 1px 0 #f5f5f5;
+}
+
+.Buttons3 a.grey,
+.Buttons3 .grey button
+{
+   color: #808080 !important;
+}
+
+
+
+
+
+
+/*-----------------------------------------------------------
+5. Блоки с закругленными уголками (.rounded) 
+------------------------------------------------------------*/
+
+/*
+rounded - блоки с закругленными уголками, третья инкарнация
+
+TODO:	1. Использовать нормальный png вместо gif для ie (сейчас есть баг iepngfix, приходится для ie подсовывать gif)
+
+однажды у меня дойдут руки описать подробно, пока приведу только используемые сокращения:
+.s - верхняя и нижняя часть блока
+    .t - верхняя
+    .b - нижняя
+
+*/
+
+.rounded { xxxmargin: 0 5px 5px 5px; }
+	.rounded .s { position: relative; left: -1px; height: 10px; margin-right: -2px; font-size: 1%; }
+		.rounded .s span { float: right; width: 10px; height: 10px; }
+	.rounded .rounded_wrapper { padding: 0 10px; }
+
+.rounded .s.t,
+.rounded .s.b,
+.rounded .s.t span,
+.rounded .s.b span {
+   background: url('../images/blocks3_2.png') no-repeat;
+   *background-image: url('../images/blocks3_2.gif');
+/*
+   behavior: url('css/iepngfix.htc');
+   Когда iepngfix научится полноценно позиционировать фоновое изображение,
+   нужно будет отключить ссылку на gif выше и раскомментировать behavior,
+   чтобы включить корректную работу с png для старых версий ie.
+*/
+}
+
+
+
+
+
+
+/* желтый */
+.rounded.yellow, .rounded.yellow .header { background-color: #fffbc7 !important; }
+.rounded.yellow, .rounded.yellow .header .b { border: 1px solid #f8f4c5; }
+.rounded.yellow .s.t { top: -1px; background-position: -10px -10px; }
+.rounded.yellow .s.b { bottom: -1px; background-position: -10px 0; }
+.rounded.yellow .s.t span { background-position: 0 -10px; }
+.rounded.yellow .s.b span { background-position: 0 0; }
+
+/* синий */
+.rounded.blue, .rounded.blue .header { background-color: #bfc6d7 !important; }
+.rounded.blue, .rounded.blue .header .b { border: 1px solid #abb4c9; }
+.rounded.blue .s.t { top: -1px; background-position: -10px -30px; }
+.rounded.blue .s.b { bottom: -1px; background-position: -10px -20px; }
+.rounded.blue .s.t span { background-position: 0 -30px; }
+.rounded.blue .s.b span { background-position: 0 -20px; }
+
+/* зеленый */
+.rounded.green, .rounded.green .header { background-color: #e9f4df !important; }
+.rounded.green, .rounded.green .header .b { border: 1px solid #ddeece; }
+.rounded.green .s.t { top: -1px; background-position: -10px -50px; }
+.rounded.green .s.b { bottom: -1px; background-position: -10px -40px; }
+.rounded.green .s.t span { background-position: 0 -50px; }
+.rounded.green .s.b span { background-position: 0 -40px; }
+
+/* красный */
+.rounded.red, .rounded.red .header { background-color: #ffe5e5 !important; }
+.rounded.red, .rounded.red .header .b { border: 1px solid #f3e0e0; }
+.rounded.red .s.t { top: -1px; background-position: -10px -70px; }
+.rounded.red .s.b { bottom: -1px; background-position: -10px -60px; }
+.rounded.red .s.t span { background-position: 0 -70px; }
+.rounded.red .s.b span { background-position: 0 -60px; }
+
+/* голубой */
+.rounded.lightblue, .rounded.lightblue .header { background-color: #e8f1ff !important; }
+.rounded.lightblue, .rounded.lightblue .header .b { border: 1px solid #e1e9f7; }
+.rounded.lightblue .s.t { top: -1px; background-position: -10px -90px; }
+.rounded.lightblue .s.b { bottom: -1px; background-position: -10px -80px; }
+.rounded.lightblue .s.t span { background-position: 0 -90px; }
+.rounded.lightblue .s.b span { background-position: 0 -80px; }
+
+/* оранжевый */
+.rounded.orange, .rounded.orange .header { background-color: #ffebd8 !important; }
+.rounded.orange, .rounded.orange .header .b { border: 1px solid #fae5d2; }
+.rounded.orange .s.t { top: -1px; background-position: -10px -110px; }
+.rounded.orange .s.b { bottom: -1px; background-position: -10px -100px; }
+.rounded.orange .s.t span { background-position: 0 -110px; }
+.rounded.orange .s.b span { background-position: 0 -100px; }
+
+/* серый */
+.rounded.grey, .rounded.grey .header { background-color: #ededed !important; }
+.rounded.grey, .rounded.grey .header .b { border: 1px solid #e6e6e6; }
+.rounded.grey .s.t { top: -1px; background-position: -10px -130px; }
+.rounded.grey .s.b { bottom: -1px; background-position: -10px -120px; }
+.rounded.grey .s.t span { background-position: 0 -130px; }
+.rounded.grey .s.b span { background-position: 0 -120px; }
+
+/* glamorous */
+.rounded.glamorous, .rounded.glamorous .header { background-color: #f7e6f8 !important; }
+.rounded.glamorous, .rounded.glamorous .header .b { border: 1px solid #efd5ec; }
+.rounded.glamorous .s.t { top: -1px; background-position: -10px -150px; }
+.rounded.glamorous .s.b { bottom: -1px; background-position: -10px -140px; }
+.rounded.glamorous .s.t span { background-position: 0 -150px; }
+.rounded.glamorous .s.b span { background-position: 0 -140px; }
+
+
+
+
+
+
+#workspace .Rounded4 {
+   -moz-box-sizing: border-box;
+   -webkit-box-sizing: border-box;
+   -ms-box-sizing: border-box;
+   box-sizing: border-box;
+   -moz-border-radius: 10px;
+   -webkit-border-radius: 10px;
+   padding: 0 20px;
+}
+
+.Slip {
+	margin-bottom:8px;
+}
+
+#workspace .Rounded4.glamorous { background-color: #f7e6f8 !important; border: 1px solid #efd5ec; }
+
+#workspace .Rounded4.yellow { background-color: #fffbc7 !important; border: 1px solid #efebba; }
+#workspace .Rounded4.blue { background-color: #bfc6d7 !important; border: 1px solid #abb4c9; }
+#workspace .Rounded4.green { background-color: #e9f4df !important; border: 1px solid #d3e8c1; }
+#workspace .Rounded4.red { background-color: #ffe5e5 !important; border: 1px solid #ead2d2; }
+#workspace .Rounded4.lightblue { background-color: #e8f1ff !important; border: 1px solid #d6e0f1; }
+#workspace .Rounded4.orange { background-color: #ffebd8 !important; border: 1px solid #efd9c5; }
+#workspace .Rounded4.grey, #workspace .Rounded4.default { background-color: #ededed !important; border: 1px solid #c9c9c9; }
+
+
+.Rounded4.outlined { background-color: #fff !important; }
+
+		/* выравнивание по вертикали */
+		.crutch4ie { display: none; width: 1px; margin-left: -1px; }
+		* html .crutch4ie, * html .valign-center { vertical-align: middle; display: inline; }
+		* html .valign-center { width: 100%; }
+		* html .crutch4ie { height: 100%; }
+
+
+
+
+
+
+
+
+	/*
+	   Сервисы продукта/раздела (.Services)
+	*/
+
+.Services {
+   list-style: none;
+   -webkit-border-radius: 15px;
+   -moz-border-radius: 15px;
+   border-radius: 15px;
+   font-size: .675em;
+   font-weight: bold;
+   line-height: 1.2em;
+}
+
+.Services.glamorous {
+   background-color: #f7e6f8 !important;
+   border: 1px solid #efebba;
+}
+
+.Services.yellow {
+   background-color: #fffbc7 !important;
+   border: 1px solid #efebba;
+}
+
+.Services.blue {
+   background-color: #bfc6d7 !important;
+   border: 1px solid #abb4c9;
+}
+
+.Services.green {
+   background-color: #e9f4df !important;
+   border: 1px solid #d3e8c1;
+}
+
+.Services.red {
+   background-color: #ffe5e5 !important;
+   border: 1px solid #ead2d2;
+}
+
+.Services.orange {
+   background-color: #ffebd8 !important;
+   border: 1px solid #efd9c5;
+}
+
+.Services.grey {
+   background-color: #ededed !important;
+   border: 1px solid #c9c9c9;
+}
+
+	.Services li {
+	   float: left;
+	   padding: 5px 13px 7px 13px;
+	   border-right: 2px solid #fff;
+	}
+
+	.Services li.last { border: none; }
+
+		.Services a,
+		.Services a:visited {
+		   color: #000;
+		}
+
+
+
+
+/*
+.outlined - это когда фоновый цвет белый, а border остается соответствующего блоку цвета.
+Внутри может быть блок с классом .header - это заголовок блока с соответствующим блоку фоновым цветом
+*/
+
+.default.outlined, 
+.yellow.outlined, 
+.blue.outlined, 
+.green.outlined, 
+.red.outlined, 
+.lightblue.outlined, 
+.orange.outlined,
+.grey.outlined { background: #fff !important; }
+.rounded.outlined .header { padding: 0 10px 5px 10px; margin-top: -1px; }
+.rounded.outlined .header .b { margin: -11px -1px 0 -1px; border-right: none !important; border-bottom: none !important; }
+* html .rounded.outlined .header .b { margin-top: -10px; }
+
+.Slip .valign-center
+{
+  line-height: 45px;
+  min-height: 60px;
+}

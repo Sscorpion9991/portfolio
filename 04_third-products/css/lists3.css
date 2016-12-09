@@ -1,0 +1,1168 @@
+﻿/*-----------------------------------------------------------
+
+                   Списки содержимого v3.4
+
+Содержание:
+
+1. Общее
+2. Виды списков
+   2.1. Документы (.Documents)
+   2.2. Документы с аннотациями (.DocumentsWithAnnotations)
+   2.3. Ситуации (.Situations)
+   2.4. Ситуации с аннотациями (.SituationsWithAnnotations)
+   2.5. Классификаторы (линейный список) (.Classificators)
+   2.6. Дерево (.Tree) и дерево тематик (.ThematicsTree)
+   2.7. Содержание документа (.DocumentContents)
+   2.8. Оглавление (.ContentsTree)
+   2.9. Разделы продукта (.Sections)
+   2.10. Подключенные тома базы данных (.DbVolumes)
+   2.11. Список с результами быстрого поиска (.QuickResults)
+   2.12. Список атрибутов сортировки (.SortAttrs)
+   2.13. Запросы (.Queries)
+   2.14. Тематики (.Thematics)
+3. Различные состояния элементов списка
+   3.1. Выделенные элементы (.selected)
+   3.2. Внесенные в список элементы (.enlisted)
+   3.3. Посещенные элементы (.visited)
+
+
+
+Тематики (.Thematics)
+Аннотации к результатам поиска по тексту (.TSearchAnnotations)
+.products
+
+------------------------------------------------------------*/
+
+/*-----------------------------------------------------------
+   1. Общее
+------------------------------------------------------------*/
+
+.list {
+   list-style: none;
+   -xxxmoz-user-select: none;
+   -xxxwebkit-user-select: none;
+   user-select: none;
+}
+
+	/* действующий документ */
+	.Documents .active,
+	.DocumentsWithAnnotations .active,
+	.list .documentActive {
+	   background: #fff url('../images/list_documents.png') no-repeat 0 0;
+	}
+
+	/* недействующий документ */
+	.Documents .inactive,
+	.DocumentsWithAnnotations .inactive,
+	.list .documentInactive {
+	   background: #fff  url('../images/list_documents.png') no-repeat 0 -1000px;
+	}
+
+	/* документ с неопределенным статусом */
+	.Documents .undefined,
+	.DocumentsWithAnnotations .undefined,
+	.list .documentUndefined {
+	   background: #fff  url('../images/list_documents.png') no-repeat 0 -2000px;
+	}
+
+	/* карточка документа действующего */
+	.Documents .card_active,
+	.DocumentsWithAnnotations .card_active,
+	.list .documentCardActive {
+	   background: #fff url('../images/list_documents.png') no-repeat 0 -3000px;
+	}
+
+	/* карточка документа не действующего */
+	.Documents .card_inactive,
+	.DocumentsWithAnnotations .card_inactive,
+	.list .documentCardInactive {
+	   background: #fff  url('../images/list_documents.png') no-repeat 0 -4000px;
+	}
+
+	/* карточка документа с неопределенным статусом */
+	.Documents .card_undefined,
+	.DocumentsWithAnnotations .card_undefined,
+	.list .documentCardUndefined {
+	   background: #fff  url('../images/list_documents.png') no-repeat 0 -5000px;
+	}
+	/* документ закрытый для пользователя */
+	.Documents .protectedDoc,
+	.DocumentsWithAnnotations .protected_doc,
+	.list .documentProtectedDoc {
+	   background: #fff  url('../images/list_documents.png') no-repeat 0 -17140px;
+	}
+	
+
+/*-----------------------------------------------------------
+   2. Виды списков
+------------------------------------------------------------*/
+
+	/*
+	   2.1. Документы (.Documents)
+	*/
+
+.Documents .active,
+.Documents .inactive,
+.Documents .undefined,
+.Documents .card_active,
+.Documents .card_inactive,
+.Documents .card_undefined,
+.list .documentActive,
+.list .documentInactive,
+.list .documentUndefined,
+.list .documentCardActive,
+.list .documentCardInactive,
+.list .documentCardUndefined {
+   position: relative;
+   _width: 100%;
+   padding: 10px 33px 15px 43px;
+   border-bottom: 1px solid #ededed;
+   cursor: pointer;
+}
+
+	.Documents p,
+	.list .documentActive p,
+	.list .documentInactive p,
+	.list .documentUndefined p,
+	.list .documentCardActive p,
+	.list .documentCardInactive p,
+	.list .documentCardUndefined p {
+	   margin: 0;
+	   padding-bottom: .4em;
+	}
+
+		.Documents a,
+		.Documents a:visited,
+		.list .documentActive a,
+		.list .documentInactive a,
+		.list .documentUndefined a,
+		.list .documentCardActive a,
+		.list .documentCardInactive a,
+		.list .documentCardUndefined a {		
+		   color: #000;
+		   text-decoration: none;
+		}
+		
+	.Documents em,
+	.list .documentActive em,
+	.list .documentInactive em,
+	.list .documentUndefined em,
+	.list .documentCardActive em,
+	.list .documentCardInactive em,
+	.list .documentCardUndefined em {
+	   color: #939393;
+	   font-size: .75em;
+	   line-height: 1.1em;
+	}
+
+
+
+	/*
+	   2.2. Документы с аннотациями (.DocumentsWithAnnotations)
+	*/
+
+.DocumentsWithAnnotations li,
+	.DocumentsWithAnnotations .link_Annotation {
+   -moz-box-sizing: border-box;
+   -webkit-box-sizing: border-box;
+   -ms-box-sizing: border-box;
+   box-sizing: border-box;
+}
+
+.DocumentsWithAnnotations li {
+   position: relative;
+   width: 100%;
+   padding: 10px 120px 15px 43px !important;
+   border-bottom: 1px solid #ededed;
+   cursor: pointer;
+   _height: 1px;
+}
+
+	.DocumentsWithAnnotations p { margin-bottom: .4em; }
+
+	.DocumentsWithAnnotations em {
+	   color: #939393;
+	   font-size: .75em;
+	   line-height: 1.1em;
+	 }
+
+	.DocumentsWithAnnotations .link_Annotation {
+	   display: block;
+	   background: #f7f7f7 url('../images/list_pics.png') no-repeat -55px 0;
+	   border: 10px solid #fff;
+	   border-left: none !important;
+	   width: 110px;
+	   height: 100%;
+	   position: absolute;
+	   top: 0;
+	   right: 0;
+	   text-align: center;
+	   font-size: 1%;
+	   text-indent: -9999px;
+	}
+
+	.DocumentsWithAnnotations .link_Annotation:hover { background: #ededed url('../images/list_pics.png') no-repeat -55px 0; }
+
+	/* стили для выделенного элемента */
+
+	.DocumentsWithAnnotations .selected .link_Annotation { border: 10px solid #c2d5f5; }
+
+	/* загрузка аннотации */
+	.DocumentsWithAnnotations .loading { background: #f7f7f7 url('../images/spinner_l.gif') no-repeat 45px 10px; }
+	.DocumentsWithAnnotations .loading:hover { background: #ededed url('../images/spinner_l.gif') no-repeat 45px 10px;	}
+
+	.DocumentsWithAnnotations .dropdown {
+	   top: 10px;
+	   right: 40px;
+	   left: auto;
+	   cursor: default;
+	}
+
+	.DocumentsWithAnnotations .selected { _z-index: 10001; }
+
+
+
+	/*
+	   2.3. Ситуации (.Situations)
+	*/
+
+	ul.Situations li,
+	.list .situation {
+	   margin: 0;
+	   padding: 5px 0.5em 5px 43px;
+	   border-bottom: 1px solid #ededed;
+	   background: url('../images/list_documents.png') no-repeat 0 -6000px;
+	   cursor: pointer;
+	}
+
+ul.Situations_simple { margin: .5em 0 1em 0; }
+
+	ul.Situations_simple li {
+	   padding: 5px 0.5em 5px 33px;
+	   font-weight: bold;
+	}
+
+
+
+	/*
+	   2.4. Ситуации с аннотациями (.SituationsWithAnnotations)
+	*/
+
+.SituationsWithAnnotations .item,
+	.SituationsWithAnnotations .link_annotation_show,
+	.SituationsWithAnnotations .link_annotation_hide {
+   -moz-box-sizing: border-box;
+   -webkit-box-sizing: border-box;
+   -ms-box-sizing: border-box;
+   box-sizing: border-box;
+}
+
+.SituationsWithAnnotations .item {
+   position: relative;
+   width: 100%;
+   padding: 5px 120px 5px 33px !important;
+   border-bottom: 1px solid #ededed;
+   cursor: pointer;
+   _height: 1px;
+   background: url('../images/list_documents.png') no-repeat 0 -5950px;
+}
+
+	.SituationsWithAnnotations .annotation {
+	   background: #f7f7f7;
+	   border: 1px solid #ededed;
+	   margin: .5em 0 5px 0;
+	   _margin-bottom: 6px;
+	   padding: 3px 8px;
+	}
+
+	/* добавлять к .annotation во время подгрузки аннотации */
+	.SituationsWithAnnotations .loading {
+	   height: 20px;
+	   background: #f7f7f7 url('../images/spinner_l.gif') no-repeat center;
+	}
+
+	.SituationsWithAnnotations .link_annotation_show,
+	.SituationsWithAnnotations .link_annotation_hide {
+	   display: block;
+	   background: #f7f7f7 url('../images/list_pics.png') no-repeat -55px -5px;
+	   border: 7px solid #fff;
+	   border-left: none !important;
+	   width: 110px;
+	   height: 100%;
+	   position: absolute;
+	   top: 0;
+	   right: 0;
+	   text-align: center;
+	   font-size: 1%;
+	   text-indent: -9999px;
+	}
+
+	.SituationsWithAnnotations .link_annotation_hide {
+	   display: none;
+	   background: #f7f7f7 url('../images/list_pics.png') no-repeat 45px -5px;
+	}
+
+	/* стили для выделенного элемента */
+
+	.SituationsWithAnnotations .selected .annotation {
+	   background: #3369ad;
+	   border: 1px solid #4a7bb9;
+	   color: #fff !important;
+	}
+
+	.SituationsWithAnnotations .selected .loading { background:  #3369ad url('../images/spinner_l_blue.gif') no-repeat center; }
+
+	.SituationsWithAnnotations .selected .link_annotation_show,
+	.SituationsWithAnnotations .selected .link_annotation_hide {
+	   background: #3369ad url('../images/list_pics.png') no-repeat -255px -5px;
+	   border: 7px solid #004499;
+	}
+
+	.SituationsWithAnnotations .selected .link_annotation_hide {
+	   background: #3369ad url('../images/list_pics.png') no-repeat -155px -5px;
+	}
+
+
+
+	/*
+	   2.5. Классификаторы (линейный список) (.Classificators)
+	*/
+
+.Classificators .item,
+	.Classificators li {
+	   padding: 0 10px;
+	   border-top: 1px solid #fff;
+	   font-size: .785em;
+	   font-family: Tahoma;
+	   line-height: 1.2em;
+	   cursor: pointer;
+	}
+
+
+
+	/*
+	   2.6. Дерево (.Tree) и дерево тематик (.ThematicsTree)
+	*/
+
+.Tree .item,
+.Tree li,
+.ThematicsTree li {
+   padding-left: 15px;
+   border-top: 1px solid #fff;
+   font-size: .785em;
+   font-family: Tahoma, sans-serif;
+   line-height: 1.2em;
+   _zoom: 1;
+}
+
+	.Tree .closed,
+	.ThematicsTree .closed {
+	   background-image: url('../images/list_pics.png');
+	   background-repeat: no-repeat;
+	   background-position: -385px .4em;
+	}
+
+	.Tree .opened,
+	.ThematicsTree .opened {
+	   background-image: url('../images/list_pics.png');
+	   background-repeat: no-repeat;
+	   background-position: -2476px .4em;
+	}
+
+	.Tree .loading,
+	.ThematicsTree .loading {
+	   background-image: url('../images/spinner_l.gif');
+	   background-repeat: no-repeat;
+	   background-position: 11px 4px;
+	}
+
+		.Tree a, .Tree a:visited,
+		.ThematicsTree a,
+		.ThematicsTree a:visited {
+		   color: #000 !important;
+		   text-decoration: none;
+		   display: block;
+		   padding: .25em 0 .2em 0;
+		   margin-left: 15px;
+		}
+
+		.Tree a:hover, .ThematicsTree a:hover { text-decoration: underline; }
+			.Tree ul,
+			.ThematicsTree ul {
+			   list-style: none;
+			   margin-left: -15px;
+			   padding-left: 15px;
+			}
+
+			.Tree .selected ul,
+			.Tree .enlisted ul,
+			.ThematicsTree .selected ul,
+			.ThematicsTree .enlisted ul {
+			   background-color: #fff;
+			}
+				.Tree li li, .ThematicsTree li li  { font-size: 1em; }
+
+/* дерево в окне выбора классификаторов */
+.ThematicsTree a,
+.ThematicsTree a:visited,
+.ThematicsTree a:hover {
+   cursor: pointer;
+   text-decoration: none;
+   display: inline-block;
+   _display: block;
+}
+
+
+
+	/*
+	   2.7. Дерево тематик (.ThematicsTree)
+
+
+	.ThematicsTree li {
+	   border-top: 1px solid #fff;
+	   padding-left: 30px;
+	   font-size: .785em;
+	   font-family: Tahoma, sans-serif;
+	   line-height: 1.2em;
+	   cursor: pointer;
+	}
+	.ThematicsTree .closed { background-image: url('../images/list_pics.png'); background-repeat: no-repeat; background-position: -385px .2em; }
+	.ThematicsTree .opened { background-image: url('../images/list_pics.png'); background-repeat: no-repeat; background-position: -2476px .2em; }
+	.ThematicsTree .loading { background-image: url('../images/spinner_l.gif'); background-repeat: no-repeat; background-position: 11px 0; }
+		.ThematicsTree .selected ul,
+		.ThematicsTree .enlisted ul {
+		   background-color: #fff;
+		}
+		.ThematicsTree ul { list-style: none; margin-left: -30px; padding-left: 15px; cursor: auto; }
+			.ThematicsTree li li { font-size: 1em; }
+	*/
+
+
+	/*
+	   2.7. Содержание документа (.DocumentContents)
+	*/
+
+.DocumentContents
+{
+   margin: 10px;
+   _zoom: 1;
+}
+
+/* level 1 */
+
+	.DocumentContents li
+	{
+	   border-top: 1px solid #fff;
+	   background: #dedede;
+	   font-weight: bold;
+	   line-height: 1.3em;
+	   padding: 3px 0 0 0;
+	   text-transform: uppercase;
+	}
+
+		.DocumentContents a,
+		.DocumentContents a:visited,
+		.DocumentContents a:hover
+		{
+		   display: block;
+		   color: #000;
+		   text-decoration: none;
+		   padding: 0 10px 3px 20px;
+		}
+
+		.DocumentContents .closed > a
+		{
+		   background: url('../images/list_pics.png') no-repeat -395px .15em;
+		}
+
+		.DocumentContents .opened > a
+		{
+		   background: url('../images/list_pics.png') no-repeat -2486px .15em; 
+		}
+
+			.DocumentContents .closed > ul { display: none; }
+			.DocumentContents .opened > ul { display: block; }
+
+/* level 2 */
+
+				.DocumentContents li li
+				{
+				   text-transform: none;
+				   background: #efefef;
+				   font-weight: normal;
+				}
+
+/* level 3 */
+
+					.DocumentContents li li li
+					{
+					   background: #fff;
+					   border-top: 1px solid #ededed;
+					}
+
+/* куда же без костылей-то */
+
+* html 	.DocumentContents li,
+* html .DocumentContents a
+{
+   _zoom: 1;
+}
+
+/* а дальше начинается шведское порно; и все потому, что ie6 не знает селектора > */
+
+* html .DocumentContents .closed ul { display: none; }
+	* html .DocumentContents .closed .closed ul { display: none; }
+		* html .DocumentContents .closed .closed .closed ul { display: none; }
+		* html .DocumentContents .closed .closed .opened ul { display: block; }
+	* html .DocumentContents .closed .opened ul { display: block; }
+		* html .DocumentContents .closed .opened .closed ul { display: none; }
+		* html .DocumentContents .closed .opened .opened ul { display: block; }
+* html .DocumentContents .opened ul { display: block; }
+	* html .DocumentContents .opened .closed ul { display: none; }
+		* html .DocumentContents .opened .closed .closed ul { display: none; }
+		* html .DocumentContents .opened .closed .opened ul { display: block; }
+	* html .DocumentContents .opened .opened ul { display: block; }
+		* html .DocumentContents .opened .opened .closed ul { display: none; }
+		* html .DocumentContents .opened .opened .opened ul { display: block; }
+
+		* html .DocumentContents .closed li a,
+		* html .DocumentContents .opened li a,
+		* html .DocumentContents li .closed li a,
+		* html .DocumentContents li .opened li a,
+		* html .DocumentContents li li .closed li a,
+		* html .DocumentContents li li .opened li a,
+		* html .DocumentContents li li li .closed li a,
+		* html .DocumentContents li li li .opened li a
+		{
+		   background: none; 
+		}
+
+		* html .DocumentContents .closed a,
+		* html .DocumentContents li .closed a,
+		* html .DocumentContents li li .closed a,
+		* html .DocumentContents li li li .closed a
+		{ 
+		   background: url('../images/list_pics.png') no-repeat -395px 0;
+		}
+
+		* html .DocumentContents .opened a,
+		* html .DocumentContents li .opened a,
+		* html .DocumentContents li li .opened a,
+		* html .DocumentContents li li li .opened a
+		{
+		   background: url('../images/list_pics.png') no-repeat -2486px 0;
+		}
+
+
+
+	/*
+	   2.9. Оглавление (.ContentsTree)
+	*/
+
+.ContentsTree {
+   font-size: .875em;
+   font-family: Tahoma, sans-serif;
+}
+
+	.ContentsTree .closed {
+	   background-image: url('../images/list_pics.png');
+	   background-repeat: no-repeat;
+	   background-position: -395px .4em;
+	}
+
+	.ContentsTree .opened {
+	   background-image: url('../images/list_pics.png');
+	   background-repeat: no-repeat;
+	   background-position: -2486px .4em;
+	}
+
+	.ContentsTree .loading {
+	   background-image: url('../images/spinner_l.gif');
+	   background-repeat: no-repeat;
+	   background-position: 2px 4px;
+	}
+
+		.ContentsTree a,
+		.ContentsTree a:visited {
+		   color: #000 !important;
+		   text-decoration: none
+		   display: block;
+		   xxxpadding: .25em 0 .2em 0;
+		   margin-left: 20px;
+		}
+
+		.ContentsTree a:hover { text-decoration: underline; }
+
+			.ContentsTree ul { list-style: none; }
+
+/* level 1 */
+
+	.ContentsTree li {
+	   xxxtext-transform: uppercase;
+	   font-weight: bold;
+	   background-color: #efefef;
+	   border-bottom: 1px solid #afafaf;
+	   padding: .25em 0 .2em 0;
+	}
+
+/* level 2 */
+
+		.ContentsTree ul {
+		   background: #fff;
+		   border-top: 1px solid #afafaf;
+		   margin-bottom: -3px;
+		}
+
+			.ContentsTree li li {
+			   border-bottom: 1px solid #cfcfcf;
+			   background-color: #fff;
+			   font-weight: bold;
+			   text-transform: none;
+			}
+
+			.ContentsTree li .closed {
+			   background-position: -395px .55em;
+			}
+
+			.ContentsTree li .opened {
+			   background-position: -2486px .55em;
+			}
+
+				.ContentsTree li li a {
+				   padding: .4em 0 .5em 0 !important;
+				}
+
+/* level 3 */
+
+				.ContentsTree ul ul {
+				   border-top: none;
+				   margin-bottom: 0;
+				   xxxfont-size: .85em;
+				   padding-bottom: 1em;
+				}
+
+					.ContentsTree ul ul li {
+					   border-top: 1px solid #cfcfcf;
+					   border-bottom: 1px solid #fff;
+					   font-weight: normal;
+					}
+					
+/* level 4 */
+
+						.ContentsTree ul ul ul {
+						   margin-left: 20px;
+						   xxxpadding-top: .5em;
+						   font-size: .85em;
+						}
+
+							.ContentsTree ul ul ul li {
+							   font-weight: normal;
+							}
+								.ContentsTree ul ul ul li a {
+								   padding: .15em 0 .1em 0 !important;
+								}
+
+/* level 5 */
+
+								.ContentsTree ul ul ul ul {
+								   padding: 0;
+								   font-size: .9em;
+								}
+
+
+
+	/*
+	   2.9. Разделы продукта (.Sections)
+	*/
+
+.Sections li,
+.list .section {
+   padding: 6px 10px 7px 17px;
+   border-top: 1px solid #fff;
+   background: url('../images/pics.png') no-repeat 0 -356px;
+   cursor: pointer;
+}
+
+
+
+	/*
+	   2.10. Подключенные тома базы данных (.DbVolumes)
+	*/
+
+.DbVolumes {
+   font-size: .6785em;
+   font-family: Tahoma;
+   line-height: 1.4em;
+   _zoom: 1;
+}
+
+	.DbVolumes .vdocbase {
+		padding: 2px 10px 4px 35px;
+		border-bottom: 1px solid #ededed;
+		background: url('../images/list_dbs.png') no-repeat 0 -2000px;
+		cursor: pointer;
+		_zoom: 1;
+		font-weight: normal;
+		color: Black;
+		background-color: aquamarine;
+		min-height: 30px;
+	}
+	
+	.DbVolumes .vdocbase.absent {
+		background: url('../images/list_dbs.png') no-repeat 0 -3000px;
+		min-height: 30px;
+		background-color: lightpink;
+	}
+	
+	.DbVolumes .vdocbase div {
+		float: left;
+	}
+	
+	.DbVolumes .vdocbase .setvdoc {
+		background: url('../images/list_dbs.png') no-repeat 0 -4000px;
+		width: 35px;
+		height: 30px;
+		float: right;
+		margin-left: -35px;
+	}
+	
+	.DbVolumes .vdocbase .remvdoc {
+		background: url('../images/list_dbs.png') no-repeat 0 -5000px;
+		width: 35px;
+		height: 30px;
+		float: right;
+	}
+	
+	.DbVolumes .vdocbase strong.err {
+		color: darkred;
+	}
+
+	.DbVolumes .folder {
+		padding: 2px 2px 1px 25px;
+		background: url('../images/folder_open.png') no-repeat 3px 1px;
+		font-weight: bold;
+		color: darkblue;
+		cursor: pointer;
+	}
+	
+	.DbVolumes .folder.error {
+		background: url('../images/folder_error.png') no-repeat 3px 1px;
+	}
+
+	.DbVolumes .folder .efldrmsg {
+		font-style: italic;
+		font-family: Times New Roman;
+		font-size: 10pt;
+		color: #704020;
+		background-color: #FFE9E9;
+		text-align: center;
+		margin-left: -23px;
+	}
+	
+	.DbVolumes .folder .specfldrmsg {
+		font-style: italic;
+		font-family: Times New Roman;
+		font-size: 10pt;
+		color: #704020;
+		background-color: #EBFFDC;
+		text-align: center;
+		margin-left: -23px;
+	}
+
+	.DbVolumes .item,
+	.DbVolumes .folder .childitem {
+		padding: 2px 10px 4px 35px;
+		border-bottom: 1px solid #ededed;
+		background: url('../images/list_dbs.png') no-repeat 0 0;
+		cursor: pointer;
+		_zoom: 1;
+		font-weight: normal;
+		color: Black;
+	}
+	
+	.DbVolumes .item.active,
+	.DbVolumes .folder.active {
+		border: dotted 1px gray;
+	}
+	
+	.DbVolumes .folder.selected .item {
+		/*background-color: #f5f5dc !important;*/
+		background-color: #dfeff5 !important;
+	}
+
+
+	.DbVolumes .error {
+	   background: #ffc6c6 url('../images/list_dbs.png') no-repeat 0 -1000px;
+	   color: #bc0000;
+	}
+	
+	.DbVolumes .error.selected {
+	   background-color: #d0c6ff !important;	
+	}
+
+	.DbVolumes .error strong {
+	   color: #000;
+	}
+
+	.DbVolumes .error strong.err {
+	   color: #a02000;
+	   /*font-size:large;*/
+	}
+
+	/*
+	   2.11. Список с результами быстрого поиска (.QuickResults)
+	*/
+
+.QuickResults {
+   list-style: none;
+   font-family: Tahoma;
+   font-size: .875em;
+   text-align: left;
+   line-height: 1.15em;
+}
+
+		.QuickResults a,
+		.QuickResults a:visited {
+		   -moz-box-sizing: border-box;
+		   -webkit-box-sizing: border-box;
+		   -ms-box-sizing: border-box;
+		   box-sizing: border-box;
+		   xxxdisplay: block;
+		   padding: 0 5px 2px 5px;
+		   display: inline-block;
+		   width: 100%;
+		   color: #000;
+		   text-decoration: none;
+		}
+
+		.QuickResults a.qhover {
+		   background-color: #004499;
+		   color: #fff !important;
+		   cursor: pointer;
+		   text-decoration: none;
+		}
+
+
+
+	/*
+	   2.13. Список атрибутов сортировки (.SortAttrs)
+	*/
+
+	.SortAttrs {
+	   list-style: none;
+	   font-family: Tahoma;
+	   font-size: .875em;
+	   text-align: left;
+	   line-height: 1.15em;
+	}
+
+		.SortAttrs a,
+		.SortAttrs a:visited {
+		   -moz-box-sizing: border-box;
+		   -webkit-box-sizing: border-box;
+		   -ms-box-sizing: border-box;
+		   box-sizing: border-box;
+		   padding: 0 5px 2px 25px;
+		   display: inline-block;
+		   width: 100%;
+		   color: #000;
+		   text-decoration: none;
+		}
+
+		.SortAttrs a:hover {
+		   background-color: #004499;
+		   color: #fff !important;
+		   cursor: pointer;
+		   text-decoration: none;
+		}
+
+		.SortAttrs a.active_asc { background: url('../images/pics.png') no-repeat 7px -59px; }
+		.SortAttrs a.active_desc { background: url('../images/pics.png') no-repeat 7px 1px; }
+		.SortAttrs a.active_asc:hover { background-color: #004499; background-position: 7px -721px; }
+		.SortAttrs a.active_desc:hover { background-color: #004499; background-position: 7px -661px; }
+
+
+
+	/*
+	   2.13. Запросы (.Queries)
+	*/
+	
+	.Queries .isearch,
+	.Queries .asearch,
+	.Queries .ssearch {
+	   position: relative;
+	   _width: 100%;
+	   padding: 10px 33px 15px 53px;
+	   border-bottom: 1px solid #ededed;
+	   cursor: pointer;
+	}
+
+	.Queries .isearch {
+	   background: #fff url('../images/list_queries.png') no-repeat 10px 7px;
+	}
+
+	.Queries .asearch {
+	   background: #fff url('../images/list_queries.png') no-repeat 10px -843px;
+	}
+
+	.Queries .ssearch {
+	   background: #fff url('../images/list_queries.png') no-repeat 10px -1686px;
+	}
+
+		.Queries p {
+		   margin: 0;
+		   padding-bottom: .5em;
+		   font-weight: bold;
+		}
+
+			.Queries a,
+			.Queries a:visited {
+			   color: #000;
+			   text-decoration: none;
+			}
+
+			.Queries table.AttrsList  { margin: 0; }
+
+			.list .time {
+			   position: absolute;
+			   top: 10px;
+			   right: 15px;
+			   color: #bebebe;
+			   text-align: right;
+			}
+
+	#content_UserDataList .Documents li,
+	#content_UserDataList .Queries li {
+	   padding-right: 15em;
+	}
+
+
+
+	/*
+	   2.15. (.Checkable)
+
+.Checkable ul { list-style: none; margin-top: .5em; }
+.Checkable { list-style: none; margin: 10px 0; padding: 0; }
+	.Checkable li { margin: 0; padding: .3em 0 .8em 20px; _zoom: 1; position: relative; }
+		.Checkable input { margin: 2px 0 0 -20px; position: absolute; _margin: -2px 0 0 -25px; }
+
+			.Checkable li li { font-size: 0.85em; padding: .1em 0 .4em 20px; }
+				.Checkable li li input { _margin-top: -3px; }
+	*/
+
+
+	/*
+	   2.14. Тематики (.Thematics)
+	*/
+
+.Thematics li,
+.list .thematic {
+   padding: 6px 10px 7px 17px;
+   border-top: 1px solid #fff;
+   background: url('../images/pics.png') no-repeat 0 -356px;
+   cursor: pointer;
+}
+
+.Thematics .selected,
+.list .thematic.selected {
+   background: #004499 url('../images/pics.png') no-repeat 0 -356px;
+}
+
+	.Thematics a,
+	.Thematics a:visited,
+	.Thematics a:hover,
+	.list .thematic	a,
+	.list .thematic	a:visited,
+	.list .thematic	a:hover {
+	   color: #000;
+	}
+
+	.Thematics p,
+	.list .thematic p { margin: 0 !important; }
+
+
+
+	/*
+	   2.15. Дерево папок (.FoldersTree)
+	*/
+
+.FoldersTree li {
+   padding-left: 33px;
+   border-top: 1px solid #fff;
+   font-size: .785em;
+   font-family: Tahoma, sans-serif;
+   line-height: 1.2em;
+   _zoom: 1;
+}
+	.FoldersTree li { background-repeat: no-repeat; }
+
+	.FoldersTree .closed,
+	.FoldersTree .opened {
+	   background-image: url('../images/folders_pics.png');	   
+	}
+
+	.FoldersTree .closed { background-position: 25px 3px; }
+	.FoldersTree .opened { background-position: -975px 3px; }
+	.FoldersTree .opened.hasChildren { background-position: -4975px 3px; }
+	.FoldersTree .closed.hasChildren { background-position: -5975px 3px; }
+
+	.FoldersTree .loading {
+	   background-image: url('../images/spinner_l.gif');
+	   background-position: 11px 4px;
+	}
+
+		.FoldersTree a,
+		.FoldersTree a:visited {
+		   color: #000 !important;
+		   text-decoration: none;
+		   display: block;
+		   padding: .25em 0 .6em 0;
+		   margin-left: 15px;
+		}
+
+		.FoldersTree a:hover { text-decoration: underline; }
+
+		.FoldersTree input {
+		   margin-left: 15px;
+		   width: 90%;
+		}
+
+			.FoldersTree ul {
+			   list-style: none;
+			   margin-left: -33px;
+			   padding-left: 37px;
+			}
+
+			.FoldersTree .selected ul,
+			.FoldersTree .enlisted ul {
+			   background-color: #fff;
+			}
+				.FoldersTree li li  { font-size: 1em; }
+
+.FoldersTree a,
+.FoldersTree a:visited,
+.FoldersTree a:hover {
+   cursor: pointer;
+   text-decoration: none;
+   display: inline-block;
+   _display: block;
+}
+
+
+	/*
+	   2.16. Разнородный список (.Hybrid)
+	*/
+
+.Hybrid li {
+   cursor: default;
+   border-bottom: 1px solid #ededed;
+}
+
+	.Hybrid .documentActive,
+	.Hybrid .documentInactive,
+	.Hybrid .documentUndefined,
+	.Hybrid .documentCardActive,
+	.Hybrid .documentCardInactive,
+	.Hybrid .documentCardUndefined {
+	   background: #fff url('../images/list_documents.png') no-repeat 0 0;
+	   position: relative;
+	   _width: 100%;
+	   padding: 6px 30px 10px 37px;
+	}
+
+	.Hybrid .documentActive { background-position: -6px -3px; }
+	.Hybrid .documentInactive { background-position: -6px -1003px; }
+	.Hybrid .documentUndefined { background-position: -6px -2003px; }
+	.Hybrid .documentCardActive { background-position: -6px -3003px; }
+	.Hybrid .documentCardInactive { background-position: -6px -4003px; }
+	.Hybrid .documentCardUndefined { background-position: -6px -5003px; }
+
+		.Hybrid .documentActive p,
+		.Hybrid .documentInactive p,
+		.Hybrid .documentUndefined p,
+		.Hybrid .documentCardActive p,
+		.Hybrid .documentCardInactive p,
+		.Hybrid .documentCardUndefined p { margin-bottom: .3em; }
+
+		.Hybrid .documentActive em,
+		.Hybrid .documentInactive em,
+		.Hybrid .documentUndefined em,
+		.Hybrid .documentCardActive em,
+		.Hybrid .documentCardInactive em,
+		.Hybrid .documentCardUndefined em {
+		   color: #939393;
+		   font-size: .85em;
+		   line-height: 1.1em;
+		}
+
+	.Hybrid .situation { padding: 6px 30px 10px 37px; }
+
+	.Hybrid .section {
+	   padding: 6px 30px 10px 37px;
+	   background: url('../images/pics.png') no-repeat 18px -357px;
+	}
+
+	.Hybrid .section.selected { background: #004499 url('../images/pics.png') no-repeat 0 -506px; }
+
+	.Hybrid .product {
+	   padding: 6px 30px 10px 37px;
+	   font-weight: bold;
+	}
+
+
+/*-----------------------------------------------------------
+   8. Аннотации к результатам поиска по тексту
+
+.TSearchAnnotations .item
+{
+   padding: 0 10px 1em 10px;
+}
+
+------------------------------------------------------------*/
+
+
+
+
+
+
+
+
+/*-----------------------------------------------------------
+   3. Различные состояния элементов списка
+------------------------------------------------------------*/
+
+	/*
+	   3.1. Выделенные элементы (.selected)
+	*/
+
+.selected {
+   background-color: #c2d5f5 !important;
+}
+
+	/*
+	   3.2. Внесенные в список элементы (.enlisted)
+	*/
+
+.enlisted {
+   background-color: #fceb91;
+}
+
+
+
+	/*
+	   3.3. Посещенные элементы (.visited)
+
+
+.list .visited p
+{
+   color: #990099;
+   text-decoration: underline;
+}
+
+.list .visited .annotation p
+{
+   color: #000;
+   text-decoration: none;
+}
+
+.list .visited a { background: #f00;  }	*/

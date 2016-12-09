@@ -1,0 +1,143 @@
+#panel.annotSearch{
+	padding: 0px;
+	font-size:11px;
+	line-height:14px;
+}
+#panel.annotSearch p{
+	margin: 4px 0;
+	font-size: 11px;
+	padding-left: 20px;
+}
+
+#panel.annotSearch a{
+	color: #17347b;
+	text-decoration: none;
+}
+#panel.annotSearch .annotSearch{
+	padding-top: 32px;
+	-moz-box-sizing:border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing:border-box;
+	behavior: url('boxsizing.htc');
+	-ms-box-sizing: border-box;
+	height: 100%;
+}
+#panel .annotSearchTop{
+	height:39px;
+	position:absolute;
+	width:100%;
+	margin-left: -5px;
+	margin-right: -5px;
+	margin-top:-39px;
+    padding: 0 5px 0 6px;
+    z-index: 100;
+	
+	-moz-box-sizing:border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing:border-box;
+	-ms-box-sizing: border-box;
+	behavior: url('boxsizing.htc');
+}
+#panel .annotListHeader{
+	height:39px;
+	width:100%;
+	overflow: hidden;
+}
+#panel .annotSearchBody{
+	height: 100%;
+}
+#panel .annotSearchTop div, #panel .annotListHeader div{
+	-moz-background-inline-policy: continuous;
+	background-image: url(data:;base64,R0lGODlhAQAnAIQeAPfjdffjdvfkd/flePjmePjmefjmevnne/nofPnpfPrpffrqfvrqf/rrf/rsgPrtgPvtgfvtgvvugvzvg/zvhPzwhP3whf3xhv3yhv3yh/3ziP3zif70if71iv///////yH5BAEKAB8ALAAAAAABACcAAAUeYNdx3KZpGXZdVkVNUiTP0OM0zKIkyGEUhIEgAAgBADs=);
+    font-weight: bold;
+    height: 38px;
+    overflow: hidden;
+    padding: 10px 12px 2px;
+    text-shadow: -1px 1px white;
+	font-size: 16px;
+}
+#panel .annotSearchTop div{
+	font-weight:bold;
+	overflow:hidden;
+	height:38px;
+	-moz-background-clip:border;
+	-moz-background-inline-policy:continuous;
+	-moz-background-origin:padding;
+	background:transparent url(../images/fc/co.gif) repeat-x scroll left top;
+	border-radius: 10px 10px 0px 0px ;
+	-moz-border-radius: 10px 10px 0px 0px ;
+	-khtml-border-radius: 10px 10px 0px 0px ;
+	-webkit-border-radius: 10px 10px 0px 0px ;
+}
+#panel .annotSearchTop .close, #panel .annotListHeader .close{
+	background-image: url(data:;base64,R0lGODlhCgAKAKEDAHFvWf33zP33zf///yH5BAEKAAMALAAAAAAKAAoAAAIbHIZ4BsvbThRCRUDTy+m6HVlAEDwK2aFDqZUFADs=);
+	background-position: center center;
+	background-repeat: no-repeat;
+	height: 12px;
+	width: 12px;
+	float: right;
+	margin: 13px 15px 10px 10px;
+	cursor: pointer;
+	padding: 0px;
+	opacity:0.8;
+	position:absolute;
+	right:0px;	
+}
+#panel .annotSearchTop .close:hover, #panel .annotListHeader .close:hover{
+	opacity:1;
+}
+#panel .annotListText{
+	height: 100%;
+	-moz-box-sizing:border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing:border-box;
+	behavior: url('boxsizing.htc');
+	-ms-box-sizing: border-box;
+}
+#panel .annotListText .scroll{
+	overflow-y: auto; 
+	height: 100%;
+    -webkit-overflow-scrolling: touch !important;
+}
+#panel .annotListContents{
+	padding-top:4px;
+	-moz-box-sizing:border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing:border-box;
+	behavior: url('boxsizing.htc');
+	-ms-box-sizing: border-box;
+	max-height: 200px;
+	overflow:auto;
+	position:relative;
+    -webkit-overflow-scrolling: touch !important;
+}
+#panel .annotListContents .documentAnchors {
+	padding-bottom:5px;
+	padding-top: 6px;
+	margin: 0px;
+	border-bottom:1px solid #E3E3E3;
+}
+#panel .annotListText p {
+	border-bottom:1px solid #E3E3E3;
+	padding-bottom: 4px;
+	padding-right: 4px;
+}
+
+#panel .annotListText p.documentAnchors {
+	border-bottom:0px;
+	padding-bottom: 0px;
+}
+#panel .documentAnchors {
+	color: #17347B;
+	cursor: pointer;
+    font-weight: bold !important;
+	padding-left:13px !important;
+	font-size:12px !important;
+}
+#panel .documentAnchors:hover{
+	text-decoration: underline;
+}
+#panel  .annotListText p, #panel  .annotListContents p{
+    font-family: Tahoma,sans-serif;
+	padding-left: 13px;
+}

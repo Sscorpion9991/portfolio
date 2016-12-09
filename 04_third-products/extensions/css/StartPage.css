@@ -1,0 +1,1179 @@
+#indexPage{
+	visibility: hidden;
+	min-width: 470px;
+	padding: 20px 30px 20px 0px;
+	height: 100%;
+	-moz-box-sizing:border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing:border-box;
+	behavior: url('boxsizing.htc');
+	-ms-box-sizing: border-box;
+	width:expression(document.body.clientWidth < 470? "470px": "auto" );
+}
+#indexPage.juris .main{
+	min-width: 500px;
+	width:expression(document.body.clientWidth < 530? "530px": "auto" );
+}
+body.progress #indexPage{
+	display: none;
+}
+
+#indexPage .top .logoKodeks, #indexPage .top .logoTexpert{
+	float: left;
+	height: 73px;
+	width: 241px;
+	margin: 16px 0 0 59px;
+}
+#indexPage .top .logoKodeks{
+	background: url('images/gs_logo_k.png');
+}
+#indexPage .top .logoTexpert{
+	background: url('images/gs_logo_te.png');
+}
+#indexPage .top .picList{
+	height: 95px;
+	margin-bottom:15px;
+	margin-left: 325px;	
+	margin-right: -20px;
+}
+#indexPage .top .picList c1{
+}
+#indexPage .top .picList .leftIndent{
+	display: none;
+}
+#indexPage .top .picList .rightIndent{
+	display: none;
+}
+					
+#indexPage .top .picList ul{
+	display: none;
+	list-style: none;
+	margin: 0px 0px;
+	width: 100%;
+}
+#indexPage .top .picList .ctrlIndent{
+	position: relative;
+	overflow: hidden;
+}
+
+#indexPage .top .picList .scrollList{
+	overflow:hidden;
+	height:86px;
+}
+#indexPage .top .picList .next{
+	background: url('images/bBtn.png') right top no-repeat;
+	height: 19px;
+	width: 11px;
+	float: right;
+	padding: 0px;
+	margin: 36px 0px 0px 10px;
+}
+#indexPage .top .picList .prev{
+	padding: 0px;
+	background: url('images/bBtn.png') left top no-repeat;
+	float: left;
+	height: 19px;
+	width: 11px;
+	margin: 36px 10px 0px 0px;
+}
+#indexPage .top .picList li{
+	height: 95px;
+	width: 200px;
+	float: left;	
+	overflow:hidden;
+	background-position: left top;
+	margin: 0px 5px 0px 0px;
+	position:relative;
+}
+#indexPage .top .picList .c11,
+#indexPage .top .picList .c12,
+#indexPage .top .picList .c21,
+#indexPage .top .picList .c22{
+	background-image: url('images/bCorner.png');	
+	background-repeat: no-repeat;
+	height: 7px;
+	width: 7px;
+	position: relative;
+	border: 0px;
+}
+#indexPage .top .picList .c11{
+	margin:-95px 0 0;
+	float: left;
+	background-position: top left;
+}
+#indexPage .top .picList .c12{
+	margin:-95px 0px 0px 0px;
+	float: right;
+	background-position: top right;
+}
+#indexPage .top .picList .c21{
+	margin: -16px 0px 0px 0px;
+	float: left;
+	background-position: bottom left;
+}
+#indexPage .top .picList .c22{
+	margin: -16px 0px 0px 0px;
+	float: right;
+	background-position: bottom right;
+}
+#indexPage .top .picList li.pic1{
+	background-image: url('images/pic1.jpg');
+	width: 200px;
+}
+#indexPage .top .picList li.pic2{
+	background-image: url('images/pic2.jpg');
+	width: 207px;
+}
+#indexPage .top .picList li.pic3{
+	background-image: url('images/pic3.jpg');
+	width: 207px;
+}
+#indexPage .top .picList li.pic4{
+	width: 218px;
+	background-image: url('images/pic4.jpg');
+}
+#indexPage .top .importantly{
+	float: right;
+	min-width: 240px;
+	min-height: 30px;
+	background: url('images/warning.png') left top no-repeat;
+}
+#indexPage .top .importantly .importantlyBlock{
+	width:100%;
+	border-right: 1px solid #cccccc;	
+	padding-right: 15px;
+	box-sizing:border-box;
+	-moz-box-sizing:border-box;
+	-webkit-box-sizing: border-box;
+	-ms-box-sizing: border-box;
+}
+#indexPage .top .importantly .bPrev,#indexPage .top .importantly .bNext{
+	background-image: url('images/importantlyBtn.png');
+	background-position: center center;
+	background-repeat: no-repeat;
+	height: 17px;
+	width: 7px;
+	float: right;
+	margin:10px 7px -10px 11px;
+	cursor: pointer;
+}
+#indexPage .top .importantly .inactive{
+	visibility: hidden;
+}
+#indexPage .top .importantly .bPrev{
+	background-position:left top;
+}
+#indexPage .top .importantly .bNext{
+	background-position:right top;
+}
+#indexPage .top .importantly .c11{
+	background: url('images/importantlyCorner.png')left top no-repeat;
+	height: 11px;
+	width: 11px;
+	margin: -1px 0px 0px -1px;
+	float: left;
+}
+#indexPage .top .importantly .c12{
+	background: url('images/importantlyCorner.png')right top no-repeat;
+	height: 11px;
+	width: 11px;
+	margin: -1px -1px 0px 0px;
+	float: right;
+}
+#indexPage .top .importantly .c21{
+	background: url('images/importantlyCorner.png')left bottom no-repeat;
+	height: 11px;
+	width: 11px;
+	margin: 0px 0px -1px -1px;
+	float: left;
+}
+#indexPage .top .importantly .c22{
+	background: url('images/importantlyCorner.png')right bottom no-repeat;
+	height: 11px;
+	width: 11px;
+	margin: 0px -1px -1px 0px;
+	float: right;
+}
+#indexPage .top .importantly .title{
+	float: left;
+	font-weight: bold;
+	width: 80px;
+	margin:6px 0 0 47px;
+}
+#indexPage .top .importantly .text{
+	color: #4f4f46;
+	font-style: italic;
+	font-size: 12px;
+	min-height:45px;
+	padding: 10px 0px 0px 47px;
+	line-height:16px;
+}
+#indexPage .top .importantly .text a{
+	color: #222222;
+	font-style: italic;
+	font-size: 12px;
+}
+
+#indexPage .top .importantly .text li{
+	display: none;
+}
+#indexPage .top .importantly .text li.active{
+	display: block;
+}
+#indexPage .top .topLink{
+	width: 250px;
+	float: right;
+}
+#indexPage .top .kodeks{
+	background: url('images/ico_kodeks.png') 20px top no-repeat;
+	padding:0 10px 5px 63px;
+	float: left;
+	width: 95px;
+	font-size: 14px;
+}
+
+#indexPage .top .kodeks p{
+	letter-spacing:-1px;
+	margin-top:6px;
+}
+#indexPage .top .catalog{
+	background: url('images/ico_catalog.png') 20px top no-repeat;
+	float:left;
+	font-size:12px;
+	margin-top:0;
+	padding:7px 10px 0 63px;
+	
+}
+#indexPage .top .catalog p{
+	margin-top: 2px;
+	line-height:13px;
+}
+#indexPage .main{
+	background: url('images/search.png') left top no-repeat;
+	min-height: 180px;
+	padding-top: 25px;
+}
+#indexPage .context{
+	margin: 0px 0px 0px 300px;	
+	background-color:White;
+}
+
+#indexPage .context .findMainBlock {
+	background: url('images/searchBorder.png') left top repeat-x;
+	width: 100%;
+	border-collapse: collapse;
+	height: 78px;
+	border: 0;
+}
+
+#indexPage .context .findMainBlock .fAdditionalService {
+	/* height: 78px; */
+	border: 0;
+	margin-right: 9px;
+	margin-left: 3px;
+}
+
+#indexPage .context .findMainBlock .fAdditionalService td {
+	background: url('images/searchCenterTight.png') repeat-x scroll 0 0;
+}
+
+#indexPage .context .findMainBlock .fAdditionalService .iSearchTd {
+	background-image: none;
+	background: url('images/searchCenterTight.png') no-repeat right -234px transparent;
+	padding-top: 25px;
+	padding-bottom: 5px;
+}
+
+#indexPage .context .findMainBlock .fAdditionalService .aSearchTd {
+	padding-top: 23px;
+} 
+
+#indexPage .context .findMainBlock .fAdditionalService .iSearchTd .positRel {
+	position: relative;
+}
+
+#indexPage .context .findMainBlock .fMainLeft {	
+	width: 100%;
+}
+
+#indexPage .context .input {
+	height: 78px;
+}
+#indexPage .tight .input {
+	/* margin-right: 117px; */	
+}
+#indexPage .tight .inputJuris { 
+	margin: 0px 172px 0px 0px;
+}
+
+#indexPage .context .iconJuris, #indexPage .context .iconNTDPointer {
+	width: 49px;
+	height: 32px;
+	display: block;
+	/* float: right; */	
+	margin-right: 20px;
+	margin-top: 23px;
+	outline: none;
+}
+#indexPage .context .iconNTDPointer {
+	margin-right: 10px;
+}
+#indexPage .context .iconJuris div, #indexPage .context .iconNTDPointer div {
+	width: 100%;
+	height: 100%;
+	background: url('../jurisprudence/images/icon_show.png') left top no-repeat;
+}
+ #indexPage .context .iconNTDPointer div {
+ 	background: url('images/icon_show_NTDP.png') left top no-repeat;
+ }
+
+#indexPage .context .iconJuris div:hover{
+	background: url('../jurisprudence/images/icon_show.png');
+	background-position: 0px -32px;
+}
+#indexPage .context .iconNTDPointer div:hover {
+	background: url('images/icon_show_NTDP.png');
+	background-position: 0px -32px;
+}
+
+#indexPage .context .input p{
+	padding-top: 28px;
+}
+#indexPage .context .input input{
+	border: 0px;
+	width: 98%;
+	background-color:inherit;
+}
+#indexPage .context .right {	
+	height: 78px;
+	background: url('images/searchRightTight.png') right top no-repeat;
+}
+
+#indexPage .tight .right {
+	float: right;
+	height: 78px;
+	background: url('images/searchRightTight.png') right top no-repeat;	
+}
+
+#indexPage .tight .rightJuris {
+	width: 172px;
+	background: url('images/searchRightJurisTight.png') right top no-repeat;
+}
+
+#indexPage .context .right .iSearch{
+	background: url('images/iSearchBtn.png') left top no-repeat;
+	height: 29px;
+	width: 131px;
+	/* margin-top: 25px; */
+	margin-right: 5px;
+	cursor: pointer;
+}
+#indexPage .context .right .iSearch:hover{
+	background-image: url('images/iSearchBtn.png');
+	background-position: 0px -29px;
+}
+#indexPage .context.tight .right .iSearch{
+	width: 33px;
+	background-position: right top;
+}
+#indexPage .context.tight .right .iSearch:hover{
+	background-position: right -29px;
+}
+#indexPage .context .right .aSearch{
+	cursor: pointer;
+	background-image: url('images/aSearchBtn.png');
+	background-position: left top;
+	background-repeat: no-repeat;
+	height: 31px;
+	width: 160px;
+	/* margin: 23px 9px 0px 15px; */
+	margin: 0px 9px 0px 15px;
+}
+#indexPage .tight .right .aSearch{
+	background-position: right top;
+	width: 42px;
+}
+
+#indexPage .context .right .aSearch:hover{
+	background-image: url('images/aSearchBtn.png');
+	background-position: 0px -31px;
+}
+
+#indexPage .tight .right .aSearch:hover{
+	background-position: right -31px;
+}
+
+#indexPage .main.focus{
+	background-position: 0px -180px;	
+}
+#indexPage .focus .context{
+	background-position: 0px -78px;
+}
+#indexPage .focus .context .right{
+	background-position: right -78px;	
+}
+#indexPage .focus .context .rightJuris {
+	background-position: right top;
+}
+#indexPage .focus .context .right .iSearch{
+	background-position: left -58px;
+}
+#indexPage .focus .context .right .iSearch:hover{
+	background-position: left -87px;
+}
+#indexPage .focus .context.tight .right .iSearch{
+	background-position: right -58px;
+}
+#indexPage .focus .context.tight .right .iSearch:hover{
+	background-position: right -87px;
+}
+#indexPage .left{
+	float: left;
+	margin:55px 0 0 35px;
+	width:250px;
+	font-size: 12px;
+}
+#indexPage .left div{
+	background: url('images/leftBorder.png') center top repeat-y;
+	padding: 15px 27px 15px 27px;
+}
+#indexPage .left div.controlDocBottom{
+	padding: 15px 27px 0px 27px;
+}
+#indexPage .left div div{
+	margin:0px;
+	padding: 0px;
+}
+#indexPage .left div.top{
+	background: url('images/leftCorner.png') center top no-repeat;
+	padding:0px;
+	height: 25px;
+}
+#indexPage .left div.bottom{
+	background: url('images/leftCorner.png') center bottom no-repeat;
+	padding:0px;
+	height: 16px;
+}
+#indexPage .left div.bottom.controlDocBottom{
+	margin-top: -11px;
+}
+#indexPage .left div ul{
+	list-style: none;
+}
+#indexPage .left div.news ul li{
+	border-top: 1px solid #dcdcdc;
+	padding: 4px 2px;
+	line-height: 14px;
+	font-style: italic;
+}
+#indexPage .left div.news.controlDocBottom ul li{
+	border-top: none;
+}
+#indexPage .left div.news ul li .hotNews{
+	background: url('images/hot.png') left center no-repeat;
+	padding: 0px;
+	min-height: 21px;
+	padding-left: 33px;
+	margin-left: -33px;
+}
+#indexPage .left div.news ul li .controlDoc {
+	margin-top:12px;
+	font-weight:bolder;
+	margin-left: -5px;
+}
+#indexPage .left div.news ul li .newDocuments{
+	margin-top:10px;
+	color: blue;
+    cursor: pointer;
+}
+#indexPage .left div.news ul li div.controlDocBackground {
+	/*background-color: #F1F1F1;*/
+    border-top: 1px solid #DCDCDC;
+    height: 46px;
+    margin-left: -22px;
+    margin-top: 10px;
+    width: 237px;
+	position:relative;
+	background-image: url(data:;base64,iVBORw0KGgoAAAANSUhEUgAAAOwAAAAuCAYAAAFc9MU9AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAiJJREFUeNpiPHPmzH9ubm4GegMWCQkJBl5eXrpbzMQwQGBkWvx/ICwGCCDG69ev091ixo8fP/4fEXE7ailNAUAAMT5+/Pj/QBSNAwFYGBkZGUB4JAAmhhEERj07nD3LOFI8CxBAA9KWoBb4//8/SYUr44cPH/6PlJhlGSnVzmhpPOrZUc+OenbUs6OeHfUs7T37cIT41RMgADt2dAIACEJRtKA3fyO6SjRFkOeAC3jBD2dVtflUdLKSjDu4xQiLsAiLsMIiLMLyMuy2hv8cAdi5YxQAQQCAog3Obu5dpvt1nm7TGQTXshNkUEP63tQU4Q8sFH+93H7n6XL8F/d7+xlalFKmkFLyencm5zyFykh05mo61P6YYebX2tRXsd8dhEVYhEVYhBUWYREWYREWYYVFWIRFWNodwvZpvc76W+rFZiy6sccY51OA9u0mBUEgDMDwJIIQ4QU8gvvO0IU6RRfqDF3BI7hVAlfNbFtEib/0PPDtRGuYFyGmQ9M0f/eP9l+PhKbrk7nPh409qjrm+zjrtj9d14W8KIqQZomNtcTm+eZ+Uzxzrk0/xeef8lz7GnF/+8xP123pbP/7fcc+ZxiGkGdZFtIAG/9lIrVqGWBH0VoCECwgWBAsIFhAsCBYQLCAYEGwgGABwYJgAcECggXBAhsPtrUMsAttCraO87QWsGmp0Trv+z69YY9xTnGucS5xztYHVveIc49zq6qqK8syvACBDY8VBCDqUwAAAABJRU5ErkJggg==);
+}
+#indexPage .left div.news ul li div.controlDocBackground div.controlDocButton {
+	width: 209px;
+	height:27px;
+	margin:auto;
+	margin-top:8px;
+	cursor: pointer;
+	color: white;
+	background-image: url('images/controlDoc_Button.png');
+}
+#indexPage .left div.news ul li div.controlDocBackground div.controlDocButton.controlDocEmpty{
+	color: black;
+	background-position: 0 -27px;
+}
+#indexPage .left div.news ul li div.controlDocBackground div.controlDocButton div.controlDocButtonText {
+    margin-left: 16px;
+	padding-top: 6px;
+    text-align: center;
+}
+#indexPage .left div.news ul li .controlDoc div.changed {
+	height: 19px;
+	background-image: url('images/control_doc_changed.png');
+	margin-left: -2px;
+	text-align:center;
+	display: inline-block;
+	color:white;
+	cursor: pointer;
+	text-align:center;
+}
+#indexPage .left div.news ul li .controlDoc div.changedLeft {
+	height:19px;
+	width:8px;
+	background-image: url('images/control_doc_changed_left.png');
+	float:left;
+}
+#indexPage .left div.news ul li .controlDoc div.changedRight {
+	height:19px;
+	width:10px;
+	background-image: url('images/control_doc_changed_right.png');
+	float:right;
+}
+#indexPage .left div ul li{
+	padding: 2px 2px;
+}
+#indexPage .left div div{
+	background: none;
+}
+#indexPage .left h3{
+	margin: -20px 0 8px 3px;
+	font-size: 17px;
+}
+#indexPage .left h3.news{
+	margin:20px 0 0 29px;
+}
+#indexPage .left h3.news{
+	margin-top: -3px;
+}
+#indexPage .left .panelControl{
+	padding-top: 0px;
+}
+#indexPage .content h4{
+	margin: 12px 0px 4px 0px;
+}
+#indexPage .content h4.red{
+	color: orangeRed;
+}
+#indexPage .content p{
+	font-size: 14px;
+}
+#indexPage .content h3,#indexPage .content h4{
+	font-size: 15px;
+}
+#indexPage .content .more{
+	background:transparent url(images/more.png) no-repeat scroll 0px 0;
+	height: 24px;
+	width: 24px;
+	float: right;
+	margin-top:-10px;
+}
+#indexPage .content h3{
+	border-bottom: 1px solid #dcdcdc;
+	padding-bottom: 11px;
+	margin: 0px 0px;
+}
+#indexPage .content h4{
+
+}
+#indexPage .content{
+	margin-left: 310px;
+	padding: 20px 20px;
+	box-sizing:border-box;
+	-moz-box-sizing:border-box;
+	-webkit-box-sizing: border-box;
+	-ms-box-sizing: border-box;
+
+}
+#indexPage .content .NoDb{
+	padding-bottom:10px;	
+}
+#indexPage .content .NoDb p{
+	font-size:13px;	
+}
+#indexPage .content .NoDb h4{
+	font-size:14px;
+}
+#indexPage .content .odd{
+	clear: right;
+}
+
+#indexPage .content .sep{
+	clear: both;
+	border-bottom: 1px solid #DCDCDC;
+	font-size:1px;
+	
+}
+#indexPage .content .product{
+	clear: right;
+	padding:13px 8px 14px 0;
+	font-size: 14px;
+}
+#indexPage .content .other{
+	clear: right;
+	padding: 13px 0px 14px 0px;
+	font-size: 14px;
+	border: 0px;
+}
+#indexPage .content .other h3{
+	border: 0px;
+	padding-top:20px;
+}
+#indexPage .content .product p{
+	padding: 3px 0px 6px 0px;
+	line-height: 15px;
+	font-size: 14px;
+}
+#indexPage .content .twoColumns .odd{
+	clear: right;
+	padding-bottom: 14px; 
+	margin-bottom: 0px; 
+}
+#indexPage .content .odd{
+	clear: left;
+	padding-bottom: 0px; 
+	
+}
+
+
+/*
+#indexPage .content h3.green,
+#indexPage .content h3.red,
+#indexPage .content h3.blue,
+#indexPage .content h3.yellow,
+#indexPage .content h3.orange,
+#indexPage .content h3.glamorous{
+	border: 0px;
+	padding: 3px 0px 10px 45px;
+}
+
+#indexPage .content h3.green{
+	background:transparent url(../../images/groups_pics.png) no-repeat scroll;
+	background-position:0 0;
+}
+
+#indexPage .content h3.red {
+	background:transparent url(../../images/groups_pics.png) no-repeat scroll;
+	background-position:0 -300px;
+}
+#indexPage .content h3.blue{
+	background:transparent url(../../images/groups_pics.png) no-repeat scroll;
+	background-position:0 -500px;
+}
+#indexPage .content h3.yellow {
+	background:transparent url(../../images/groups_pics.png) no-repeat scroll;
+	background-position:0 -400px;
+}
+#indexPage .content h3.orange {
+	background:transparent url(../../images/groups_pics.png) no-repeat scroll;
+	background-position:0 -200px;
+}
+*/
+
+#indexPage .content h3.federal_legislation,
+#indexPage .content h3.international_law,
+#indexPage .content h3.regional_law,
+#indexPage .content h3.judicial_practice,
+#indexPage .content h3.references,
+#indexPage .content h3.digizine,
+#indexPage .content h3.technical_information,
+#indexPage .content h3.individual_products {
+	border: 0px;
+	padding: 3px 0px 10px 45px;
+}
+
+#indexPage .content h3.individual_products {
+	background:transparent url(../../images/groups_pics.png) no-repeat;
+	background-position:0 -1500px;
+}
+#indexPage .content h3.federal_legislation {
+	background:transparent url(../../images/groups_pics.png) no-repeat scroll;
+	background-position:0 -400px;
+}
+#indexPage .content h3.international_law{
+	background:transparent url(../../images/groups_pics.png) no-repeat scroll;
+	background-position:0 -100px;
+}
+#indexPage .content h3.regional_law{
+	background:transparent url(../../images/groups_pics.png) no-repeat scroll;
+	background-position:0 0;
+}
+#indexPage .content h3.judicial_practice {
+	background:transparent url(../../images/groups_pics.png) no-repeat scroll;
+	background-position:0 -300px;
+}
+#indexPage .content h3.references{
+	background:transparent url(../../images/groups_pics.png) no-repeat scroll;
+	background-position:0 -500px;
+}
+#indexPage .content h3.digizine{
+	background:transparent url(../../images/groups_pics.png) no-repeat scroll;
+	background-position:0 -500px;
+}
+#indexPage .content h3.technical_information {
+	background:transparent url(../../images/groups_pics.png) no-repeat scroll;
+	background-position:0 -200px;
+}
+
+#indexPage .pic {
+	height: 86px;
+	cursor: pointer;
+	overflow: hidden;
+	position: relative;
+	opacity: 1;
+}
+
+#indexPage .pic:hover {
+	opacity: 0.9;
+}
+.goToMobileVersion {
+    float: right;
+    font-size: 1.0em;
+    height: 24px;
+    line-height: 1.0em;
+    margin: 25px 36px 25px 0;
+    width: 280px;
+}
+.goToMobileVersion a {
+    text-decoration:none;
+}
+.newVersClient{
+	color: gray;
+	float: right;
+	font-size: 0.7em;
+	height: 24px;
+	line-height: 1.1;
+	margin: 10px 36px;
+	padding-left: 28px;
+	width: 223px;
+	background-image: url('images/icon_update.png');
+	background-repeat: no-repeat;
+}
+.newVersClient a.newVersion{
+	color:grey;
+	text-decoration:underline !important;
+}
+.newVersClient a:hover {
+	color:grey;
+}
+.newVersClient a :active{
+	color:grey;
+}
+.producti_i_uslugi{
+	text-align: left; 
+	background: url('images/bk/producti_i_uslugi/bg.jpg') no-repeat top left; 
+}
+.producti_i_uslugi .wrapper{ 
+	background: url('images/bk/producti_i_uslugi/bg_inner.png') no-repeat top right; 
+	height: 100%; 
+}
+.producti_i_uslugi img{ 
+	margin-left: 18px;
+	margin-top: 11px; 
+}
+.energoeffectiovnost_i_energoaudit {
+	text-align: left;
+	background: url('images/bk/energoeffectiovnost_i_energoaudit/bg.jpg') no-repeat top right;
+}
+.energoeffectiovnost_i_energoaudit img {
+	margin-top: 47px;
+	margin-left: 18px;
+}
+.den_kadrovika1 { 
+	text-align: center; 
+	background: url('images/bk/den_kadrovika/bg1.jpg') no-repeat top center; 
+}
+.den_kadrovika1 img {
+	margin-top: 10px;
+}
+.den_kadrovika2 {
+	text-align: center;
+	background: url('images/bk/den_kadrovika/bg2.jpg') no-repeat top center;
+}
+.den_kadrovika2 .wrapper {
+	height: 86px;
+	width: 100%;
+	background: url('images/bk/den_kadrovika/text2.png') no-repeat top center;
+}
+.sro_v_stroitelstve {
+	text-align: left;
+	background: url('images/bk/sro_v_stroitelstve/bg.jpg') no-repeat top right;
+}
+.sro_v_stroitelstve img {
+	margin-top: 37px;
+	margin-left: 18px;
+}
+.partners1 {
+	text-align: left;
+	background: url('images/bk/partners/bg1.jpg') no-repeat top right;
+}
+.partners1 img {
+	margin-top: 12px;
+	margin-left: 18px;
+}
+.zima_priblizhaetsya {
+	text-align: center;
+	background: url('images/bk/zima_priblizhaetsya/bg.jpg') no-repeat top center;
+}
+.gradostroitelniy_kodeks_izmeneniya {
+	text-align: left;
+	background: url('images/bk/kodekses/bg_gradostroitelniy_kodeks.jpg') no-repeat top right;
+}
+.gradostroitelniy_kodeks_izmeneniya img {
+	margin-top: 12px;
+	margin-left: 20px;
+}
+.nalogoviy_kodeks_izmeneniya {
+	text-align: left;
+	background: url('images/bk/kodekses/bg_nalogoviy_kodeks.jpg') no-repeat top right;
+}
+.nalogoviy_kodeks_izmeneniya img {
+	margin-top: 12px;
+	margin-left: 20px;
+}
+.sozday_svoe_elektronnoe__hranilishe { 
+	text-align: left; 
+	background: url('images/bk/sozday_svoe_elektronnoe__hranilishe/bg.jpg') no-repeat top right; 
+}
+.sozday_svoe_elektronnoe__hranilishe img { 
+	margin-top: 8px; 
+	margin-left: 9px; 
+}
+.pordravlyaem_professionalov { 
+	text-align: center; 
+	background: url('images/bk/pordravlyaem_professionalov/bg1.jpg') no-repeat top center; 
+}
+.pordravlyaem_professionalov img { 
+	margin-top: 30px; 
+}
+.sozday_svoe_elektronnoe__hranilishe { 
+	text-align: left; 
+	background: url('images/bk/sozday_svoe_elektronnoe__hranilishe/bg.jpg') no-repeat top right; 
+}
+.sozday_svoe_elektronnoe__hranilishe img { 
+	margin-top: 8px; 
+	margin-left: 9px; 
+}
+.kniga_otzyvov_i_predlozheniy { 
+	text-align: left; 
+	background: url('images/bk/kniga_otzyvov_i_predlozheniy/bg.jpg') no-repeat top right; 
+}
+.kniga_otzyvov_i_predlozheniy img {
+	margin-top: 28px; margin-left: 9px; 
+}
+.priglashaem_buhgalterov { 
+	text-align: right; 
+	background: url('images/bk/priglashaem_buhgalterov/bg.jpg') no-repeat top; 
+}
+.priglashaem_buhgalterov img { 
+	margin-top: 13px; 
+	margin-right: 15px; 
+}
+
+/* ---- 04.08, можно удалить 15.09 ---- */
+#indexPage .iSearchTd .tooltip {
+	position: absolute;
+	width: 350px;
+}
+
+#indexPage .tight .iSearchTd .tooltip {
+	right: 50px;
+}
+#indexPage .demoMode, #indexPage .billingMode{
+	background-color: #fffabd;
+	border-top: #fffcd9 1px solid;
+	border-left: #fffcd9 1px solid;
+	border-right: #e5de8b 1px solid;
+	border-bottom: #e5de8b 1px solid;
+	-moz-border-radius: 4px;
+	-khtml-border-radius: 4px;
+	-webkit-border-radius: 4px;
+	padding: 12px 24px;
+	width: 98%;
+	margin: 10px 00px 26px -24px;
+	font-size: 14px;
+	
+}
+#indexPage .billingMode 
+{
+	 min-height: 124px;
+}
+#indexPage .demoMode h3, #indexPage .billingMode h3{
+	border-bottom: 0px;
+	padding-bottom:4px;
+}
+/*
+#indexPage .billingMode div.billingText{
+	float: left;
+    font-size: small;
+    width: 48%;
+}
+#indexPage .billingMode div.billingImage{
+	background-color: inherit;
+    float: right;
+    height: 112px;
+    margin-right: -20px;
+    width: 54%;
+}
+#indexPage .billingMode div.billingImage a div{
+	background-image: url(../images/button_free_demo.png);
+    height: 112px;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-position: right;
+}
+*/
+/**Относится к гербам, позже сделать отдельный файл для них**/
+div.scrollBlock div#emblem {
+	height: 68px;
+	width: 68px;
+	background-image: url(../images/gerbs_all.png);
+	background-repeat: no-repeat;
+	background-position: 0px 0px;	
+	margin-left: auto;
+    margin-right: auto;
+	margin-top: 20px;
+	
+}
+.document .headertext {margin-bottom: 1em !important; margin-top: 0.1em !important;}
+
+div.scrollBlock div#emblem.MskEmbl {
+	background-position: 0px -400px;
+}
+div.scrollBlock div#emblem.SpbEmbl {
+	background-position: 0px -200px;
+}
+div.scrollBlock div#emblem.FedEmbl {
+	background-position: 0px 0px;
+}
+
+.listRecords li.docItem.bibl, 
+.docList .list li.docItem.bibl,
+.iSearch .iSearchList li.docItem.bibl {
+	background-image: url(../images/doc_hz.png); 
+	background-repeat: no-repeat;
+	background-position: 13px 16px;	
+}
+
+.listRecords  li, .docList .list li {
+	min-height: 30px;
+}
+
+ul.iSearchList li.docItem{
+	min-height: 40px;
+}	
+div.aiudProgressBkgr {
+	background-color: black;
+	border: 2px solid gray;
+	height: 100%;
+	left: 0;
+	margin:0 auto;
+	opacity: 0.5;
+	position: absolute;
+	top: 0;
+	width: 99.64%;
+	z-index: 1000;
+}
+div.aiudProgress {
+	-webkit-box-shadow: darkRed 0px 0px 40px 3px;
+	background-color: white;
+	border-radius: 10px;
+	left: 50%;
+	margin-left: -7em;
+	opacity: 1;
+	padding: 20px 25px;
+	position: relative;
+	top: -50%;
+	width: 13em;
+	z-index: 1001;
+}
+
+div.aiudProgress > img {
+	margin-right: 10px;
+	vertical-align: middle;
+}
+div.autoImportDialog {
+	height:inherit;
+}
+div.autoImportDialog h3{
+	margin: 0px;
+	padding: 12px 0px;
+	padding-right:10px;
+}
+div.autoImportDialog p{
+	margin: 0px;
+	padding: 8px 10px 8px 0;
+}
+div.autoImportDialog .top{
+	margin-top: -20px;
+	background-color: white;
+	background-image: url(data:;base64,R0lGODlhAQAGAIABAO3t7f///yH5BAEKAAEALAAAAAABAAYAAAIChF8AOw==);
+	background-repeat: repeat-x;
+	height: 20px;		
+}
+div.autoImportDialog .top div, div.autoImportDialog .footer div{
+	background-image: url(data:;base64,R0lGODlhKAAoAIQeAIaGhoiIiJOTk5eXl6GhoaWlpaqqqq2trcLCwsjIyMnJycrKytDQ0NLS0tTU1NbW1tra2uDg4OXl5enp6ezs7O3t7e7u7u/v7/Ly8vPz8/j4+Pn5+fv7+/z8/P///////yH5BAEKAB8ALAAAAAAoACgAAAW8YCWOZGmeaKqubOu+cCzPdD1bmebtfL9zmoyFhtn4jkfKRZbpIJ+9SwSGcUKvHsrDZTFisZBGK/MtIyYsXRm7ULDWX8nhDccG6HXofZW/7lV9eniBPn8phEiGKIhHiieMhYOQjiaQPZQlljyYJJo7nCOeHqAioqQVapYLLGSaBiwWFJYOAC0XF4wTBAUuEbKBEwYCDC8PEH0OBAIJMQ0ICxJxCwYABcQyEwoHAdzd3t0DBwpoNuXm5+jpNSEAOw==);
+}
+div.autoImportDialog .top .left{
+	width: 20px;
+	height: 20px;
+	float: left;
+	background-position: top left;
+}
+div.autoImportDialog .top .right{
+	width: 20px;
+	height: 20px;		
+	float: right;		
+	background-position: top right;
+}
+div.autoImportDialog .footer{
+	background-color: white;
+	background-image: url(data:;base64,R0lGODlhAQAFAKECAIiIiO3t7f///////yH5BAEKAAIALAAAAAABAAUAAAIDRB4FADs=);
+	background-repeat: repeat-x;
+	height: 20px;		
+	background-position: 0px 15px;
+}
+div.autoImportDialog .footer .left{
+	width: 20px;
+	height: 20px;		
+	float: left;		
+	background-position: bottom left;
+}
+div.autoImportDialog .footer .right{
+	width: 20px;
+	height: 20px;		
+	float: right;		
+	background-position: bottom right;
+}
+div.autoImportDialog .bd{
+	background-color: white;
+	margin: 0px 6px 0px 6px;
+	/*border-right: 1px solid #888;*/
+	background-image: url(data:;base64,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);
+	background-repeat: no-repeat;
+	background-position: 50px 50px;
+	height: inherit;	
+	padding-left: 130px;
+	/*margin-top:10px;*/
+	-moz-box-shadow:2px 2px 5px #555555;
+	-webkit-box-shadow:2px 2px 5px #555555;
+	box-shadow:2px 2px 5px #555555;
+	-moz-border-radius:5px 5px 5px 5px;
+   	-webkit-border-radius:5px 5px 5px 5px;
+	border-radius:5px 5px 5px 5px;
+}
+div.autoImportDialog .bd>div{
+	padding-top: 36px;
+	-moz-box-sizing:border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing:border-box;
+	behavior: url('boxsizing.htc');
+	-ms-box-sizing: border-box;
+}
+
+.autoImportNO,.autoImportOK{
+	margin-bottom: 18px;
+    margin-left: 10px;
+    margin-top: 10px;
+}
+
+#path{
+color: darkGray;
+font-size: 12px;
+font-style: italic;
+overflow: hidden;
+text-overflow: ellipsis;
+/*text-shadow: lightGrey 2px 2px 3px;*/
+}
+
+.mobidleDevice ul.iSearchList li.docItem{
+	position: static;
+	min-height: 66px;
+}
+.mobidleDevice .annot{
+	padding: 4px 0px;
+	height:58px;
+}
+
+
+/*******************************************/
+.listRecords li.docZaks,
+.iSearch .iSearchList li.docZaks,
+.docList .list li.docZaks {
+	background-image: url(../../images/icons_zaks.png) !important;
+	background-repeat: no-repeat !important;
+}
+
+.listRecords li.zaksResolution,
+.iSearch .iSearchList li.zaksResolution,
+.docList .list li.zaksResolution {
+	background-position: 14px 14px !important;
+}
+
+.listRecords li.zaksAddition,
+.iSearch .iSearchList li.zaksAddition,
+.docList .list li.zaksAddition {
+	background-position: 14px -506px !important;
+}
+
+.listRecords li.zaksRedaction,
+.iSearch .iSearchList li.zaksRedaction,
+.docList .list li.zaksRedaction {
+	background-position: 14px -1024px !important;
+}
+
+.listRecords li.zaksLawDecree,
+.iSearch .iSearchList li.zaksLawDecree,
+.docList .list li.zaksLawDecree {
+	background-position: 14px -1544px !important;
+}
+
+.listRecords li.zaksLawResolution,
+.iSearch .iSearchList li.zaksLawResolution,
+.docList .list li.zaksLawResolution {
+	background-position: 14px -2062px !important;
+}
+
+.listRecords li.zaksDecree,
+.iSearch .iSearchList li.zaksDecree,
+.docList .list li.zaksDecree {
+	background-position: 14px -2582px !important;
+}
+
+.listRecords li.zaksExplain,
+.iSearch .iSearchList li.zaksExplain,
+.docList .list li.zaksExplain {
+	background-position: 14px -3102px !important;
+}
+
+.listRecords li.zaksCoverLetter,
+.iSearch .iSearchList li.zaksCoverLetter,
+.docList .list li.zaksCoverLetter {
+	background-position: 14px -3622px !important;
+}
+
+.listRecords li.zaksJurConclusion,
+.iSearch .iSearchList li.zaksJurConclusion,
+.docList .list li.zaksJurConclusion {
+	background-position: 14px -4140px !important;
+}
+
+.listRecords li.zaksModification,
+.iSearch .iSearchList li.zaksModification,
+.docList .list li.zaksModification{
+	background-position: 14px -4658px !important;
+}
+
+.listRecords li.zaksFinConclusion,
+.iSearch .iSearchList li.zaksFinConclusion,
+.docList .list li.zaksFinConclusion {
+	background-position: 14px -5178px !important;
+}
+
+/* ------------------------------------ */

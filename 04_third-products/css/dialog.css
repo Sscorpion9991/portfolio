@@ -1,0 +1,558 @@
+.ui-dialog .closeDialog, .ui-dialog .closeBookmarkDialog {
+	background:transparent url(../images/pic_niceclose.png) no-repeat scroll 0 0;
+	border:0 none;
+	height:29px;
+	position:absolute;
+	right:-2px;
+	top:10px;
+	width:29px;
+	cursor: pointer;
+	display: block;
+	
+}
+.ui-widget-overlay{
+	background:transparent url(../images/modal_bg.png) repeat ;
+	position:absolute;
+	top:0;
+}
+.ui-dialog-titlebar-close{
+	display: none;
+}
+#dialog{
+	font-size:14px;
+	background-color:white;
+	margin: 8px;
+	-moz-border-radius:10px;
+	-webkit-border-radius: 10px;
+	-khtml-magin-start: 0px; 
+	-webkit-margin-start: 0px;
+	border-radius: 10px;
+	padding: 10px;
+}
+
+#waitDialog, #disconnectDialog{
+	font-size:14px;
+	background-color:white;
+	margin: 8px;
+	-moz-border-radius:10px;
+	-webkit-border-radius: 10px;
+	-khtml-magin-start: 0px; 
+	-webkit-margin-start: 0px;
+	border-radius: 10px;
+	padding: 10px;
+	display: none;
+	cursor: default;
+}
+#disconnectDialog{
+	padding: 12px 20px;
+}
+#disconnectDialog h1{
+	margin: 10px 0px
+}
+
+#waitDialog p{
+	margin-top:16px;
+}
+#waitDialogClose {
+	padding-left: 165px;
+	padding-top: 10px;
+}
+#dialog .filter{
+	float: right;
+	width: 290px;
+	margin-top:-2px;
+}
+#dialog h4{
+	margin: 0px;
+	font-size:16px;
+}
+#dialog .listHeader{
+	padding: 6px 15px;
+	background-color: #F4F4F4;
+	border-color: #DDDDDD;
+	border-style:solid;
+	border-width:1px 1px 0px 1px;
+}
+
+/* 
+  Sab 18.01.2011 (������ ���) ������� .list �� .dlist, 
+  ����� �� ���� ��������� ���� � ��������, ��� ����� ���� ���������� ������ ����������, ������� ����� .list
+*/ 
+
+#dialog .dlist{
+	height:270px;
+	overflow:auto;
+	font-size:12px;
+	background-color: white;
+	border-color: #DDDDDD;
+	border-style:solid;
+	border-width:0px 1px 1px 1px;
+}
+#dialog .dlist ul.treeSection{
+	margin-left:10px;
+}
+#dialog .dlist .notFound{
+	padding: 6px 10px;
+}
+#dialog .dlist li p{
+	margin-left: 20px;
+	padding-left: 4px;
+}
+#dialog .dlist li span{
+	background-image:url(../images/list_pics.png);
+	background-repeat:no-repeat;
+	float: left;
+	height: 18px;
+	width: 18px;
+}
+
+#dialog .dlist li span.open{
+	background-position:-395px 3px;
+}
+#dialog .dlist li span.close{
+	background-position:-2486px 3px;
+}
+#dialog div.result ul,#dialog .dlist ul{
+	list-style: none;
+	padding: 0px 30px 0px 10px;
+}
+#dialog li ul{
+	list-style: none;
+	padding: 0px 0px 0px 20px;
+}
+
+#dialog div.result ul li {
+	font-size: 12px;
+}
+
+#dialog .dlist ul li, #dialog .dlist ul li{
+	margin:0 -19px 1px;
+	padding: 1px 0px 0px 0px;
+	border: 1px white; 
+	cursor: pointer;
+	user-select: none;
+	-moz-user-select: none;
+	-khtml-user-select: none;
+	-webkit-user-select: none;
+}
+
+#dialog div.result ul > li {
+	margin-left:6px;
+	cursor: pointer;
+}
+#dialog div.result ul > li:hover {
+	background-color: #c2d2f5;
+}
+#dialog .dlist ul li.selected > p{
+	border: 1px dotted  ActiveCaption;
+}
+
+#dialog .dlist li:hover > p{
+	background-color:#C2D5F5;
+}
+#dialog .dlist ul li.choice > p{
+	background-color:#FCEB91;
+}
+#dialog .resultsHeader{
+	margin-top:7px;
+	padding: 7px 15px;
+	background-color: #F4F4F4;
+	border-color: #DDDDDD;
+	border-style:solid;
+	border-width:1px 1px 0px 1px;
+}
+#dialog .reset{
+	float: right;
+	text-decoration: none;
+	border-bottom: 1px dashed #0000AA;
+}
+#dialog div.result{
+	height:130px;
+	overflow:auto;
+	background-color: white;
+	border-color: #DDDDDD;
+	border-style:solid;
+	border-width:0px 1px 1px 1px;
+}
+
+#dialog .logic {
+	padding: 7px 9px;
+}
+#dialog .logic label, #dialog .logic h4{
+	float: left;
+	padding: 0px 10px;		
+}
+#dialog .buttons{
+	padding: 14px 0px 0px 202px; 	
+	clear: left;		
+}
+#dialog .bookmarks_add,#dialog .put_to_folder{
+	padding-left: 140px;
+}
+#dialog .buttons .cancel span span{
+	padding-left:47px;
+	padding-right:36px;
+}
+
+#dialog .buttons .back span span{
+	padding-left:31px;
+	padding-right:20px;
+}
+
+#dialog .header{
+	padding: 6px 15px;
+	background-color: #F4F4F4;
+	border-color: #DDDDDD;
+	border-style:solid;
+	border-width:1px 1px 1px 1px;
+	min-height: 30px;
+}
+
+.BookmarkName {
+	border: 1px solid rgb(221, 221, 221);
+	border-top: none;
+	height: 100px;
+	padding: 10px 0 0 15px;
+	margin-bottom: 10px;
+}
+
+.BookmarkName span.enabled, 
+span.enabled input{
+	color: #000000;
+}
+.BookmarkName span.disabled,
+span.disabled input {
+	color: #C6C6C6;
+}
+
+.BookmarkName #name{
+	border-color:#ABADB3 #E3E9EF #E3E9EF;
+	border-style:solid;
+	border-width:1px;
+	height:65px;
+	width:550px;
+}
+
+.BookmarkName #addSelected{
+	float: left;
+	padding: 20px 0 0 0;
+	display: none;
+}
+
+.BookmarkName span {
+	font-weight: bolder;
+}
+
+.MaterialsList {
+	border: 1px solid rgb(221, 221, 221);
+	border-top: none;
+	height: 110px;
+	margin-bottom: 10px;
+}
+
+.MaterialsList ul{
+	list-style: none;
+	height: 100%;
+	width: 100%;
+	overflow-y: auto;
+}
+.MaterialsList ul li{
+	background:url("../images/list_documents.png") no-repeat scroll -3px 3px transparent;
+	border-bottom:1px solid #DDDDDD;
+	cursor:default;
+	font-size:85%;
+	font-style:italic;
+	margin:0 0 0 0;
+	padding:10px 0px 10px 43px;
+	color:#939393;
+	width: 100%;
+	float: left;
+	clear: both;
+	-moz-box-sizing:border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing:border-box;
+	-ms-box-sizing: border-box;
+	
+}
+.MaterialsList .material {
+	float: left;
+	width:500px;
+}
+.MaterialsList ul li .title {
+	font-style:normal;
+	font-weight:normal;
+	color:#000000;
+}
+.removeItem {
+	width: 16px;
+	height:16px;
+	font-style: none;
+	text-decoration: none;
+	float: right;
+	color: #000000;
+	cursor: pointer;
+}
+.FoldersList {
+	background-color: white;
+	border: 1px solid #DDDDDD;
+	height: 150px;
+	overflow: auto;	
+}
+
+#dialog p.haschild {
+	font-weight: bolder;
+	color: #0000AA;
+	text-decoration: underline;
+}
+
+#dialog p.haschild:hover {
+	text-decoration: none;
+}
+
+#dialog .select_all {
+	float: right;
+	margin-right: 35px;
+	padding-left: 20px;
+	display: none;
+}
+
+#dialog .header.withHelp, #dialog .listHeader.withHelp {
+	padding-right: 0px;
+}
+#dialog .listHeader.withHelp #helpUF{
+	margin-left:10px;
+	margin-top:-2px;
+}
+#helpUF {
+	background: url('../images/dialog_help.png') 0 0 no-repeat;
+	float:right;
+	height:23px;
+	width:23px;
+	cursor: pointer;
+	display: block;
+}
+ul.FoldersTree {
+	list-style: none;
+}
+#dialog .FoldersTree li {
+	font-size: 13px;
+}
+.FoldersTree li {
+	background-repeat: no-repeat;
+	border-top: 1px solid rgb(255, 255, 255);
+	font-family: Tahoma, sans-serif;
+	line-height: 1.7em;
+	clear:both;
+}
+.FoldersTree li ul {
+	display: none;
+	background: #ffffff;
+}
+
+.FoldersTree li.selected {
+	background-color: rgb(194, 213, 245);
+}
+.FoldersTree li.selected li {
+	background-color: #ffffff;
+}
+#dialog .back {
+	display: none;
+}
+
+#dialog .dlist .filterMatch{
+	background-image: none;
+	background: #FFF152;
+	width: auto;
+	float: none;
+}
+#dialog .importBase,#dialog .changeBase{
+	padding: 20px 15px 5px 15px;
+	border-left: 1px solid #DDDDDD;
+	border-right: 1px solid #DDDDDD;
+}
+#dialog .importBase{
+	border-bottom: 1px solid #DDDDDD;
+	padding-bottom: 30px;
+	height:70px;
+}
+#dialog .okChangeBase{
+	border: 0px solid #DDDDDD;
+	padding-left: 188px;
+	padding-top:15px;
+}
+#dialog .udatafilepath{
+	float: right;
+}
+#dialog  #File1{
+
+}
+#dialog.progress{
+	background-image:  url(../images/ajax-loader.gif);
+	background-repeat: no-repeat;
+	background-position: center center;
+}
+#dialog .importBase .button{
+	float: right;
+}
+
+#dialog .lifetime {
+	height:125px;
+}
+#dialog .lifetime .mainForm{
+	border-left:1px solid #CCCCCC;
+	border-right:1px solid #CCCCCC;
+	border-bottom:1px solid #CCCCCC;
+	height:100%;
+}
+#dialog .lifetime .leftText{
+	float:left;
+	padding:17px 10px 0 13px;
+}
+#dialog .lifetime .rightForm{
+	float:left;
+	margin-top:17px;
+}
+#dialog .lifetime .button{
+	float:left;
+	margin:7px 0 0 140px;
+}
+
+#dialog .importBase .unsuccess, #dialog .lifetime .unsuccess{
+	display: none;
+	color:orangeRed;
+	font-size:12px;
+}
+
+#dialog .importBase .success, #dialog .lifetime .success{
+	display: none;
+	color:green;
+	font-size:12px;
+}
+#dialog .confirmDelete{
+	padding-top:43px;
+}
+#dialog .alert .confirmDelete{
+	padding-top: 7px;
+    min-height: 25px;
+}
+#dialog .alert h4 {
+	text-align: center;
+}
+#dialog .alert p {
+	text-align: center;
+}
+#dialog .confirmDelete .no{
+	margin-left: 74px;
+	margin-left: 73px\0/;
+}
+#dialog .dlist ul.treeSection ul.treeSection, #dialog .dlist ul.treeSection ul.treeSelectSection{
+	margin-left: 30px;
+}
+#dialog .dlist ul.treeSection ul.treeSection ul.treeSection, #dialog .dlist ul.treeSection ul.treeSelectSection ul.treeSelectSection{
+	margin-left: 30px;
+}
+#dialog .dlist ul.treeSection ul.treeSection ul.treeSection ul.treeSection, #dialog .dlist ul.treeSection ul.treeSelectSection ul.treeSelectSection ul.treeSelectSection{
+	margin-left: 30px;
+}
+#dialog .dlist ul.treeSection ul.treeSection ul.treeSection ul.treeSection ul.treeSection, #dialog .dlist ul.treeSection ul.treeSelectSection ul.treeSelectSection ul.treeSelectSection ul.treeSelectSection{
+	margin-left: 30px;
+}
+.macInput{
+	margin: 6px 0px;
+	height: 26px;
+	padding: 0px; 	
+	position: relative;
+}
+.macInput input{
+	width: 96%;
+	height: 24px;
+	padding: 0 0 0 15px;
+	border-top: 1px solid #bebebe;
+	border-bottom: 1px solid #bebebe;
+	border-left: 0px;
+	border-right: 0px;
+	background: white;
+}
+.macInput div.right{
+	background:url("../images/round.png") no-repeat scroll left 0px transparent;
+	width: 12px;
+	height: 26px;
+	float: right;
+	margin-left: -12px;
+	position:relative;
+}
+.macInput div.left{
+	background:url("../images/round.png") no-repeat scroll right 0px transparent;
+	width: 12px;
+	height: 26px;
+	float: left;
+	margin-right: -12px;
+	position:relative;
+}
+
+.macButton{
+	cursor: pointer;
+	float: left;
+	background:url("../images/macbutton.png") no-repeat scroll right 0px transparent;
+	width: 114px;
+	height: 26px;
+	text-align: center;
+	user-select: none;
+	-moz-user-select: none;
+	-khtml-user-select: none;
+	-webkit-user-select: none;
+}
+.macButton p{
+	padding: 4px 0px 0px 0px;
+	text-align: center;
+}
+.macButton.one{
+	margin-left: 92px !important;
+} 
+
+.importBase .macButton{
+	float: right;
+	cursor: pointer;
+}
+.importBase .macInput, .changeBase .macInput{
+	margin-right: 120px; 	
+}
+.importBase .macInput, .importBase .inactive input{
+	user-select: none;
+	-moz-user-select: none;
+	-khtml-user-select: none;
+	-webkit-user-select: none;
+	cursor: pointer;
+}
+.importBase .macInput, .importBase .inactive input{
+	font-size: 10px;
+	text-align: center;
+	color: #cccccc;	
+	
+}
+.importBase .inactive input{
+	height:26px;
+	text-align: left;
+	behavior: url('boxsizing.htc'); 
+	box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    padding-left:10px;
+}
+.importBase .inactive.macButton p{
+	opacity: 0.5;
+	cursor: default;
+}
+#dialog.diff{
+	background-color: #ededed;
+	padding:10px 0 0 0;
+}
+#dialog.diff iframe{
+	width: 100%;
+	height: 98%;
+	border: 0px;
+	overflow: none;
+}
+#dialog .expUDataOkBtn{
+	margin-left: 35px;
+}

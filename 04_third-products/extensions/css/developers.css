@@ -1,0 +1,151 @@
+#developersPage{
+	position:relative;
+	background: url('images/bg.png') center top no-repeat;
+	min-width:920px;
+}
+#developersPage .radiustopleft{
+	position: fixed;
+	height: 8px;
+	width: 8px;
+	background: url('images/radiustopleft.png') right top no-repeat;
+}
+#developersPage .kodeks{
+	background: url('images/kodeks.png') right top no-repeat;
+	height: 109px; 
+	width: 309px;
+	float:right;
+}
+#developersPage .page{
+	
+	width: 920px;
+	padding: 0px 0px 0px 0px;
+	-moz-box-sizing:border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing:border-box;
+	-ms-box-sizing: border-box;
+	behavior: url('boxsizing.htc');
+}
+#developersPage .page .top .leftCol{
+	padding-top: 24px;
+	float: left;
+	width: 425px;
+	height: 340px;
+	position:relative;
+}
+#developersPage .page .top .leftCol div.text{
+	padding:47px 28px 0 40px;
+	font-size: 12px;
+	text-align: right;
+}
+#developersPage .page .top .rightCol{
+	float: right;
+	width: 410px;
+	height: 340px;
+	font-size:12px;
+}
+#developersPage .page .top .rightCol .slogan{
+    margin-right: 12px;
+	float: right;
+	margin-top: 15px;
+}
+#developersPage .page .top .rightCol div.text{
+    padding: 25px 25px 0 135px;
+	font-style: italic;
+}
+#developersPage .page .top .rightCol .quotesOpen{
+	background: url('images/quotes.png') top left no-repeat;
+	height: 14px;
+	width: 14px;
+	float: left;
+    margin-left: -23px;
+	margin-top: 1px;
+}
+#developersPage .page .top .rightCol .quotesClose{
+	background: url('images/quotes.png') top right no-repeat;
+	height: 14px;
+	width: 14px;
+	float: right;
+    margin-right: -10px;
+    margin-top: 3px;
+}
+#developersPage .telephone {
+    background: url("images/telephone.png") no-repeat scroll 0 0 transparent;
+    height: 44px;
+    margin: 92px 0 0 157px;
+    width: 196px;
+}
+#developersPage .logo{
+	background: url('images/logo.png') right 20px no-repeat;
+	height: 60px;
+}
+#developersPage .page .date{
+	height: 100px;
+}
+#developersPage .page .content{
+	font-size: 12px;
+}
+#developersPage .page .content p{
+	margin: 0px;
+	padding: 8px 0px 8px 0px;
+}
+#developersPage .page .content ul{
+	list-style-image: url('images/dash.png');
+	margin-left: 20px;
+	padding-top:8px;
+}
+#developersPage .page .content ul ul{
+	list-style-image: url('images/desc.png');
+	margin-left:12px;
+	padding-top:0px;
+}
+#developersPage .page .content .leftCol{
+	float: left;
+	width: 410px;
+}
+#developersPage .page .content .leftCol .text{
+	padding: 0px 35px 0px 90px;
+}
+#developersPage .page .content .rightCol{
+	float: right;
+	width: 465px;
+}
+#developersPage .page .content .rightCol .text{
+	padding: 0px 60px 0px 10px;
+}
+#developersPage .page .content .rightCol p.lefttab{
+	padding-left: 20px;
+	padding-top:16px;
+}
+#developersPage .page .developersFooter{
+	margin: 25px 20px 20px 60px;
+}
+#developersPage .page .developersFooter .rounded{
+	font-size: 12px;
+	border-radius: 8px;
+	width: 265px; 
+	height: 230px;
+	float: left;
+	background: #e8eaef;
+	padding: 0px;
+	margin: 10px 6px;
+	-moz-border-radius:8px;
+	-webkit-border-radius: 8px;
+	-moz-box-sizing:border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing:border-box;
+	-ms-box-sizing: border-box;
+	behavior: url('boxsizing.htc');
+}
+#developersPage .page .developersFooter .rounded h3{
+	padding: 0px;
+	margin: 20px 20px 8px 30px;
+}
+#developersPage .page .developersFooter .rounded ul{
+	list-style: none;
+	margin: 8px 20px 20px 30px;
+	padding: 0px;
+}
+#developersPage .page .developersFooter .rounded li{
+	margin: 0px 0px;
+	padding: 2px 0px;
+}

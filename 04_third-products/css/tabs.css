@@ -1,0 +1,146 @@
+
+#tabs{
+	height:33px;
+	margin:-33px 12px 0 230px;
+	position: relative;
+	min-width:330px;
+	width:expression(document.body.clientWidth < 330? "330px": "auto" );
+	
+}
+
+#tabs.asearchTabs,
+ #tabs.isearchTabs {
+	margin-left:0px !important;
+}
+
+#carousel{
+	overflow:hidden;
+	height:33px;
+    right: 0px;
+    position: absolute;
+}
+#prevTabs{
+	background-image:url(../images/icons/pics/pic_ar1_left.gif);
+}
+#nextTabs{
+	background-image:url(../images/icons/pics/pic_ar1_right.gif);
+}
+#nextTabs{
+}
+#tabs .selectorList{
+	color: black;
+	float: right;
+	margin-bottom:-1000px;
+	margin-right:-7px;
+	margin-top:25px;
+	padding:0px 0px;
+	border:1px solid LightBlue;
+}
+#tabs .selectorList ul{
+	float: none;
+	width: auto;	
+}
+#tabs .selectorList li{
+	padding: 2px 10px;
+	background: none;
+	float: none;	
+}
+#tabs .selectorList li.empty{
+	color: gray;
+}
+#tabs .selectorList li:hover{
+	background: #BFC6D7;
+}
+#prevTabs, #nextTabs, #tabs .selector{
+	background-position: center center;
+	background-repeat: no-repeat;
+	cursor: pointer;
+	height:16px;
+	width:16px;
+	float: right;
+	margin-top: 10px;
+	position:relative;	
+	display: none;
+}
+
+#tabs .selector{
+	background-image:url("../images/tabs3.png");
+	background-position:left top;
+	background-repeat:repeat-x;
+	margin:3px 8px 0 0;
+	height:30px;
+	width:27px;
+    overflow: visible !important;
+}
+
+#tabs .selector div {
+	background-image:url("../images/tabs3.png");
+	background-position:right top;
+	background-repeat:repeat-x;
+	margin-left:14px;
+	height:30px;
+	width:21px;
+}
+#tabs .selector div p{
+	background-image:url("../images/icons/pics/pic_ar1_down_white.gif");
+	background-repeat:no-repeat;
+	background-position:left 10px;
+	height:100%;
+	width:100%;
+}
+
+#prevTabs.active, #nextTabs.active{
+	display: none;
+}
+#tabs ul{
+	float: right;
+	list-style: none;
+	margin: 3px 0px 0px 0px;
+}
+#tabs ul li{
+	cursor: pointer;
+	float: left;
+	background-image: url('../images/tabs3.png');
+	background-repeat: repeat-x;
+	background-position: left top;	
+}
+#tabs ul li.loadTabsSpiner{
+	background: none;
+	width: 33px;
+	height: 30px;
+}
+	#tabs ul li.loadTabsSpiner div{
+		background-image: url('../images/spinner_l.gif');
+		width: inherit;
+		height: inherit;
+		background-repeat: no-repeat;
+		background-position: center;
+	}
+#tabs ul li p{
+	font-size: 12px;
+	font-family: Tahoma;
+	font-weight: bold;
+	color: White;
+	line-height: 16px;
+	padding: 8px 15px 0 0;
+	margin: 0 0 0 15px; 
+	background-image: url('../images/tabs3.png');
+	background-repeat: repeat-x;
+	background-position: right top;
+	height: 22px;
+	max-width: 300px;
+}
+#tabs ul li.empty p{
+	background-position: right -100px;
+	color: #8b8b8b;
+}
+#tabs ul li.empty{
+	background-position: left -100px;
+}
+#tabs ul li.active p{
+	background-position: right -50px;
+	color: black;
+}
+#tabs ul li.active{
+	background-position: left -50px;
+}
