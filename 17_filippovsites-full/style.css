@@ -1,0 +1,680 @@
+html,
+body {
+    height: 100%;
+}
+
+img {
+    max-width: 100%;
+}
+
+body {
+    background: lightgray;
+    font-family: Helvetica, Arial, sans-serif;
+    text-align: center;
+    font-size: 24px;
+    text-decoration: none;
+    color: white;
+}
+
+#main_section {
+    background: url('img/bg.jpg');
+    background-position-x: center;
+    background-position-y: center;
+    background-repeat-x: no-repeat;
+    background-repeat-y: no-repeat;
+    background-attachment: initial;
+    background-origin: initial;
+    background-clip: initial;
+    background-size: cover;
+    height: 100%;
+    min-width: 960px;
+    min-height: 800px;
+}
+
+#container {
+    width: 960px;
+    margin: 0 auto;
+    
+}
+
+#container nav {
+    width: 900px;
+    padding: 30px;
+}
+
+#container nav a.logo {
+    display: block;
+    float: left;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    text-align: right;
+}
+
+nav ul li {
+    display: inline;
+    padding-left: 15px;
+}
+
+nav a {
+    color: white;
+}
+
+nav ul li a:link {
+    color: #white;
+    text-decoration: none;
+}
+
+nav ul li a:visited,
+nav ul li a:hover {
+    font-weight: bold;
+    font-style: italic;
+}
+
+nav ul li a:active {
+    position: relative;
+    top: 1px;
+}
+
+#main_div {
+    margin-top: 250px;
+}
+
+#main_div h1 {
+    font-family: Formata, Helvetica, sans-serif;
+    font-weight: 400;
+    font-size: 60px;
+    margin-bottom: 50px;
+}
+
+#main_div p {
+    font-size: 22px;
+    line-height: 1.3em;
+    padding: 0 30px;
+    width: 900px;
+}
+
+.button_black {
+    font-size: 18px;
+    display: inline-block;
+    border: solid 1px white;
+    background: #333;
+    color: white;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+#projects:link {
+    margin: 20px 0 30px;
+    height: 40px;
+    width: 200px;
+    line-height: 40px;
+}
+
+#projects:hover {
+    border: solid 1px #333;
+    background: white;
+    color: #333;
+}
+
+#projects:active {
+    position: relative;
+    top: 1px;
+}
+
+#footer_main {
+    display: block;
+    height: 100%;
+}
+
+.arrow {
+    background: url('img/arrowDown.png') center center no-repeat;
+    height: 35px;
+    width: 35px;
+    position: absolute;
+    bottom: 20px;
+    margin-left: -18px;
+    
+}
+
+.arrow:visited,
+.arrow:hover {
+    background: url('img/arrowDown_on.png') center center no-repeat;
+}
+
+.arrow:active {
+    bottom: 19px;
+}
+
+#mainfooter {
+    list-style: none;
+    text-align: right;
+    margin-top: 14%;
+}
+
+#mainfooter li {
+    display: inline;
+    margin: 0 10px;
+}
+
+.language:visited,
+.language:link {
+    padding: 5px;
+    position: absolute;
+    bottom: 20px;
+}
+
+
+.language:hover {
+    border: solid 1px #333;
+    background: white;
+    color: #333;
+}
+
+.language:active {
+    bottom: 19px;
+}
+
+#ru {
+    margin-left: -100px;
+}
+
+#en {
+    margin-left: -60px;
+}
+
+
+/* About */
+
+.container_nav {
+    width: 900px;
+    margin: 0 auto;
+}
+
+.container_nav a.logo {
+    display: block;
+    float: left;
+}
+
+.container_div {
+    width: 900px;
+    margin: 0 auto;
+}
+
+#about {
+    background: white;
+    color: #333;
+    min-width: 960px;
+    height: 100%;
+}
+
+#about nav {
+    background: #333;
+    padding: 10px 30px;
+}
+
+#about_div {
+    padding: 130px 30px 80px;
+    text-align: left;
+    height: 500px;
+}
+
+#aleksandr {
+    height: 600px;
+}
+
+#about_div h1 {
+    padding: 0;
+    padding-bottom: 30px;
+    border-bottom: solid 2px #333;
+    margin-bottom: 60px;
+}
+
+#about_div article {
+    margin-top: -645px;
+    margin-left: 450px;
+}
+
+#about_div p {
+    text-align: justify;
+    font-size: 22px;
+}
+
+#button_about {
+    margin-top: 50px;
+    text-align: justify;
+    margin-left: 450px;
+}
+
+#resume {
+    padding: 10px;
+}
+
+.button_white {
+    font-size: 18px;
+    display: inline-block;
+    border: solid 1px #333;
+    background: white;
+    color: #333;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+#about_projects:hover,
+#resume:hover {
+    border: solid 1px white;
+    background: #333;
+    color: white;
+}
+
+#about_projects:active,
+#resume:active {
+    position: relative;
+    top: 1px;
+}
+
+#about_projects {
+    position: relative;
+    left: 60px;
+    padding: 10px;
+}
+
+
+/* Phases */
+
+#phases {
+    background: url('img/bg_phases.png') center center no-repeat;
+    color: #333;
+    min-width: 960px;
+    background-attachment: initial;
+    background-origin: initial;
+    background-clip: initial;
+    background-size: cover;
+    height: 100%;
+    min-width: 960px;
+    min-height: 800px;
+}
+
+#phases nav {
+    background: #333;
+    padding: 10px 30px;
+}
+
+#phases_div {
+    text-align: center;
+    text-decoration: none;
+}
+
+#phases_div h1 {
+    padding: 120px 0 60px; 
+    width: 600px;
+    margin: 60px auto;
+    
+
+    border-bottom: solid 2px #333;
+    font-size: 30px;
+}
+
+#phases_div h2 {
+    padding: 10px 0 30px;
+    font-size: 18px;
+}
+
+#phases_div ul {
+    text-align: left;
+    line-height: 2em;
+    margin-left: -15px;
+}
+
+#p_phase {
+    width: 960px;
+    margin: 0 auto;
+}
+
+#discovery,
+#creative,
+#development,
+#launch {
+    border: solid 1px #a0a0a0;
+    padding: 60px 0px 0;
+    font-size: 14px;
+    width: 230px;
+    float: left;
+}
+
+#discovery {
+    padding-bottom: 80px;
+    margin-left: 15px;
+}
+
+#creative {
+    padding-bottom: 108px;
+    margin-left: -1px;
+}
+
+#development {
+    padding-bottom: 52px;
+    margin-left: -1px;
+}
+
+#launch {
+    padding-bottom: 80px;
+    margin-left: -1px;
+}
+
+
+/* Portfolio */
+
+#portfolio nav {
+    background: #333;
+    padding: 10px 30px;
+}
+
+
+#portfolio {
+    background: white;
+    color: #333;
+    min-width: 960px;
+    height: 165%;
+    min-width: 960px;
+    min-height: 800px;
+}
+
+#portfolio_div {
+    width: 960px;
+    margin: 0 auto;
+}
+
+#portfolio_div h1 {
+    padding: 0 0 30px;
+    margin: 50px 200px 60px;
+    border-bottom: solid 2px #333;
+}
+
+#portfolio_div img {
+    width: 290px;
+    margin: 0 10px 60px;
+}
+
+#start_projects {
+    padding: 10px;
+    margin-bottom: 45px;
+}
+
+#start_projects:hover {
+    border: solid 1px white;
+    background: #333;
+    color: white;
+}
+
+#start_projects:active {
+    position: relative;
+    top: 1px;
+}
+
+#hr_div {
+    margin: 0 auto 60px;
+    width: 800px;
+    height: 1px;
+    border-bottom: solid 2px #333;
+}
+
+#feedback1,
+#feedback2,
+#feedback3 {
+    width: 280px;
+    font-size: 14px;
+    float: left;
+    padding: 10px;
+    border: solid 1px #333;
+}
+
+#feedback1 img,
+#feedback2 img,
+#feedback3 img {
+    width: 100px;
+}
+
+#feedback1 h2,
+#feedback2 h2,
+#feedback3 h2 {
+    margin-top: -50px;
+    margin-bottom: 30px;
+}
+
+#feedback1 p,
+#feedback2 p,
+#feedback3 p {
+    text-align: justify;
+}
+
+#feedback1 {
+    margin-left: 20px;
+    padding-bottom: 73px;
+}
+
+#feedback2 {
+    margin-left: -1px;
+    padding-bottom: 148px;
+}
+
+#feedback3 {
+    margin-left: -1px;
+    padding-bottom: 50px;
+}
+
+
+/* Contact Me */
+
+#contact nav {
+    background: #333;
+    padding: 10px 30px;
+}
+
+#contact nav a#logo5 {
+    position: absolute;
+    left: 30px;
+}
+
+#contact {
+    background: url('img/bg_contact.jpg') center center no-repeat;
+    color: #333;
+    background-attachment: initial;
+    background-origin: initial;
+    background-clip: initial;
+    background-size: cover;
+    height: 950px;
+    min-width: 960px;
+    min-height: 800px;
+    position: relative;
+}
+
+#contact_div {
+    width: 960px;
+    margin: 0 auto;
+}
+
+#contact h1 {
+    margin: 40px 300px 50px;
+    padding-bottom: 30px;
+    border-bottom: solid 2px #333;
+    font-size: 30px;
+}
+
+#contact h2 {
+    font-weight: 100;
+    margin-bottom: 50px;
+    font-size: 30px;
+    line-height: 1.3em;
+}
+
+#contact h2 strong {
+    font-weight: 600;
+}
+
+#social img {
+    width: 48px;
+    padding: 10px 10px 30px;
+}
+
+#contact_div p {
+    margin-bottom: 50px;
+    font-size: 24px;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+    padding: 10px;
+    margin: 0 225px 20px;
+    border: solid 1px #333;
+    border-radius: 10px;
+    display: block;
+    width: 500px;
+    font-size: 14px;
+    text-transform: uppercase;
+    resize: none;
+}
+
+textarea {
+    height: 120px;
+}
+
+input[type="submit"],
+input[type="submit"]:link {
+    height: 40px;
+    width: 200px;
+    line-height: 40px;
+}
+
+input[type="submit"]:hover {
+    border: solid 1px #333;
+    background: white;
+    color: #333;
+}
+
+input[type="submit"]:active {
+    position: relative;
+    top: 1px;
+}
+
+#arrowup {
+    width: 35px;
+    height: 35px;
+    display: block;
+    margin-left: 462px;
+    margin-top: 50px;
+}
+
+#arrowup:link {
+    background: url('img/arrowUp.png') center center no-repeat;
+}
+
+#arrowup:visited,
+#arrowup:hover {
+    background: url('img/arrowUp_on.png') center center no-repeat;
+}
+
+#arrowup:active {
+    position: relative;
+    top: 1px;
+}
+
+
+/* Footer */
+
+#main_footer {
+    background: #333;
+    color: white;
+    text-align: center;
+    height: 200px;
+    font-size: 18px;
+    line-height: 1.3em;
+    min-width: 960px;
+    padding: 50px 0 20px;
+}
+
+#container_footer {
+    width: 960px;
+    margin: 0 auto;
+}
+
+#footerNav {
+    width: 260px;
+    float: left;
+    margin-left: 20px;
+}
+
+#footerNav p {
+    margin-top: 60px;
+}
+
+#footerNav ul li {
+    display: block;
+    text-align: left;
+}
+
+#footer_center {
+    width: 220px;
+    float: left;
+    margin-left: 70px;
+}
+
+#footer_center ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    text-align: left;
+}
+
+#footer_center ul li {
+    display: block;
+}
+
+#footer_center ul li a:link,
+#footer_center ul li a:visited,
+#footer_center ul li a:hover {
+    color: white;
+    text-decoration: none;
+}
+
+#footer_center ul li a:active {
+    position: relative;
+    top: 1px;
+}
+
+#footer_right {
+    width: 300px;
+    float: left;
+    text-align: right;
+    margin-left: 60px;
+}
+
+#footer_right p {
+    margin-top: 62px;
+}
+
+.clearfix:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+#start_projects_footer {
+    padding: 10px;
+    margin-bottom: 45px;
+}
+
+#start_projects_footer:hover {
+    border: solid 1px #333;
+    background: white;
+    color: #333;
+}
+
+#start_projects_footer:active {
+    position: relative;
+    top: 1px;
+}
