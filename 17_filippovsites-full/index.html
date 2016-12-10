@@ -1,5 +1,5 @@
-<!DOCTYPE HTML>
-<html lang="en">
+<!doctype html>
+<html>
 
 <head>
     <title>Filippovsites</title>
@@ -18,36 +18,25 @@
 </head>
 
 <body>
-    <section id="main">
-        <div id="nav_main">
-            <div class="container">
-                <a href=""><img src="img/logo.png" alt="logo" class="logo"></a>
+    <!-- SECTION MAIN -->
+    <section id="main_section" name="home">
+        <div id="container">
+            <!-- HEADER -->
+            <header>
                 <nav>
+                    <a href="" class="logo"> <img src="img/logo.png" alt="Filippovsite logo"> </a>
                     <ul>
                         <li><a href="">Home</a></li>
                         <li><a href="#about">About</a></li>
                         <li><a href="#portfolio">Portfolio</a></li>
                         <li><a href="#contact">Contact Me</a></li>
                     </ul>
-                    <select>
-                        <option value="" selected="selected">Navigation</option>
-                        <option value="">Home</option>
-                        <option value="#about">About</option>
-                        <option value="#portfolio">Portfolio</option>
-                        <option value="#contact">Contact Me</option>
-                    </select>
                 </nav>
-            </div>
-        </div>
-        <div id="middle_main">
-            <div class="container">
+            </header>
+            <div id="main_div">
                 <h1>Welcome to Filippovsites</h1>
-                <p>Hi, I’m Aleksandr Filippov a Russian web developer &amp; designer.
-                    <br>I am passionate for creating simple but powerful visual experiences, beautiful and usable interfaces.</p> <a href="#portfolio" id="projects" class="button_black">See my projects</a> </div>
-        </div>
-        <div id="bottom_main">
-            <div class="container">
-                <div id="footer_main_center">
+                <p>Hi, I’m Aleksandr Filippov a Russian web developer &amp; designer. I am passionate for creating simple but powerful visual experiences, beautiful and usable interfaces.</p> <a href="#portfolio" id="projects" class="button_black">See my projects</a>
+                <div id="footer_main">
                     <a href="#about" class="arrow"></a>
                     <ul id="mainfooter">
                         <li> <a href="" class="button_black language" id="ru">ru</a></li>
@@ -58,7 +47,8 @@
         </div>
     </section>
     <!-- SECTION About -->
-     <section id="about">
+    
+    <section id="about" name="about">
         <nav>
             <div class="container_nav">
                 <a href="" class="logo"> <img src="img/logo.png" alt="Filippovsite logo"> </a>
@@ -68,13 +58,6 @@
                     <li><a href="#portfolio">Portfolio</a></li>
                     <li><a href="#contact">Contact Me</a></li>
                 </ul>
-                <select>
-                        <option value="" selected="selected">Navigation</option>
-                        <option value="">Home</option>
-                        <option value="#about">About</option>
-                        <option value="#portfolio">Portfolio</option>
-                        <option value="#contact">Contact Me</option>
-                    </select>
             </div>
         </nav>
         <div id="about_div" class="container_div"> <img src="img/aleksandr.jpg" alt="Aleksandr Filippov" id="aleksandr">
@@ -87,7 +70,9 @@
             <div id="button_about"> <a href="" id="resume" class="button_white">show my resume</a> <a href="#portfolio" id="about_projects" class="button_white">See my projects</a> </div>
         </div>
     </section>
+
     <!-- SECTION Phases -->
+    
     <section id="phases">
         <nav>
             <div class="container_nav">
@@ -98,13 +83,6 @@
                     <li><a href="#portfolio">Portfolio</a></li>
                     <li><a href="#contact">Contact Me</a></li>
                 </ul>
-                <select>
-                    <option value="" selected="selected">Navigation</option>
-                    <option value="">Home</option>
-                    <option value="#about">About</option>
-                    <option value="#portfolio">Portfolio</option>
-                    <option value="#contact">Contact Me</option>
-                </select>
             </div>
         </nav>
         <div id="phases_div">
@@ -145,8 +123,10 @@
             </div>
         </div>
     </section>
+
     <!--    Portfolio -->
-    <section id="portfolio">
+    
+    <section id="portfolio" name="portfolio">
         <nav>
             <div class="container_nav">
                 <a href="" class="logo"> <img src="img/logo.png" alt="Filippovsite logo"> </a>
@@ -156,13 +136,6 @@
                     <li><a href="#portfolio">Portfolio</a></li>
                     <li><a href="#contact">Contact Me</a></li>
                 </ul>
-                <select>
-                    <option value="" selected="selected">Navigation</option>
-                    <option value="">Home</option>
-                    <option value="#about">About</option>
-                    <option value="#portfolio">Portfolio</option>
-                    <option value="#contact">Contact Me</option>
-                </select>
             </div>
         </nav>
         <div id="portfolio_div">
@@ -202,8 +175,10 @@
             </div>
         </div>
     </section>
+
     <!--   Contact Me -->
-    <section id="contact">
+    
+    <section id="contact" name="contact">
         <nav>
             <div class="container_nav">
                 <a href="" class="logo"> <img src="img/logo.png" alt="Filippovsite logo"> </a>
@@ -213,13 +188,6 @@
                     <li><a href="#portfolio">Portfolio</a></li>
                     <li><a href="#contact">Contact Me</a></li>
                 </ul>
-                <select>
-                    <option value="" selected="selected">Navigation</option>
-                    <option value="">Home</option>
-                    <option value="#about">About</option>
-                    <option value="#portfolio">Portfolio</option>
-                    <option value="#contact">Contact Me</option>
-                </select>
             </div>
         </nav>
         <div id="contact_div">
@@ -242,10 +210,11 @@
             <a href="#" id="arrowup"></a>
         </div>
     </section>
+
     <!--    Footer -->
     <footer id="main_footer">
         <div id="container_footer">
-            <div id="footerNav">
+            <nav id="footerNav">
                 <ul>
                     <li><a href="">Home</a></li>
                     <li><a href="#about">About</a></li>
@@ -257,7 +226,7 @@
                         <p>Built by <a href="">Aleksandr Filippov</a></p>
                     </li>
                 </ul>
-            </div>
+            </nav>
             <div id="footer_center" class="clearfix">
                 <ul>
                     <li><a href="">Russia, St. Petersburg</a></li>
