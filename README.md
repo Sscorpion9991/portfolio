@@ -4,9 +4,8 @@ Aleksandr Filippov's Portfolio
 
 Links:
 
-1. Test task
-<strong>NEW</strong>
-https://sscorpion9991.github.io/portfolio/01_test-task/index.html
+
+<a href="https://sscorpion9991.github.io/portfolio/01_test-task/index.html">1. Test task</a>
 
 2. Social project
 https://sscorpion9991.github.io/portfolio/02_first-social/index.html
