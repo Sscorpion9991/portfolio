@@ -37,7 +37,5 @@
 
 <a href="https://sscorpion9991.github.io/portfolio/16_minimal/index.html">16. MNML beach toys</a>
 
-<a href="https://sscorpion9991.github.io/portfolio/17_filippovsites-full/index.html">17. Filippovsites full screen </a>
-
-<a href="https://sscorpion9991.github.io/portfolio/18_filippovsites/index.html">18. Filippovsites project</a>
+<a href="https://sscorpion9991.github.io/portfolio/18_filippovsites/index.html">17. Filippovsites project</a>
 
