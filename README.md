@@ -1,7 +1,4 @@
-# portfolio
-<small><i>Aleksandr Filippov's Portfolio</i></small>
-
-<h1>Content:</h1>
+<h1>Contents:</h1>
 
 <a href="https://sscorpion9991.github.io/portfolio/01_test-task/index.html">1. Test task</a>
 
