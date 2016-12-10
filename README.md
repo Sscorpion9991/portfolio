@@ -8,7 +8,8 @@ Links:
 https://sscorpion9991.github.io/portfolio/01_test-task/index.html
 
 2. Social project
-
+https://sscorpion9991.github.io/portfolio/02_first-social/index.html
+https://sscorpion9991.github.io/portfolio/02_first-social/index_techexp.html
 
 3. Books project
 
