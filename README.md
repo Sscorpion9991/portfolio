@@ -5,11 +5,10 @@
 
 <a href="https://sscorpion9991.github.io/portfolio/01_test-task/index.html">1. Test task</a>
 
-<a href="https://sscorpion9991.github.io/portfolio/02_first-social/index.html">2. Social project (kodeks)</a>
-<a href="https://sscorpion9991.github.io/portfolio/02_first-social/index_techexp.html">2. Social project (techexpert)</a>
+<a href="https://sscorpion9991.github.io/portfolio/02_first-social/index.html">2. Social project (kodeks) </a>
+<a href="https://sscorpion9991.github.io/portfolio/02_first-social/index_techexp.html"> &amp; Social project (techexpert) </a>
 
-3. Books project
-https://sscorpion9991.github.io/portfolio/
+<a href="https://sscorpion9991.github.io/portfolio/03_second-books/index.html">3. Books project</a>
 
 4. Products project
 https://sscorpion9991.github.io/portfolio/
